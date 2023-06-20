@@ -4,7 +4,7 @@ IOP – OCPI 2.1.1 Interface - GIREVE Implementation Guide
 
 Test brouillon 
 
-**Exemple en Gras **
+**Exemple en Gras**
 
 *Exemple en italique*
 
