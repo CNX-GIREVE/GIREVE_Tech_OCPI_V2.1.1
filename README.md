@@ -13,8 +13,8 @@ Test brouillon
 3. Third item
 
 - First item
-- Second item
-- Third item
+	- Second item
+		- Third item
 
   `"id": "LOC1",
 	"type": "ON_STREET",
