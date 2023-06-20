@@ -5,7 +5,7 @@ IOP – OCPI 2.1.1 Interface - GIREVE Implementation Guide
 
 Test brouillon 
 
-For more informations, check the standard OCPI specifications : [OCPI 2.1.1](https://github.com/ocpi/ocpi/tree/release-2.1.1-bugfixes)
+For more informations, check the standard OCPI specifications : [OCPI 2.1.1](https://github.com/ocpi/ocpi/tree/release-2.1.1-bugfixes#contents)
 
 **Exemple en Gras**
 
