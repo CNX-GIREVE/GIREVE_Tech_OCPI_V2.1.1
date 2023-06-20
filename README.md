@@ -24,4 +24,7 @@ Test brouillon
 }
 ```
 
-  
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
