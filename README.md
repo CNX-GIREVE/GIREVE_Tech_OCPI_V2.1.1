@@ -16,6 +16,12 @@ Test brouillon
 	- Second item
 		- Third item
 
-  `"id": "LOC1",
+```
+{
+  "id": "LOC1",
 	"type": "ON_STREET",
-	"name": "Gent Zuid",`
+	"name": "Gent Zuid",
+}
+```
+
+  
