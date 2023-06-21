@@ -10,8 +10,8 @@ informations before starting
 *Exemple en italique*
 
 # Contents
-[CPO Specific implementation guidlines]
-[eMSP Specific implementation guidlines]
+[CPO Specific implementation guidlines](cpo_edits.md)
+[eMSP Specific implementation guidlines](emsp_edits.md)
 
 
 
