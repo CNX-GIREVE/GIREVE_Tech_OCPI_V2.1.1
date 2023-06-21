@@ -1,4 +1,4 @@
-#Definitions and Abbreviations
+# Definitions and Abbreviations
 
 
 | Word | Meaning |
