@@ -1,4 +1,7 @@
-# Definitions and Abbreviations
+# Things to know
+
+1.Definitions and Abbreviations
+
 
 
 | Word | Meaning |
