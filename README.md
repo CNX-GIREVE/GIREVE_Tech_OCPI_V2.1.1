@@ -3,7 +3,7 @@ IOP – OCPI 2.1.1 Interface - GIREVE Implementation Guide
 
 For more informations, check the standard OCPI specifications : [OCPI 2.1.1](https://github.com/ocpi/ocpi/tree/release-2.1.1-bugfixes#contents)
 
-Tips before starting your implementation : 
+Tips before starting your implementation : [Check-up](checkup_edits.md)
 
 **Exemple en Gras**
 
