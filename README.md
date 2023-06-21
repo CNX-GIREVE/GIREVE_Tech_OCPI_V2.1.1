@@ -17,7 +17,7 @@ informations before starting
 
 - First item
 	- Second item
-		- Third item
+		- Third item 
 
 ```
 {
