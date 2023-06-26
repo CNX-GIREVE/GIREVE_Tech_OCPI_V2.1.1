@@ -2,8 +2,6 @@
 
 1. Definitions and Abbreviations
 
-
-
 | Word | Meaning |
 | ----------- | ----------- |
 | IOP | Inter-operation Platform. IOP is the acronym of the GIREVE’s eMobility Services Platform. |
