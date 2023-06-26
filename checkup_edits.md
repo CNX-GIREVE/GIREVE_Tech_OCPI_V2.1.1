@@ -1,6 +1,6 @@
 # Things to know
 
-1. Definitions and Abbreviations
+## 1. Definitions and Abbreviations
 
 | Word | Meaning |
 | ----------- | ----------- |
