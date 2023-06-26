@@ -11,8 +11,8 @@
 
 ## 2. Who owns what ? 
 
-• Tokens are owned by the eMSP
-• Locations are owned by the CPO
-• Sessions are owned by the CPO
-• CDRs are owned by the CPO
-• Tarifs are owned by the CPO
+- Tokens are owned by the eMSP
+- Locations are owned by the CPO
+- Sessions are owned by the CPO
+- CDRs are owned by the CPO
+- Tarifs are owned by the CPO
