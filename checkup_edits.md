@@ -19,7 +19,7 @@
 
 For more informations, [See OCPI client owned object.](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/transport_and_format.md)
 
-## 2. OCPI modules implemented by IOP
+## 3. OCPI modules implemented by IOP
 
 | Module | Usage |
 | ----------- | ----------- |
@@ -30,3 +30,14 @@ For more informations, [See OCPI client owned object.](https://github.com/ocpi/o
 | Sessions | Exchange information during charge |
 | CDRs | Send the final charge report |
 | Tariffs | Exchange Tariffs information |
+
+## 4. OCPI modules implemented by IOP
+
+The next version of OCPI, OCPI 2.2, integrates new extra headers enabling the sharing of a single OCPI connection to multiple operators.
+GIREVE has begun to deploy these extra headers in its OCPI version 2.1.1 but it is an ongoing action.
+
+These extra headers should not be considered yet in OCPI 2.1.1, except for “PULL Tokens: Retrieve Tokens of a single given eMSP” (see chapter 3.7.4 page 22) and “PULL Tokens: Retrieve Locations of a single given CPO” (see chapter 4.4.3 page 29):
+- ocpi-to-country-code
+- ocpi-to-party-id
+- ocpi-from-country-code
+- ocpi-from-party-id
