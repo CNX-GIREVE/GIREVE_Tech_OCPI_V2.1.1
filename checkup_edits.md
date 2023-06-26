@@ -18,3 +18,15 @@
 - Tarifs are owned by the CPO
 
 For more informations, [See OCPI client owned object.](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/transport_and_format.md)
+
+## 2. OCPI modules implemented by IOP
+
+| Module | Usage |
+| ----------- | ----------- |
+| Credentials | Initialise and update IT connection information (endpoints, OCPI versions, …) |
+| Locations | Exchange charge infrastructure information |
+| Tokens | Manage Tokens and local authorizations |
+| Commands | Start a charge remotely, Send commands during charge |
+| Sessions | Exchange information during charge |
+| CDRs | Send the final charge report |
+| Tariffs | Exchange Tariffs information |
