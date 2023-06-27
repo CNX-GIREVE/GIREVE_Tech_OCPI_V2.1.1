@@ -1,3 +1,3 @@
-# _Locations_module
+# _Locations_ module
 
 **Module Identifier: `locations`**
