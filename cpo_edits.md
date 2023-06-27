@@ -1,3 +1,7 @@
-# _Locations_ module
-
-**Module Identifier: `locations`**
+# Overview of Modules, each section describes one module.
+- Locations
+- Sessions
+- CDRs
+- Tariffs
+- Tokens
+- Commands
