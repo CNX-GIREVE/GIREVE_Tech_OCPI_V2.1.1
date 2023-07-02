@@ -15,7 +15,14 @@ OCPI features are composed by several use cases that a CPO can choose to impleme
 
 **If a CPO manages several operations, each operation must go through the OCPI connection process (handshake).**
 
- 
+ 2. Use cases required by GIREVE
+
+Some of these use cases are required when connecting to GIREVE
+
+3.4.1 Always required Use case Why? Register/FromIOP OR Register/ToIOP
+These use cases are needed to initialise connection between an operator and GIREVE Push EVSE status/ToIOP
+A CPO connected to GIREVE must transfer “in realtime” EVSE status change of its EVSEs Pull Locations/FromIOP
+GIREVE wants to be able to refresh EVCI data when needed.
 
 
 
