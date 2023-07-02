@@ -16,7 +16,8 @@ OCPI features are composed by several use cases that a CPO can choose to impleme
 
 **If a CPO manages several operations, each operation must go through the OCPI connection process (handshake).**
 
- ## 2. Use cases required by GIREVE
+
+## 2. Use cases required by GIREVE
 
 Some of these use cases are required when connecting to GIREVE
 
