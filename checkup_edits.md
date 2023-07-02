@@ -47,7 +47,7 @@ These extra headers should not be considered yet in OCPI 2.1.1, ==except for “
 **IOP uses a new attribute « authorization_id » for Session, CDR, AuthorizationInfo and StartSession objects.**
 
 This information is used to associate the « authorization » given by the eMSP at the beginning of a charging session with Sessions and CDR related to.
-It answers to real business cases, for example an eMSP giving 2 authorisations and receiving 3 CDRs. Which ones should it pay?
+It answers to real business cases, for example an eMSP giving 2 authorisations and receiving 3 CDRs. Which ones should it pay ?
 This new property must be provided by the eMSP during the authorisation process, then used by the CPO when it sends Sessions and CDRs related to the authorisation.
 
 **This property is implemented in OCPI 2.2 under the name “authorization_reference”.**
