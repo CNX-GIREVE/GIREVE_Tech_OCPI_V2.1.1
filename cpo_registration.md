@@ -28,9 +28,7 @@ Some of these use cases are required when connecting to GIREVE.
 | Use case |  Why ? | 
 | ----------- | ----------- |
 | Register/FromIOP OR Register/ToIOP |  These use cases are needed to initialise connection between an operator and GIREVE. | 
-| Push EVSE status/ToIOP | A CPO connected to GIREVE must transfer “in realtime” EVSE status change of its EVSEs.|
-| Pull Locations/FromIOP | GIREVE wants to be able to refresh EVCI data when needed. |
-  
+
 ### 2.2 Connection & Register specifications
 
 IOP follows the OCPI standard for Connection & Register process. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/credentials.md).
