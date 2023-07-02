@@ -31,11 +31,12 @@ Some of these use cases are required when connecting to GIREVE.
 | Push EVSE status/ToIOP | A CPO connected to GIREVE must transfer “in realtime” EVSE status change of its EVSEs.|
 | Pull Locations/FromIOP | GIREVE wants to be able to refresh EVCI data when needed. |
   
+### 2.2 Connection & Register specifications
 
+IOP follows the OCPI standard for Connection & Register process. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/credentials.md).
 
-1. First item
-2. Second item
-3. Third item
+### 2.2.1 Update Credentials FromIOP
 
+IOP is not able to send a PUT Credentials to update its Credentials on operator backend. In order to update them, IOP sends a “DELETE Credentials” to delete the OCPI connection then starts a new Connection & Register process beginning by a POST Credentials sent by IOP or by the operator.
 
 
