@@ -23,7 +23,7 @@ In case of connection to GIREVE, here is the list of use cases that a CPO can im
 
 Some of these use cases are required when connecting to GIREVE
 
-1. Always required Use case Why? Register/FromIOP OR Register/ToIOP
+2.1 Always required Use case Why? Register/FromIOP OR Register/ToIOP
 
  
 These use cases are needed to initialise connection between an operator and GIREVE Push EVSE status/ToIOP
