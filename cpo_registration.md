@@ -30,5 +30,9 @@ These use cases are needed to initialise connection between an operator and GIRE
 A CPO connected to GIREVE must transfer “in realtime” EVSE status change of its EVSEs Pull Locations/FromIOP
 GIREVE wants to be able to refresh EVCI data when needed.
 
+1. First item
+2. Second item
+3. Third item
+
 
 
