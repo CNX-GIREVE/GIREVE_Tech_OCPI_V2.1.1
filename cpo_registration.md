@@ -25,7 +25,8 @@ Some of these use cases are required when connecting to GIREVE
 
 ### 2.1 Always required
 
-| Use case |  Why ? |  
+| Use case |  Why ? | 
+| ----------- | ----------- |
 | Register/FromIOP
 OR
 Register/ToIOP |  These use cases are needed to initialise connection between an operator and GIREVE | 
