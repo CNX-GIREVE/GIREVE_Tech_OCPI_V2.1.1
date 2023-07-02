@@ -23,10 +23,14 @@ In case of connection to GIREVE, here is the list of use cases that a CPO can im
 
 Some of these use cases are required when connecting to GIREVE
 
-2.1 Always required Use case Why? Register/FromIOP OR Register/ToIOP
+### 2.1 Always required
 
+| Use case |  Why ? |  
+| Register/FromIOP
+OR
+Register/ToIOP |  These use cases are needed to initialise connection between an operator and GIREVE | 
  
-These use cases are needed to initialise connection between an operator and GIREVE Push EVSE status/ToIOP
+ Push EVSE status/ToIOP
 A CPO connected to GIREVE must transfer “in realtime” EVSE status change of its EVSEs Pull Locations/FromIOP
 GIREVE wants to be able to refresh EVCI data when needed.
 
