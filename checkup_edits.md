@@ -42,7 +42,7 @@ These extra headers should not be considered yet in OCPI 2.1.1, ==except for “
 - ocpi-from-country-code
 - ocpi-from-party-id
 
-## 5. New attribute « authorization_id »
+## 5. _New_attribute « authorization_id »
 
 **IOP uses a new attribute « authorization_id » for Session, CDR, AuthorizationInfo and StartSession objects.**
 
