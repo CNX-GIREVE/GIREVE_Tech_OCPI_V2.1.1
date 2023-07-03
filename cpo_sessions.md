@@ -25,28 +25,19 @@ Some of these use cases are required when connecting to GIREVE :
 | **STOP** Session FromIOP | Remote stop features on CPO infrastructure are required by GIREVE. |
 | **PUT** Session FromIOP | A CPO must be able to send information about charging-sessions through Session objects (charge started, …). |
 
-## 3. StartSession request: new attribute « authorization_id »
-
-IOP sends a StartSession command to a CPO with a new attribute, the “authorization_id”. Please refer to paragraph 2.4.2 [New attribute « authorization_id »](checkup_edits.md).
-
-**The CPO must store this information to send it in Sessions and CDRs related to this Authorization.**
-
-### 3.1 ReserveNow command
-
-The ReserveNow command is not yet implemented by IOP.
-
-### 3.2 UnlockConnector command
-
-The UnlockConnector is not yet implemented by IOP.
-
-## 4 Sessions module specifications
+## 3. Sessions module specifications
 
 IOP follows the OCPI standard for Sessions sent by a CPO. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_sessions.md).
 
-### 4.1 Session Initialisation
+### 3.1 Session Initialisation
+
 The CPO must send, after a remote or local authorization validated by the eMSP, a PUT Session with SessionStatus when the EV plugs to the EVSE.
 This flow gives information to eMSP that the charge of its customer has really started.
-3.9.2 Usage of “authorization_id”
-When sending a Session, the CPO defines the Authorization it refers to on providing the “authorization_id” property. Please refer to paragraph 2.4.2 New attribute « authorization_id ».
-3.9.3 Store and forward – PUT Sessions
+
+### 3.2 Usage of “authorization_id”
+
+When sending a Session, the CPO defines the Authorization it refers to on providing the “authorization_id” property. Please refer to paragraph 2.4.2 [New attribute « authorization_id »](checkup_edits.md).
+
+### 3.3 Store and forward – PUT Sessions
+
 A Store and Forward mechanism must be implemented to ensure that no session may be lost, in case of a connection loss. Any PUT session that didn’t get a correct response from the GIREVE platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the session messages must be resent in a FIFO manner.
