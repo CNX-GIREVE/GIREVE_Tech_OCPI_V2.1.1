@@ -67,7 +67,7 @@ GIREVE uses the “tariff_id” information provided by CPOs in Locations to dis
 The eMSP Interface is not fully implemented by IOP for the PUSH of static attributes. The web service is present and responds but information is not stored in RPC (Charge Point Repository).
 The only data directly updated in RPC after a PUT/PATCH Locations by a CPO are :
 - The dynamic attribute EVSE.status.
-- The “Connector.tariff_id” information.
+- The “Connector.tariff_id” information.  
 
 ### 3.5 Store and Forward – PUT and PATCH Locations
 
