@@ -58,7 +58,16 @@ All “evse_id” of the CPO “FR*CPO” should start with “FR*CPO*E”.
 
 ### 3.3 Tarrif_id value
 
+GIREVE uses the “tariff_id” information provided by CPOs in Locations to dispatch CPO’s EVSEs into separated EVSE tariff groups. Also, CPOs can refer to these tariff groups when they describe their roaming offer including tariffs via the [GIREVE connect place](https://connect-place.gireve.com).
+
+**Considering that, we strongly suggest to fill the “tariff_id” information when the CPO uploads its Locations to GIREVE IOP platform.**
+
 ### 3.4 PUSH Locations ToIOP
+
+The eMSP Interface is not fully implemented by IOP for the PUSH of static attributes. The web service is present and responds but information is not stored in RPC (Charge Point Repository).
+The only data directly updated in RPC after a PUT/PATCH Locations by a CPO are :
+- The dynamic attribute EVSE.status.
+- The “Connector.tariff_id” information.
 
 ### 3.5 Store and Forward – PUT and PATCH Locations
 
