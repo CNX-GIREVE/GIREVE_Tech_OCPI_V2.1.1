@@ -30,6 +30,7 @@ IOP follows the OCPI standard for Locations upload by a CPO. [See OCPI specifica
 
 Nonetheless, the following attributes are mandatory for Gireve although they are optional in the OCPI standard :
 
+| Word | Meaning |
 | ----------- | ----------- |
 | Owner.name | Mandatory : this information MUST be registered in the ocpi flow under the object « owner » with the attribute « name ». | 
 | Operator.name | Mandatory for Gireve - we use it to give information about the brand name. |
