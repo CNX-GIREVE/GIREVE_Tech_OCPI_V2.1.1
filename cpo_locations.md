@@ -83,7 +83,7 @@ If the CPO wants to check the status of a Location, EVSE or Connector object in 
 `/ocpi/emsp/2.2.1/locations/{country_code}/{party_id}/{location_id}/{evse_uid}`
 `/ocpi/emsp/2.2.1/locations/{country_code}/{party_id}/{location_id}/{evse_uid}/{connector_id}`
 
-with:
+with :
 
 `location_id: unique id of the Location object provided by the CPO.`
 `evse_uid: unique id of the EVSE object provided by the CPO.`
