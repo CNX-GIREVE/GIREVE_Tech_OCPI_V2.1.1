@@ -34,7 +34,7 @@ Nonetheless, the following attributes are mandatory for Gireve although they are
 | Owner.name | Mandatory : this information MUST be registered in the ocpi flow under the object « owner » with the attribute « name ». | 
 | Operator.name | Mandatory for Gireve - we use it to give information about the brand name. |
 | Evses.connectos.tariff_id | Mandatory for GIREVE. |
-| Evses.capabilities| Mandatory for GIREVE. |
+| Evses.capabilities | Mandatory for GIREVE. |
 
 ### 3.1 Static and dynamic attibutes
 
