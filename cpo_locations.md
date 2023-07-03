@@ -41,12 +41,20 @@ Nonetheless, the following attributes are mandatory for Gireve although they are
 
 The attributes of the Location object (with EVSE and Connector) are of 2 types :
 
- • Static attributes are data attributes that do not change frequently (address, localisation …)
- • Dynamic attributes are data attributes that may change frequently (availability, occupied/free …)
+- Static attributes are data attributes that do not change frequently (address, localisation …)
+- Dynamic attributes are data attributes that may change frequently (availability, occupied/free …)
 
 **For the moment, all properties of a Location are Static data except EVSE.status, the only Dynamic data.**
 
 ### 3.2 EVSE object
+
+OCPI defines an attribute called « evse_id » which contains the eMI3 id of the EVSE.
+
+**The “evse_id” is optional for OCPI but required by GIREVE to ensure seamless compatibility with operators connected via other protocols (eMIP, …).
+In addition, the eMI3 standard requires that the eMI3 Id of an EVSE begins by the eMI3 Id of the CPO.**
+
+[See “Part 2 v1.0” of eMI3 standard here :](http://emi3group.com/documents-links/)
+All “evse_id” of the CPO “FR*CPO” should start with “FR*CPO*E”.
 
 ### 3.3 Tarrif_id value
 
