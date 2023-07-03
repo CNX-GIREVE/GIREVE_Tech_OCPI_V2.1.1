@@ -36,8 +36,8 @@ IOP follows the OCPI standard for Tariffs upload by a CPO. [See OCPI specificati
 
 IOP only implements :
 
-- PUT Tariffs: Used by a CPO to create and update a tariff.
-- GET Tariffs: Used by IOP to pull Tariffs of a CPO.
+- **PUT** Tariffs: Used by a CPO to create and update a tariff.
+- **GET** Tariffs: Used by IOP to pull Tariffs of a CPO.
 
 ## 3.2 Specific properties added by GIREVE
 
