@@ -2,8 +2,8 @@
 
 - [Registration](cpo_registration.md)
 - [Locations](cpo_locations.md)
-- [Sessions](cpo_sessions)
-- [CDRs](cpo_cdrs)
-- [Tariffs](cpo_tariffs)
-- [Tokens](cpo_tokens)
-- [Commands](cpo_commands)
+- [Sessions](cpo_sessions.md)
+- [CDRs](cpo_cdrs.md)
+- [Tariffs](cpo_tariffs.md)
+- [Tokens](cpo_tokens.md)
+- [Commands](cpo_commands.md)
