@@ -27,7 +27,7 @@ Some of these use cases are required when connecting to GIREVE :
 
 ## 3. StartSession request: new attribute « authorization_id »
 
-IOP sends a StartSession command to a CPO with a new attribute, the “authorization_id”. Please refer to paragraph 2.4.2 New attribute « authorization_id ».
+IOP sends a StartSession command to a CPO with a new attribute, the “authorization_id”. Please refer to paragraph 2.4.2 [New attribute « authorization_id »](checkup_edits.md#new_attribute).
 
 **The CPO must store this information to send it in Sessions and CDRs related to this Authorization.**
 
