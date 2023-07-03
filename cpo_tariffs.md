@@ -44,12 +44,13 @@ IOP only implements :
 TariffDimensionType “SESSION_TIME”
 
 Not yet available
-In standard OCPI V2.1.1, the CPO can define 2 different “TariffDimensionType” related to the duration:
-GIREVE OCPI Protocol - v1.2.1 25 / 62
-• TIME: “time charging: defined in hours, step_size multiplier: 1 second” (description from the OCPI Github).
-• PARKING_TIME: “time not charging : defined in hours, step_size multiplier: 1 second” (description from the OCPI Github).
+In standard OCPI V2.1.1, the CPO can define 2 different “TariffDimensionType” related to the duration :
+
+• **TIME** : “time charging: defined in hours, step_size multiplier: 1 second” (description from the OCPI Github).
+• **PARKING_TIME** : “time not charging : defined in hours, step_size multiplier: 1 second” (description from the OCPI Github).
+
 GIREVE adds a third “TariffDimensionType” named “SESSION_TIME” with the following description:
-• SESSION_TIME: “time charging or not: defined in hours, step_size multiplier: 1 second”.
+• **SESSION_TIME** : “time charging or not: defined in hours, step_size multiplier: 1 second”.
 
 
 3.11.3 Store and forward – PUT TARIFFS
