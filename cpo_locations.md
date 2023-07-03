@@ -50,15 +50,25 @@ Nonetheless, the following attributes are mandatory for Gireve although they are
 
 If the CPO wants to check the status of a Location, EVSE or Connector object in the IOP system, it can call these URLs : 
 
-• /ocpi/emsp/2.2.1/locations/{country_code}/{party_id}/{location_id}
-• /ocpi/emsp/2.2.1/locations/{country_code}/{party_id}/{location_id}/{evse_uid}
-• /ocpi/emsp/2.2.1/locations/{country_code}/{party_id}/{location_id}/{evse_uid}/{connector_id}
+`/ocpi/emsp/2.2.1/locations/{country_code}/{party_id}/{location_id}`
+`/ocpi/emsp/2.2.1/locations/{country_code}/{party_id}/{location_id}/{evse_uid}`
+`/ocpi/emsp/2.2.1/locations/{country_code}/{party_id}/{location_id}/{evse_uid}/{connector_id}`
+
 with:
-• location_id: unique id of the Location object provided by the CPO.
-• evse_uid: unique id of the EVSE object provided by the CPO.
-• connector_id: unique id of the Connector object provided by the CPO.
+
+`location_id: unique id of the Location object provided by the CPO.`
+`evse_uid: unique id of the EVSE object provided by the CPO.`
+`connector_id: unique id of the Connector object provided by the CPO.`
 
 ### 3.7 PULL Locations FromIOP
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
 
 
 
