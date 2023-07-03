@@ -9,6 +9,6 @@ In case of connection to GIREVE, here is the list of use cases that a CPO can im
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
 | Push Locations Static data | ToIOP | A CPO updates its Locations stored in RPC. *Only the property “connector.tariff_Id” can be updated through this flow.* |
-| Push Locations Dynamic data (Only EVSE status) | A CPO updates status of its EVSEs stored in RPC. |
+| Push Locations Dynamic data (Only EVSE status) | ToIOP | A CPO updates status of its EVSEs stored in RPC. |
 | Pull Locations (Static data) | FromIOP | IOP requests the CPO backend to retrieve Locations data. |
 | Check Locations | ToIOP | A CPO requests IOP to get its Locations stored in RPC. |
