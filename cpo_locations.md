@@ -39,6 +39,13 @@ Nonetheless, the following attributes are mandatory for Gireve although they are
 
 ### 3.1 Static and dynamic attibutes
 
+The attributes of the Location object (with EVSE and Connector) are of 2 types :
+
+ • Static attributes are data attributes that do not change frequently (address, localisation …)
+ • Dynamic attributes are data attributes that may change frequently (availability, occupied/free …)
+
+**For the moment, all properties of a Location are Static data except EVSE.status, the only Dynamic data.**
+
 ### 3.2 EVSE object
 
 ### 3.3 Tarrif_id value
@@ -63,13 +70,9 @@ with:
 
 ### 3.7 PULL Locations FromIOP
 
-```json
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
+IOP is able to PULL Location requesting CPO backend. In this case, IOP uses the pagination and CPO must respond with a paginated response. If the response is not paginated, it will be ignored by IOP.
+
+The default periodicity is every day.
 
 
 
