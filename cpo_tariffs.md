@@ -32,14 +32,14 @@ GIREVE uses the “tariff_id” information provided by CPOs in Locations to dis
 
 IOP follows the OCPI standard for Tariffs upload by a CPO. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_tariffs.md).
 
-## 3.1 Tariffs flows implemented by GIREVE
+### 3.1 Tariffs flows implemented by GIREVE
 
 IOP only implements :
 
 - **PUT** Tariffs: Used by a CPO to create and update a tariff.
 - **GET** Tariffs: Used by IOP to pull Tariffs of a CPO.
 
-## 3.2 Specific properties added by GIREVE
+### 3.2 Specific properties added by GIREVE
 
 TariffDimensionType “SESSION_TIME”
 
@@ -49,9 +49,11 @@ In standard OCPI V2.1.1, the CPO can define 2 different “TariffDimensionType�
 - **TIME** : “time charging: defined in hours, step_size multiplier: 1 second” (description from the OCPI Github).
 - **PARKING_TIME** : “time not charging : defined in hours, step_size multiplier: 1 second” (description from the OCPI Github).
 
-GIREVE adds a third “TariffDimensionType” named “SESSION_TIME” with the following description:
+GIREVE adds a third “TariffDimensionType” named “SESSION_TIME” with the following description :
+
 - **SESSION_TIME** : “time charging or not: defined in hours, step_size multiplier: 1 second”.
 
 
-3.11.3 Store and forward – PUT TARIFFS
-Similarly to a POST Cdrs, Store and Forward mechanism must be implemented to ensure that no Tariffs may be lost, in case of a connection loss. Any PUT Tariffs that didn’t get a correct response from the GIREVE platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the Tariffs messages must be resent in a FIFO manner.eMSP Specific Implementation Guidelines.
+### 3.3 Store and forward – PUT TARIFFS
+
+Similarly to a POST Cdrs, Store and Forward mechanism must be implemented to ensure that no Tariffs may be lost, in case of a connection loss. Any PUT Tariffs that didn’t get a correct response from the GIREVE platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the Tariffs messages must be resent in a FIFO manner.
