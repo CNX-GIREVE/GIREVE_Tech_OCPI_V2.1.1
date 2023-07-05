@@ -27,7 +27,7 @@ Some of these use cases are required when connecting to GIREVE :
 | Start Session/FromIOP | Remote authorisation and start features on CPO infrastructure are required by GIREVE. | 
 | Stop Session/FromIOP | Remote stop features on CPO infrastructure are required by GIREVE. |.
 
-## 3.Commands module specifications
+## 3. Commands module specifications
 
 IOP follows the OCPI standard for Commands received by a CPO. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_commands.md).
 
