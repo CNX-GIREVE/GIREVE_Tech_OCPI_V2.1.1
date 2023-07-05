@@ -37,4 +37,31 @@ IOP follows the OCPI standard for Connection & Register process. [See OCPI speci
 
 IOP is not able to send a **PUT** Credentials to update its Credentials on operator backend. In order to update them, IOP sends a “**DELETE** Credentials” to delete the OCPI connection then starts a new Connection & Register process beginning by a **POST** Credentials sent by IOP or by the operator.
 
+# 3 ToIOP_GET_emsp_versions, FromIOP_GET_emsp_versions
+
+*Request* :
+
+- **VERB : GET**
+- **HEADERS** : `{Transfer-Encoding:chunked}{Date:Wed, 08 Jan 2020 10:24:52 GMT}{Connection:Close}{Content-Type:application/json}`
+- **BODY** : EMPTY
+
+*Response* :
+
+- **CODE** : 200
+- **HEADERS** : `{Transfer-Encoding:chunked}{Date:Wed, 08 Jan 2020 10:24:52 GMT}{Connection:Close}{Content-Type:application/json}`
+- **BODY** :  
+```json
+{
+  "data": [
+          {
+            "version": "2.1.1",
+            "url": "https://xxx.yyy.com/ocpi/emsp/2.1.1"
+          }
+          ],
+"status_code": 1000,
+"status_message": "Success",
+"timestamp": "2020-01-08T10:24:52Z"
+}
+
+```
 
