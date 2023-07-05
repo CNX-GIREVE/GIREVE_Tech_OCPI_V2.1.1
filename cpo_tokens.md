@@ -96,11 +96,15 @@ IOP answers to a POST Token Authorize request with a new attribute of Authorizat
 
 *Request* :
 
-- **VERB: GET**
+- **VERB : GET**
 - **HEADERS** : `{Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}`
 - **BODY** :
 
 *Response* :
+
+- **CODE** : 200
+- **HEADERS** : `{Link:<https://xxx.nnn.com/ocpi/emsp/2.1.1/tokens?date_from=2020-01-13T12:54:25Z&offset=50&limit=50>;rel="next"}{X-Limit:50}{Content-Type:application/json}{X-Total-Count:10627}`
+- **BODY** :  
 ```json
 
   {
