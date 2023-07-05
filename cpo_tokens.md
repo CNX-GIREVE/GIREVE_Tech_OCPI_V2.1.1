@@ -37,7 +37,7 @@ IOP follows the OCPI standard for Tokens module. [See OCPI specifications](https
 
 ### 3.1 GET Tokens To/FromIOP
 
-IOP is not able to PUSH Tokens to CPO backend. CPO should PULL IOP to get WL ???.
+IOP is not able to PUSH Tokens to CPO backend. CPO should PULL IOP to get Tokens.
 
 ### 3.2 PULL Tokens: Who is the eMSP ?
 
