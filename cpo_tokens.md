@@ -136,3 +136,50 @@ IOP answers to a POST Token Authorize request with a new attribute of Authorizat
 }
 
 ```
+### 4.2 ToIOP_POST_emsp_tokens_2.1.1, FromIOP_POST_emsp_tokens_2.1.1
+
+*URL* :
+
+`//ocpi/emsp/2.1.1/tokens/AAAAAA/authorize`
+
+*Request* :
+
+- **VERB : POST**
+- **HEADERS** : `{Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}{Content-Type:application/json}`
+- **BODY** :
+
+```json
+
+  {
+    "location_id": "11111",
+    "evse_uids": [
+    "FR*CPO*E111"
+    ]
+  }
+
+```
+
+*Response* :
+
+- **CODE** : 200
+- **HEADERS** : `{Content-Type:application/json}`
+- **BODY** :  
+```json
+
+  {
+    "data": {
+    "allowed": "ALLOWED",
+    "location": {
+    "location_id": "11111",
+    "evse_uids": [
+    "FR*CPO*E111"
+    ]
+},
+    "authorization_id": "CCCC-VVVV-BBBB"
+},
+"status_code": 1000,
+"status_message": "Success",
+"timestamp": "2020-01-17T10:15:18Z"
+}
+
+```
