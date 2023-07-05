@@ -32,7 +32,7 @@ This flow gives information to eMSP that the charge of its customer has really s
 
 ### 3.2 Usage of “authorization_id”
 
-When sending a Session, the CPO defines the Authorization it refers to on providing the “authorization_id” property. Please refer to paragraph 2.4.2 [New attribute « authorization_id »](checkup_edits.md).
+When sending a Session, the CPO defines the Authorization it refers to on providing the “authorization_id” property. Please refer to paragraph 5. [New attribute « authorization_id »](checkup_edits.md).
 
 ### 3.3 Store and forward – PUT Sessions
 
