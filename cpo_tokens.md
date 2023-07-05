@@ -26,5 +26,8 @@ Some of these use cases are required when connecting to GIREVE :
 
 ### 2.1 If the CPO implements the “Roaming” feature
 
-
+| Use case |  Why ? | 
+| ----------- | ----------- |
+| Realtime Authorisation/ToIOP | A CPO should be able to request eMSP through IOP when a driver uses his RFID badge to charge. | 
+| Pull Tokens/ToIOP | Pull Tokens is the only way open for a CPO to download Tokens of eMSP it is in contract with. This feature is “global” (CPO downloads all the tokens of all eMSP it is in contract with), or “unitary” (CPO downloads all the tokens of a single given eMSP). |
 
