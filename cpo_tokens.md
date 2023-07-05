@@ -102,7 +102,7 @@ IOP answers to a POST Token Authorize request with a new attribute of Authorizat
 
 *Response* :
 ```json
-{
+
   {
 "data": [
         {
@@ -130,5 +130,5 @@ IOP answers to a POST Token Authorize request with a new attribute of Authorizat
 "status_message": "Success",
 "timestamp": "2020-01-17T09:54:25Z"
 }
-}
+
 ```
