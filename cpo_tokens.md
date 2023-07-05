@@ -18,6 +18,7 @@ In case of connection to GIREVE, here is the list of use cases that a CPO can im
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
+| Realtime Authorisation | ToIOP | A CPO requests IOP to get Authorisation triggered by a local authentication (swiping of an RFID badge by an EV driver on one of its EVSE, for example). |
 
 ## 2. Use cases required by GIREVE
 
