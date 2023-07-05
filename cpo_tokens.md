@@ -85,3 +85,50 @@ IOP answers to a POST Token Authorize request with a new attribute of Authorizat
 
 **The CPO must store this information to send it in Sessions and CDRs related to this Authorization.**
 
+## 4 Exemples
+
+### 4.1 ToIOP_GET_emsp_tokens_2.1.1, FromIOP_GET_emsp_tokens_2.1.1
+
+*URL* :
+
+`/2.1.1/tokens?date_from=2020-01-13T12%3A54%3A25&offset=0&limit=50`
+*(Date_from parameter shall be the date of the last successful request)*
+
+*Request* :
+
+**VERB: GET**
+**HEADERS** : `{Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}`
+**BODY** :
+
+*Response* :
+```json
+{
+  {
+"data": [
+        {
+          "uid": "aaa",
+          "valid": true,
+          "issuer": "FR*AAA",
+          "auth_id": "AZERTY",
+          "last_updated": "2020-01-13T12:55:01Z",
+          "language": "FR",
+          "type": "OTHER",
+          "whitelist": "ALLOWED_OFFLINE"
+},
+{
+          "uid": "bbb",
+          "valid": true,
+          "issuer": "FR*BBB",
+          "auth_id": "QSDFG",
+          "last_updated": "2020-01-13T13:01:53Z",
+          "type": "RFID",
+          "whitelist": "NEVER",
+          "visual_number": "AZSCV"
+}
+],
+"status_code": 1000,
+"status_message": "Success",
+"timestamp": "2020-01-17T09:54:25Z"
+}
+}
+```
