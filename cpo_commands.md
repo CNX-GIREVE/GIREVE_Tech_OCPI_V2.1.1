@@ -34,6 +34,7 @@ IOP follows the OCPI standard for Commands received by a CPO. [See OCPI specific
 ### 3.1 StartSession request: new attribute « authorization_id »
 
 IOP sends a StartSession command to a CPO with a new attribute, the “authorization_id”. Please refer to paragraph 5. [New attribute « authorization_id »](checkup_edits.md).
+
 The CPO must store this information to send it in Sessions and CDRs related to this Authorization.
 
 ### 3.2 ReserveNow command
