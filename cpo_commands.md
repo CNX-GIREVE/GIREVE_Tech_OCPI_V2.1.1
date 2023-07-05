@@ -41,6 +41,6 @@ The CPO must store this information to send it in Sessions and CDRs related to t
 
 The ReserveNow command is not yet implemented by IOP.
 
-### 3.8.3 UnlockConnector command
+### 3.3 UnlockConnector command
 
 The UnlockConnector is not yet implemented by IOP.
