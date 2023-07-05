@@ -95,12 +95,140 @@ IOP is able to PULL Location requesting CPO backend. In this case, IOP uses the 
 
 The default periodicity is every day.
 
+## 4. Exemples
 
+### 4.1 ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
 
+*URL* :
 
+`/ocpi/emsp/2.1.1/locations/FR/XXX/1111`
+*(FR and XXX refer to the country_code and party_id of the CPO which owns the Location cf. 2.1.3 Client owned object push)*
 
+*Request* :
 
+- **VERB : PUT**
+- **HEADERS** : `{content-type:application/json; charset=UTF-8}{connection:close}{accept:application/json, application/*+json}{authorization:Token xxx-xxx-xxx}`
+- **BODY** :
+```json
+{
+    "id": "eeee",
+    "type": "UNKNOWN",
+    "name": "name ",
+    "address": "address",
+    "city": "city",
+    "postal_code": "pc",
+    "country": "FRA",
+    "coordinates": {
+        "latitude": "11.111111",
+        "longitude": "11.111111"
+    },
+    "related_locations": null,
+    "evses": [
+        {
+            "uid": "aaaaaa",
+            "evse_id": "FR*CPO*E111",
+            "status": "AVAILABLE",
+            "status_schedule": null,
+            "capabilities": [],
+            "connectors": [
+                {
+                    "id": "QSDF",
+                    "standard": "IEC_62196_T2",
+                    "format": "SOCKET",
+                    "power_type": "AC_3_PHASE",
+                    "voltage": 230,
+                    "amperage": 16,
+                    "tariff_id": "A3",
+                    "terms_and_conditions": null,
+                    "last_updated": "2020-01-09T09:45:59Z"
+                }
+            ],
+            "floor_level": "",
+            "coordinates": null,
+            "physical_reference": null,
+            "directions": [],
+            "parking_restrictions": null,
+            "images": null,
+            "last_updated": "2020-01-16T13:25:20Z"
+        }
+    ],
+    "directions": [],
+    "operator": {
+        "name": "FR*CPO",
+        "website": "https://ccc.ddd.com",
+        "logo": {
+            "url": "https://logo.com/logo.png",
+            "thumbnail": "https:// logo.com/img/logo_thumb.png",
+            "category": "OPERATOR",
+            "type": "png",
+            "width": 0,
+            "height": 0
+        }
+    },
+    "suboperator": null,
+    "owner": null,
+    "facilities": [],
+    "time_zone": null,
+    "opening_times": null,
+    "charging_when_closed": false,
+    "images": null,
+    "energy_mix": null,
+    "last_updated": "2020-01-16T13:59:37Z"
+}
 
+``` 
+
+*Response* :
+
+- **CODE** : 200
+- **HEADERS** : `{Date:Thu, 16 Jan 2020 07:30:16 GMT}{Connection:close}{Content-Type:application/json}`
+- **BODY** :  
+```json
+
+  {
+    "data": {},
+    "status_code": 1000,
+    "status_message": "Success",
+    "timestamp": "2020-01-16T14:26:27Z"
+}
+
+```
+
+### 4.2 ToIOP_PATCH_emsp_locations_2.1.1, FromIOP_ PATCH_emsp_locations_2.1.1 (on EVSE)
+
+*URL* :
+
+`/ocpi/emsp/2.1.1/locations/FR/XXX/1111/22222`
+*(FR and XXX refer to the country_code and party_id of the CPO which owns the Location cf. 2.1.3 Client owned object push)*
+
+*Request* :
+
+- **VERB : PATCH**
+- **HEADERS** : `{content-type:application/json; charset=UTF-8}{connection:close}{accept:application/json, application/*+json}{authorization:Token xxx-xxx-xxx}`
+- **BODY** :
+```json
+
+{
+    "status": "AVAILABLE",
+    "last_updated": "2020-01-16T15:18:52Z"
+}
+
+```
+*Response* :
+
+- **CODE** : 200
+- **HEADERS** : `{Date:Thu, 16 Jan 2020 07:30:16 GMT}{Connection:close}{Content-Type:application/json}`
+- **BODY** :  
+```json
+
+{
+    "data": {},
+    "status_code": 1000,
+    "status_message": "Success",
+    "timestamp": "2020-01-16T14:26:27Z"
+}
+
+```
 
 
 
