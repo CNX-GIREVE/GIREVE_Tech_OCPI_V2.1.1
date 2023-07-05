@@ -96,9 +96,9 @@ IOP answers to a POST Token Authorize request with a new attribute of Authorizat
 
 *Request* :
 
-**VERB: GET**
-**HEADERS** : `{Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}`
-**BODY** :
+- **VERB: GET**
+- **HEADERS** : `{Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}`
+- **BODY** :
 
 *Response* :
 ```json
