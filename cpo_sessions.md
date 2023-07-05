@@ -19,8 +19,6 @@ Some of these use cases are required when connecting to GIREVE :
 
 | Use case | Why ? |
 | ----------- | ----------- |
-| **START** Session FromIOP | Remote authorisation and start features on CPO infrastructure are required by GIREVE. |
-| **STOP** Session FromIOP | Remote stop features on CPO infrastructure are required by GIREVE. |
 | **PUT** Session FromIOP | A CPO must be able to send information about charging-sessions through Session objects (charge started, …). |
 
 ## 3. Sessions module specifications
