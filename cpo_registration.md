@@ -118,3 +118,77 @@ IOP is not able to send a **PUT** Credentials to update its Credentials on opera
 }
 
 ```
+
+### 3.3 ToIOP_POST_emsp_credentials_2.1.1, FromIOP_POST_emsp_credentials_2.1.1
+
+Request* :
+
+- **VERB : POST**
+- **HEADERS** : `{content-type:application/json; charset=UTF-8}{connection:close}{accept:application/json, application/*+json}{authorization:Token xxx-xxx-xxx}`
+- **BODY** :
+```json
+{
+    "business_details": {
+        "logo": {
+            "category": "NETWORK",
+            "height": 44,
+            "thumbnail": "http://xxx.xxx.com/yyyy.png",
+            "width": 92,
+            "type": "png",
+            "url": " http://xxx.xxx.com/logo.png"
+        },
+        "website": "http://xxx.com",
+        "name": "NAME"
+    },
+    "token": "aaa-xxx-eee",
+    "party_id": "PID",
+    "country_code": "FR",
+    "url": "https://xxx.com/ocpi/emsp/versions"
+}
+
+```
+*Response* :
+
+- **CODE** : 200
+- **HEADERS** : `Date:Thu, 16 Jan 2020 07:30:16 GMT}{Connection:close}{Content-Type:application/json}`
+- **BODY** :
+```json
+{
+    "data": {
+        "url": "http://xxx.com/ocpi/versions",
+        "token": "eee-fff-ddd",
+        "party_id": "AAA",
+        "country_code": "DE",
+        "business_details": {
+            "name": "NAME"
+        }
+    },
+    "status_code": 1000,
+    "status_message": "Success",
+    "timestamp": "2020-01-14T09:10:21Z"
+}
+
+```
+
+### 3.4 ToIOP_DELETE_emsp_credentials_2.1.1, FromIOP_DELETE_emsp_credentials_2.1.1
+
+*Request* :
+
+- **VERB : DELETE**
+- **HEADERS** : `{content-type:application/json; charset=UTF-8}{connection:close}{accept:application/json, application/*+json}{authorization:Token xxx-xxx-xxx}`
+- **BODY** : EMPTY
+
+*Response* :
+
+- **CODE** : 200
+- **HEADERS** : `Date:Thu, 16 Jan 2020 07:30:16 GMT}{Connection:close}{Content-Type:application/json}`
+- **BODY** :
+```json
+{
+    "data": {},
+    "status_code": 1000,
+    "status_message": "Success",
+    "timestamp": "2020-01-17T09:39:42Z"
+}
+
+```
