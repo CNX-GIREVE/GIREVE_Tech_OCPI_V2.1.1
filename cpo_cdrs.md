@@ -53,3 +53,101 @@ GIREVE has extended OCPI 2.1.1 for CPOs to send signed data in CDRs, aiming to b
 These signed data are included in CDRs following the [OCPI 2.2 specifications](https://github.com/ocpi/ocpi/blob/master/mod_cdrs.asciidoc#mod_cdrs_signed_data_class).
 
 *To activate this feature, the CPO must validate its implementation through the standard GIREVE certification process before the deployment and activation on PRODUCTION. (Please contact connection@gireve.com).*
+
+## 4. Exemples
+
+### 4.1 ToIOP_POST_emsp_cdrs_2.1.1, FromIOP_POST_emsp_cdrs_2.1.1
+
+*URL* :
+
+`/ocpi/emsp/2.1.1/cdrs`
+
+*Request* :
+
+- **VERB : POST**
+- **HEADERS** : `{Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}{Content-Type:application/json}`
+- **BODY** :
+```json
+
+{
+    "id": "AAAAA",
+    "start_date_time": "2020-01-17T07:59:07",
+    "stop_date_time": "2020-01-17T07:59:08",
+    "auth_id": "FR*EMP*1111",
+    "authorization_id": "mmm-ttt",
+    "auth_method": "AUTH_REQUEST",
+    "location": {
+        "id": "1",
+        "type": "ON_STREET",
+        "name": "name",
+        "address": "address",
+        "city": "city",
+        "postal_code": "11111",
+        "country": "FRA",
+        "coordinates": {
+            "latitude": "11.111111",
+            "longitude": "11.111111"
+        },
+        "evses": [
+            {
+                "uid": "23",
+                "evse_id": "FR*CPO*E111",
+                "status": "AVAILABLE",
+                "capabilities": [
+                    "REMOTE_START_STOP_CAPABLE",
+                    "RFID_READER",
+                    "UNLOCK_CAPABLE"
+                ],
+                "connectors": [
+                    {
+                        "id": "1",
+                        "standard": "IEC_62196_T2",
+                        "format": "SOCKET",
+                        "power_type": "AC_3_PHASE",
+                        "voltage": 230,
+                        "amperage": 32,
+                        "last_updated": "2019-12-02T16:17:07"
+                    }
+                ],
+                "last_updated": "2019-08-26T16:46:46"
+            }
+        ],
+        "opening_times": {
+            "twentyfourseven": true
+        },
+        "last_updated": "2019-08-26T13:53:05"
+    },
+    "currency": "EUR",
+    "charging_periods": [
+        {
+            "start_date_time": "2020-01-17T07:59:07",
+            "dimensions": [
+                {
+                    "type": "TIME",
+                    "volume": 0.0002
+                }
+            ]
+        }
+    ],
+    "total_cost": 0,
+    "total_energy": 0,
+    "total_time": 0.0002,
+    "last_updated": "2020-01-17T07:59:19"
+}
+
+```
+
+*Response* :
+
+- **CODE** : 200
+- **HEADERS** : `{Content-Type:application/json}`
+- **BODY** :  
+```json
+
+{
+    "data": {},
+    "status_code": 1000,
+    "status_message": "Success",
+    "timestamp": "2020-01-17T09:39:42Z"
+}
+```
