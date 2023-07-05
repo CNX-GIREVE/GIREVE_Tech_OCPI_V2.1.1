@@ -20,9 +20,26 @@ In case of connection to GIREVE, here is the list of use cases that a CPO can im
 
 Some of these use cases are required when connecting to GIREVE :
 
-### 2.1 Always required
+### 2.1 If the CPO implements the “Roaming” feature
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
-| Push EVSE status/ToIOP | A CPO connected to GIREVE must transfer “in realtime” EVSE status change of its EVSEs. | 
-| Pull Locations/FromIOP | GIREVE wants to be able to refresh EVCI data when needed. |
+| Start Session/FromIOP | Remote authorisation and start features on CPO infrastructure are required by GIREVE. | 
+| Stop Session/FromIOP | Remote stop features on CPO infrastructure are required by GIREVE. |.
+
+## 3.Commands module specifications
+
+IOP follows the OCPI standard for Commands received by a CPO. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_commands.md).
+
+### 3.1 StartSession request: new attribute « authorization_id »
+
+IOP sends a StartSession command to a CPO with a new attribute, the “authorization_id”. Please refer to paragraph 5. [New attribute « authorization_id »](checkup_edits.md).
+The CPO must store this information to send it in Sessions and CDRs related to this Authorization.
+
+### 3.2 ReserveNow command
+
+The ReserveNow command is not yet implemented by IOP.
+
+### 3.8.3 UnlockConnector command
+
+The UnlockConnector is not yet implemented by IOP.
