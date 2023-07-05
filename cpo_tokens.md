@@ -166,7 +166,7 @@ IOP answers to a POST Token Authorize request with a new attribute of Authorizat
 - **BODY** :  
 ```json
 
-  {
+{
     "data": {
     "allowed": "ALLOWED",
     "location": {
