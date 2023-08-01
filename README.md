@@ -16,7 +16,7 @@ A REVOIR : Tips before starting your implementation : [Check-up](checkup_edits.m
 * [1.4 Cardinality expression](#_Toc122429853)
 
 ## [2 Integration Guidelines](#_Toc122429854)
-* [2.1 Technical](#_Toc122429855)
+*[2.1 Technical](#_Toc122429855)
   - [2.1.1 Supported OCPI versions](#_Toc122429856)
   - [2.1.2 Security](#_Toc122429857)
   - [2.1.3 Client owned object push](#_Toc122429858)
