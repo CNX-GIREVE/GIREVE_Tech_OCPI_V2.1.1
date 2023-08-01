@@ -2,9 +2,9 @@
 
 * [3.1 CPO Operation Definition And Naming Rules](#31-cpo-operation-definition-and-naming-rules)
 * [3.2 CPO Operation And Roaming Offers](#32cpo-operation-and-roaming-offers)
-* [3.3 Use Cases Covered By IOP](#32use-cases-covered-by-iop)
+* [3.3 Use Cases Covered By IOP](#33use-cases-covered-by-iop)
   - 3.3.1 Technical Use cases
-* [3.4 Use Cases Required By GIREVE](#34use-cases-required-by-gireve)
+* [3.4 Use Cases Required By GIREVE](#34-use-cases-required-by-gireve)
   - 3.4.1 Always required
 * [3.5 Connection & Register specifications](#35-connection-&-register-specifications)
   - 3.5.1 Update Credentials FromIOP
