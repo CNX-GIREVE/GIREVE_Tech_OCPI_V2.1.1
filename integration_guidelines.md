@@ -108,6 +108,8 @@ An OCPI Roaming session through IOP should run the following workflow
 
 #### Authorisation then initialise Session object
 
+![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/media/8fec8b5e0a4654acb2cf7098f0cafae6.emf)
+
 ![](media/8fec8b5e0a4654acb2cf7098f0cafae6.emf)
 
 #### Session status information exchange, stop then Charge Detail Record
