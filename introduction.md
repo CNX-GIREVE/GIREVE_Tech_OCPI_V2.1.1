@@ -1,34 +1,28 @@
 # Contents
 ## 1 Introduction
-* [1.1 Aims]()
+* [1.1 Aims](# 1.1 Aims)
 * [1.2 Intended Audience]()
 * [1.3 Definitions and Abbreviations]()
 * [1.4 Cardinality expression]()
 
+## Mon Titre (#mon-titre)
 
-[[mod_locations_flow_and_lifecycle]]
-=== Flow and Lifecycle
+Ceci est le contenu de la section "Mon Titre".
 
-The Locations module has the <<mod_locations_location_object,Location>> as base object. 
-Each Location can have multiple EVSEs (1:n) and each EVSE can have multiple Connectors (1:n).
-
+[Cliquez ici pour aller à Mon Titre](#mon-titre)
 
 
-
-
-
-
-## Aims
+## 1.1 Aims
 
 This document describes guidelines to perform a proper connection with the GIREVE’s platform using the OCPI protocol.
 
-## Intended Audience
+## 1.2 Intended Audience
 
 This document is dedicated to technical teams (system administrators, developers, etc.) of systems connected or to be connected to the GIREVE’s platform through OCPI.
 
 This document also covers some operational requirements that must be considered when implementing the OCPI 2.1.1 protocol.
 
-## Definitions and Abbreviations
+## 1.3 Definitions and Abbreviations
 
 | Word | Meaning |
 | ----------- | ----------- |
@@ -37,7 +31,7 @@ This document also covers some operational requirements that must be considered 
 | ToIOP | Referring to flows for which an operator requests GIREVE platform IOP. Partner system is client. IOP is server |
 | FromIOP | Referring to flows for which GIREVE platform IOP requests an operator. IOP is client. Partner system is server |
 
-## Cardinality expression
+## 1.4 Cardinality expression
 
 To designate the cardinality of fields on data structures the following symbols are used:
 
