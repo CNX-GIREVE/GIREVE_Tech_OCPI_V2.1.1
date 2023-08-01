@@ -6,7 +6,7 @@
   - 3.3.1 Technical Use cases
 * [3.4 Use Cases Required By GIREVE](#34-use-cases-required-by-gireve)
   - 3.4.1 Always required
-* [3.5 Connection & Register specifications](#35-connection-&-register-specifications)
+* [3.5 Connection & Register specifications](#35-connection-and-register-specifications)
   - 3.5.1 Update Credentials FromIOP
 * [4 Exemples](#4-exemples)
   - 4.1 ToIOP_GET_emsp_versions, FromIOP_GET_emsp_versions
@@ -71,7 +71,7 @@ Some of these use cases are required when connecting to GIREVE :
 | ----------- | ----------- |
 | Register/FromIOP OR Register/ToIOP |  These use cases are needed to initialise connection between an operator and GIREVE. | 
 
-## 3.5 Connection & Register specifications
+## 3.5 Connection And Register specifications
 
 IOP follows the OCPI standard for Connection & Register process. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/credentials.md).
 
