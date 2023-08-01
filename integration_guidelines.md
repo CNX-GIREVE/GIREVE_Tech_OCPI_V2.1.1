@@ -190,8 +190,43 @@ This new flow can also be used as a fallback for CPOs which download all Tokens 
 
 Description of this new flow in chapter 3.7.3 PULL Tokens by uid: Retrieve a unique Token.
 
+                                        FIN ICI 
 
 
+### Client owned object push
 
-![image](media/0724c0b727d9d70be5d990bcb44921e4.png)
+OCPI introduces a specific use of resource identification mechanism, to manage situation where resource belongs to servers and situation where resource belongs to client. [See OCPI client owned object.](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/transport_and_format.md)
+
+In OCPI, Objects managed through Rest protocol are owned by the CPO or the eMSP:
+
+-   Tokens are owned by the eMSP
+-   Locations are owned by the CPO
+-   Sessions are owned by the CPO
+-   CDRs are owned by the CPO
+-   Tarifs are owned by the CPO
+
+IOP acts as a hub which routes the messages between CPOs and eMSPs, so IOP does not own objects exchanged by these two actors during their communication.
+
+**IOP is not the owner of the exchanged resources. Following this principle, IOP uses “country-code” and “partner-id” of the object owner during communication with other operators.**
+
+For example, IOP pushes Locations of a CPO to an eMSP using “country-code/party-id” of the CPO in the URL.
+
+![](media/0724c0b727d9d70be5d990bcb44921e4.png)
+
+### Pagination
+
+IOP implements pagination mechanisms described by OCPI. [*See OCPI pagination mechanism.*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/transport_and_format.md#pagination)
+
+IOP requires operators to use pagination when they pull resources requesting IOP. If the operator does not use pagination arguments in its request, IOP will force it answering with the first **X** items and a Link to the second page if any.
+
+Finally, IOP for each module has its own max size limit per page (20 Locations, 1000 Tokens, …). These limits can change with IOP evolutions, the operator implementation might be flexible regarding these limits.
+
+### IOP HTTP headers
+
+The next version of OCPI, OCPI 2.2, integrates new extra headers enabling the sharing of a single OCPI connection to multiple operators.
+
+GIREVE has begun to deploy these extra headers in its OCPI version 2.1.1 but it is an ongoing action.
+
+**These extra headers should not be considered yet in OCPI 2.1.1, except for “PULL Tokens: Retrieve Tokens of a single given eMSP” (see chapter 3.7.4 page 22) and “PULL Tokens: Retrieve Locations of a single given CPO” (see chapter 4.4.3 page 29):**
+
 
