@@ -31,7 +31,7 @@ A REVOIR : Tips before starting your implementation : [Integration Guidelines](i
   - 2.4.4 RFID Tokens
   - 2.4.5 Custom OCPI flow to prevent eMSP Tokens download by CPOs
 
-## [3 CPO Specfic Implementation Guidelines](#cpo_edits.md)
+## [3 CPO Specfic Implementation Guidelines](cpo_edits.md)
 * 3.1 CPO Operation Definition And Naming Rules
 * 3.2 CPO Operation And Roaming Offers
 * 3.3 Use Cases Covered By IOP
