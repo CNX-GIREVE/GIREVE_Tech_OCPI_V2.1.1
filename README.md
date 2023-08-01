@@ -10,10 +10,10 @@ A REVOIR : Tips before starting your implementation : [Check-up](checkup_edits.m
 - [eMSP Specific implementation guidlines](emsp_edits.md).
 
 ## [1 Introduction](#_Toc122429849)
-*[1.1 Aims](#_Toc122429850)
-*[1.2 Intended Audience](#_Toc122429851)
-*[1.3 Definitions and Abbreviations](#_Toc122429852)
-*[1.4 Cardinality expression](#_Toc122429853)
+* [1.1 Aims](#_Toc122429850)
+* [1.2 Intended Audience](#_Toc122429851)
+* [1.3 Definitions and Abbreviations](#_Toc122429852)
+* [1.4 Cardinality expression](#_Toc122429853)
 
 ## [2 Integration Guidelines](#_Toc122429854)
 *[2.1 Technical](#_Toc122429855)
