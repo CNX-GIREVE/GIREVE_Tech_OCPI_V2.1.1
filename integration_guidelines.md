@@ -108,7 +108,7 @@ An OCPI Roaming session through IOP should run the following workflow
 
 #### Authorisation then initialise Session object
 
-![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/b31cb733-abe7-420c-8784-ddba1d846a46)
+![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/d88b1cad-a81b-48cc-b887-aae5d4d1b779)
 
 #### Session status information exchange, stop then Charge Detail Record
 
@@ -126,7 +126,7 @@ This new property must be provided by the eMSP during the authorisation process,
 
 #### “authorization_id” in local authorization
 
-![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/73d2f22e-b276-447e-92a0-57ce49200b01)
+![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/ec32c777-cca6-4f69-ad2d-9bc2121d69d1)
 
 #### “authorization_id” in remote authorization
 
