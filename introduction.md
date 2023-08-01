@@ -30,7 +30,12 @@ This document also covers some operational requirements that must be considered 
 
 To designate the cardinality of fields on data structures the following symbols are used:
 
-![](media/ebc894d041323455718e436089619559.png)
+| Symbol | Description |
+| ----------- | ----------- |
+| ? | An optional object. If not set, it might be null, or the field might be omitted. When the field is omitted and it has a default value, the value is the default value. |
+| 1 | Required object. |
+| * | A list of zero or more objects. If empty, it might be null, [] or the field might be omitted. |
+| + | A list of at least one object. |
 
 **Note that some attributes may not be mandatory by the OCPI standard but are required by Gireve for quality reasons.**
 
