@@ -126,7 +126,7 @@ This new property must be provided by the eMSP during the authorisation process,
 
 #### “authorization_id” in local authorization
 
-![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/aefbd597-cb4a-4bae-ba23-6084699383cd)
+![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/73d2f22e-b276-447e-92a0-57ce49200b01)
 
 #### “authorization_id” in remote authorization
 
