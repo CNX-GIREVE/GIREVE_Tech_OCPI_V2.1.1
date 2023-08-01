@@ -16,20 +16,20 @@ A REVOIR : Tips before starting your implementation : [Integration Guidelines](i
 * 1.4 Cardinality expression
   
 ## [2 Integration Guidelines](integration_guidelines.md)
-* [2.1 Technical](#_Toc122429855)
-  - [2.1.1 Supported OCPI versions](#_Toc122429856)
-  - [2.1.2 Security](#_Toc122429857)
-  - [2.1.3 Client owned object push](#_Toc122429858)
-  - [2.1.4 Pagination](#_Toc122429859)
-  - [2.1.5 IOP HTTP headers](#_Toc122429860)  
-* [2.2 OCPI modules implemented by IOP](#_Toc122429861)
-* [2.3 GIREVE management of Locations data](#_Toc122429862)
-* [2.4 Roaming](#_Toc122429871)
-  - [2.4.1 General workflow](#_Toc122429872)
-  - [2.4.2 New attribute « authorization_id »](#_Toc122429873)
-  - [2.4.3 Management of B2B tariffs](#_Toc122429874)
-  - [2.4.4 RFID Tokens](#_Toc122429875)
-  - [2.4.5 Custom OCPI flow to prevent eMSP Tokens download by CPOs](#_Toc122429876)
+* 2.1 Technical
+  - 2.1.1 Supported OCPI versions
+  - 2.1.2 Security
+  - 2.1.3 Client owned object push
+  - 2.1.4 Pagination
+  - 2.1.5 IOP HTTP headers
+* 2.2 OCPI modules implemented by IOP
+* 2.3 GIREVE management of Locations data
+* 2.4 Roaming
+  - 2.4.1 General workflow
+  - 2.4.2 New attribute « authorization_id »
+  - 2.4.3 Management of B2B tariffs
+  - 2.4.4 RFID Tokens
+  - 2.4.5 Custom OCPI flow to prevent eMSP Tokens download by CPOs
 
 ## [3 CPO Specfic Implementation Guidelines](#_Toc122429877)
 * [3.1 CPO Operation Definition And Naming Rules](#_Toc122429878)
