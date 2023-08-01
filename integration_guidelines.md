@@ -108,13 +108,11 @@ An OCPI Roaming session through IOP should run the following workflow
 
 #### Authorisation then initialise Session object
 
-![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/media/8fec8b5e0a4654acb2cf7098f0cafae6.emf)
-
-![](media/8fec8b5e0a4654acb2cf7098f0cafae6.emf)
+![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/b31cb733-abe7-420c-8784-ddba1d846a46)
 
 #### Session status information exchange, stop then Charge Detail Record
 
-![](media/d80d615cc2bdd8510bc784e0aa76b96e.emf)
+![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/ac509c35-6d0b-4e82-b83a-048aa302c283)
 
 ### 2.4.2 New attribute « authorization_id »
 
@@ -128,19 +126,19 @@ This new property must be provided by the eMSP during the authorisation process,
 
 #### “authorization_id” in local authorization
 
-![](media/313ffe2ad92b9c64f4ff1a2a365188b2.png)
+![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/aefbd597-cb4a-4bae-ba23-6084699383cd)
 
 #### “authorization_id” in remote authorization
 
-![](media/2dc2a3d3c73e0a9694525bffce6e85d2.png)
+![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/a9ec03ea-c428-4ece-aaf4-250ca84d0723)
 
 #### “authorization_id” in Sessions
 
-![](media/80bc04d9c9d46e4a6af5d03315d9eb85.png)
+![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/e0f0d1a6-4c65-4e05-913c-1cb9926aa2ec)
 
 #### “authorization_id” in CDRs
 
-![](media/913628d91d26f97470fd2090ea6778f1.png)
+![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/4c43625c-efb0-4daf-b7ef-a4e7d1128223)
 
 ### 2.4.3 Management of B2B tariffs
 
@@ -183,52 +181,11 @@ Using this new flow, the CPO can decide to:
 
 -   Send an authorization request to IOP without knowledge of the Token. If the authorization is accepted the CPO gets the Token, including the “auth_id”, with the new flow then send Sessions and CDRs.  
       
-     ![](media/fc3cb631c1aa4601d08bcc9343dd638f.png)
+     ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/12bbe067-d4e7-45bd-8cef-3a7195115ca6)
 -   Or request this new flow to get the Token description and the confirmation that this Token is owned by an eMSP behind GIREVE, then send the authorization request to GIREVE.  
       
-     ![](media/ff39e3d06b58f7858f75a6e827140571.png)
+    ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/5f86964a-3b30-41a1-b8cf-a9a62b1b6ac0)
 
 This new flow can also be used as a fallback for CPOs which download all Tokens and have a local authorization for an unknown Token.
 
 Description of this new flow in chapter 3.7.3 PULL Tokens by uid: Retrieve a unique Token.
-
-                                        FIN ICI 
-
-
-### Client owned object push
-
-OCPI introduces a specific use of resource identification mechanism, to manage situation where resource belongs to servers and situation where resource belongs to client. [See OCPI client owned object.](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/transport_and_format.md)
-
-In OCPI, Objects managed through Rest protocol are owned by the CPO or the eMSP:
-
--   Tokens are owned by the eMSP
--   Locations are owned by the CPO
--   Sessions are owned by the CPO
--   CDRs are owned by the CPO
--   Tarifs are owned by the CPO
-
-IOP acts as a hub which routes the messages between CPOs and eMSPs, so IOP does not own objects exchanged by these two actors during their communication.
-
-**IOP is not the owner of the exchanged resources. Following this principle, IOP uses “country-code” and “partner-id” of the object owner during communication with other operators.**
-
-For example, IOP pushes Locations of a CPO to an eMSP using “country-code/party-id” of the CPO in the URL.
-
-![](media/0724c0b727d9d70be5d990bcb44921e4.png)
-
-### Pagination
-
-IOP implements pagination mechanisms described by OCPI. [*See OCPI pagination mechanism.*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/transport_and_format.md#pagination)
-
-IOP requires operators to use pagination when they pull resources requesting IOP. If the operator does not use pagination arguments in its request, IOP will force it answering with the first **X** items and a Link to the second page if any.
-
-Finally, IOP for each module has its own max size limit per page (20 Locations, 1000 Tokens, …). These limits can change with IOP evolutions, the operator implementation might be flexible regarding these limits.
-
-### IOP HTTP headers
-
-The next version of OCPI, OCPI 2.2, integrates new extra headers enabling the sharing of a single OCPI connection to multiple operators.
-
-GIREVE has begun to deploy these extra headers in its OCPI version 2.1.1 but it is an ongoing action.
-
-**These extra headers should not be considered yet in OCPI 2.1.1, except for “PULL Tokens: Retrieve Tokens of a single given eMSP” (see chapter 3.7.4 page 22) and “PULL Tokens: Retrieve Locations of a single given CPO” (see chapter 4.4.3 page 29):**
-
-
