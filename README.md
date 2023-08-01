@@ -9,13 +9,13 @@ A REVOIR : Tips before starting your implementation : [Integration Guidelines](i
 - [CPO Specific implementation guidlines](cpo_edits.md).
 - [eMSP Specific implementation guidlines](emsp_edits.md).
 
-## [1 Introduction](#_Toc122429849)
-* [1.1 Aims](#_Toc122429850)
-* [1.2 Intended Audience](#_Toc122429851)
-* [1.3 Definitions and Abbreviations](#_Toc122429852)
-* [1.4 Cardinality expression](#_Toc122429853)
+## [1 Introduction](introduction.md)
+* 1.1 Aims
+* 1.2 Intended Audience
+* 1.3 Definitions and Abbreviations
+* 1.4 Cardinality expression
   
-## [2 Integration Guidelines](#_Toc122429854)
+## [2 Integration Guidelines](integration_guidelines.md)
 * [2.1 Technical](#_Toc122429855)
   - [2.1.1 Supported OCPI versions](#_Toc122429856)
   - [2.1.2 Security](#_Toc122429857)
