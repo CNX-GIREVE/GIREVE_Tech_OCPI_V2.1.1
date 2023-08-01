@@ -1,11 +1,10 @@
 # Contents
 ## 1 Introduction
-* [1.1 Aims](#1-1-aims)
-* [1.2 Intended Audience](#1-2-intended-audience)
-* [1.3 Definitions and Abbreviations](#1-3-definitions-and-abbreviations)
-* [1.4 Cardinality expression](#1-4-cardinality-expression)
-* 
-See the section on [`1.1 Aims`](#11-aims).
+* [1.1 Aims](#11-aims)
+* [1.2 Intended Audience](#12-intended-audience)
+* [1.3 Definitions and Abbreviations](#13-definitions-and-abbreviations)
+* [1.4 Cardinality expression](#14-cardinality-expression)
+
 
 ## 1.1 Aims
 
