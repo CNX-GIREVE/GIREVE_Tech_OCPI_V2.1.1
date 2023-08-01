@@ -5,7 +5,7 @@
 * [1.3 Definitions and Abbreviations](#1-3-definitions-and-abbreviations)
 * [1.4 Cardinality expression](#1-4-cardinality-expression)
 * 
-See the section on [`1.1 Aims`](##1.1Aims).
+See the section on [`1.1 Aims`](#11-aims).
 
 ## 1.1 Aims
 
