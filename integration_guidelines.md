@@ -1,4 +1,4 @@
-* Contents
+# Contents
 
 * [2.1 Technical](#21-technical)
   - [2.1.1 Supported OCPI versions](#211-supported-ocpi-versions)
@@ -14,6 +14,8 @@
   - [2.4.3 Management of B2B tariffs](#243-management-of-b2b-tariffs)
   - [2.4.4 RFID Tokens](#244-rfid-tokens)
   - [2.4.5 Custom OCPI flow to prevent eMSP Tokens download by CPOs](#245-custom-ocpi-flow-to-prevent-emsp-tokens-download-by-cpos)
+ 
+*** 
 
 ## 2.1 Technical
 
