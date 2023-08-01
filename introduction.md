@@ -5,9 +5,9 @@
 * [1.3 Definitions and Abbreviations](#1-3-definitions-and-abbreviations)
 * [1.4 Cardinality expression](#1-4-cardinality-expression)
 * 
-See the section on [`code`](#code).
+See the section on [`1.1 Aims`](##1.1Aims).
 
-## 1.1 Aims {#1-1-aims}
+## 1.1 Aims
 
 This document describes guidelines to perform a proper connection with the GIREVE’s platform using the OCPI protocol.
 
