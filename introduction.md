@@ -4,8 +4,10 @@
 * [1.2 Intended Audience](#1-2-intended-audience)
 * [1.3 Definitions and Abbreviations](#1-3-definitions-and-abbreviations)
 * [1.4 Cardinality expression](#1-4-cardinality-expression)
+* 
+See the section on [`code`](#code).
 
-(## 1.1 Aims {#1-1-aims})
+## 1.1 Aims {#1-1-aims}
 
 This document describes guidelines to perform a proper connection with the GIREVE’s platform using the OCPI protocol.
 
