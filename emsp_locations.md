@@ -7,7 +7,7 @@
 * [4.2 Use Cases Required By GIREVE](#42-use-cases-required-by-gireve)
   - 4.2.2	If the eMSP implements the “Locations static data download” feature
   - 4.2.3	If the eMSP implements the “Locations dynamic data download” feature
-* [4.4 LOCATIONS MODULE SPECIFICATIONS](#44-locations-module-specifications)
+* [4.4 Locations module specifications](#44-locations-module-specifications)
   - 4.4.1 Static and dynamic attributes
   - 4.4.2 PULL Locations ToIOP: Who is the CPO?
   - 4.4.3 PULL Tokens: Retrieve Locations of a single given CPO
