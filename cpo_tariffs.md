@@ -46,7 +46,7 @@ GIREVE uses the “tariff_id” information provided by CPOs in Locations to dis
 
 **Considering that, we strongly suggest to fill the “tariff_id” information when the CPO uploads its Locations to GIREVE IOP platform.**
 
-## 3.11 Tariffs module specification
+## 3.11 Tariffs module specifications
 
 IOP follows the OCPI standard for Tariffs upload by a CPO. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_tariffs.md).
 
