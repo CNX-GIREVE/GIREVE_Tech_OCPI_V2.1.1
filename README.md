@@ -33,7 +33,7 @@ A REVOIR : Tips before starting your implementation : [Integration Guidelines](i
 
 ## [3 CPO Specfic Implementation Guidelines](cpo_edits.md)
 * 3.1 [CPO Operation Definition And Naming Rules](cpo_registration.md/#31-cpo-operation-definition-and-naming-rules)
-* 3.2 [CPO Operation And Roaming Offers](cpo_registrtion.md/#32cpo-operation-and-roaming-offers)
+* 3.2 [CPO Operation And Roaming Offers](cpo_registration.md/#32cpo-operation-and-roaming-offers)
 * 3.3 Use Cases Covered By IOP
   - 3.3.1 Technical Use cases
   - 3.3.2 EVCI data
