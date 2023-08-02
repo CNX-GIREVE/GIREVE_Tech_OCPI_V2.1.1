@@ -1,3 +1,5 @@
+# [Module selection](cpo_edits.md)
+
 # Contents
 
 * [3.1 CPO Operation Definition And Naming Rules](#31-cpo-operation-definition-and-naming-rules)
