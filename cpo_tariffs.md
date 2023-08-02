@@ -9,7 +9,7 @@
   - 3.11.1 Tariffs flows implemented by GIREVE
   - 3.11.2 Specific properties added by GIREVE
   - 3.11.3 Store and forward – PUT TARIFFS
-* [5 Exemples](#4-exemples)
+* [5.7 Exemples](#57-exemples)
   - 5.7.1 ToIOP_PUT_emsp_tariffs_2.1.1
   - 5.7.2 ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
 
