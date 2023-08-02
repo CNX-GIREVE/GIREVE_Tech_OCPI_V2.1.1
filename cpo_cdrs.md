@@ -10,8 +10,8 @@
   - 3.10.3 CDR content
   - 3.10.4 Store and Forward - POST CDRs
   - 3.10.5 Send the signed data (Calibration Law/Eichrecht)
-* [4 Exemples](#4-exemples)
-  - 4.1 ToIOP_POST_emsp_cdrs_2.1.1, FromIOP_POST_emsp_cdrs_2.1.1
+* [5.6 Exemples](#56-exemples)
+  - 5.6.1 ToIOP_POST_emsp_cdrs_2.1.1, FromIOP_POST_emsp_cdrs_2.1.1
 
 ***
 
@@ -73,9 +73,9 @@ These signed data are included in CDRs following the [OCPI 2.2 specifications](h
 
 *To activate this feature, the CPO must validate its implementation through the standard GIREVE certification process before the deployment and activation on PRODUCTION. (Please contact connection@gireve.com).*
 
-## 4. Exemples
+## 5.6 Exemples
 
-### 4.1 ToIOP_POST_emsp_cdrs_2.1.1, FromIOP_POST_emsp_cdrs_2.1.1
+### 5.6.1 ToIOP_POST_emsp_cdrs_2.1.1, FromIOP_POST_emsp_cdrs_2.1.1
 
 *URL* :
 
