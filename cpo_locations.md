@@ -12,9 +12,9 @@
   - 3.6.5 Store and Forward – PUT and PATCH Locations
   - 3.6.6 PULL Locations ToIOP
   - 3.6.7 PULL Locations FromIOP 
-* [4 Exemples](#4-exemples)
-  - 4.1 ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
-  - 4.2 ToIOP_PATCH_emsp_locations_2.1.1, FromIOP_ PATCH_emsp_locations_2.1.1 (on EVSE)
+* [5.2 Exemples](#4-exemples)
+  - 5.2.2 ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
+  - 5.2.3 ToIOP_PATCH_emsp_locations_2.1.1, FromIOP_ PATCH_emsp_locations_2.1.1 (on EVSE)
 
 ***
 
@@ -117,9 +117,9 @@ IOP is able to PULL Location requesting CPO backend. In this case, IOP uses the 
 
 The default periodicity is every day.
 
-## 4. Exemples
+## 5.2 Exemples
 
-### 4.1 ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
+### 5.2.2 ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
 
 *URL* :
 
@@ -216,7 +216,7 @@ The default periodicity is every day.
 
 ```
 
-### 4.2 ToIOP_PATCH_emsp_locations_2.1.1, FromIOP_ PATCH_emsp_locations_2.1.1 (on EVSE)
+### 5.2.3 ToIOP_PATCH_emsp_locations_2.1.1, FromIOP_ PATCH_emsp_locations_2.1.1 (on EVSE)
 
 *URL* :
 
