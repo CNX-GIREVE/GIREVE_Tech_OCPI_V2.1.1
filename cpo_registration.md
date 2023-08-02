@@ -50,7 +50,7 @@ OCPI features are composed by several use cases that a CPO can choose to impleme
 
 In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
 
-## 3.3.1 Technical Use cases
+### 3.3.1 Technical Use cases
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
