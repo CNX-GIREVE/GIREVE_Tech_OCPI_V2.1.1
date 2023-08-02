@@ -8,9 +8,9 @@
   - 3.9.1 Session Initialisation
   - 3.9.2 Usage of “authorization_id”
   - 3.9.3 Store and forward – PUT Sessions
-* [4 Exemples](#4-exemples)
-  - 4.1 ToIOP_PUT_emsp_sessions_2.1.1, FromIOP_PUT_emsp_sessions_2.1.1
-  - 4.2 ToIOP_PATCH_emsp_sessions_2.1.1, FromIOP_PATCH_emsp_sessions_2.1.1
+* [5.5 Exemples](#55-exemples)
+  - 5.5.1 ToIOP_PUT_emsp_sessions_2.1.1, FromIOP_PUT_emsp_sessions_2.1.1
+  - 5.5.2 ToIOP_PATCH_emsp_sessions_2.1.1, FromIOP_PATCH_emsp_sessions_2.1.1
 
 ***
 
@@ -55,9 +55,9 @@ When sending a Session, the CPO defines the Authorization it refers to on provid
 
 A Store and Forward mechanism must be implemented to ensure that no session may be lost, in case of a connection loss. Any PUT session that didn’t get a correct response from the GIREVE platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the session messages must be resent in a FIFO manner.
 
-## 4. Exemples
+## 5.5 Exemples
 
-### 4.1 ToIOP_PUT_emsp_sessions_2.1.1, FromIOP_PUT_emsp_sessions_2.1.1
+### 5.5.1 ToIOP_PUT_emsp_sessions_2.1.1, FromIOP_PUT_emsp_sessions_2.1.1
 
 *URL* :
 
@@ -155,7 +155,7 @@ A Store and Forward mechanism must be implemented to ensure that no session may 
 
 ```
 
-### 4.2 ToIOP_PATCH_emsp_sessions_2.1.1, FromIOP_PATCH_emsp_sessions_2.1.1
+### 5.5.2 ToIOP_PATCH_emsp_sessions_2.1.1, FromIOP_PATCH_emsp_sessions_2.1.1
 
 *URL* :
 
