@@ -9,9 +9,9 @@
   - 3.11.1 Tariffs flows implemented by GIREVE
   - 3.11.2 Specific properties added by GIREVE
   - 3.11.3 Store and forward – PUT TARIFFS
-* [4 Exemples](#4-exemples)
-  - 4.1 ToIOP_PUT_emsp_tariffs_2.1.1
-  - 4.2 ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
+* [5 Exemples](#4-exemples)
+  - 5.7.1 ToIOP_PUT_emsp_tariffs_2.1.1
+  - 5.7.2 ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
 
 ***
 
@@ -76,9 +76,9 @@ GIREVE adds a third “TariffDimensionType” named “SESSION_TIME” with the 
 
 Similarly to a POST Cdrs, Store and Forward mechanism must be implemented to ensure that no Tariffs may be lost, in case of a connection loss. Any PUT Tariffs that didn’t get a correct response from the GIREVE platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the Tariffs messages must be resent in a FIFO manner.
 
-## 4 Exemples
+## 5 Exemples
 
-### 4.1 ToIOP_PUT_emsp_tariffs_2.1.1
+### 5.7.1 ToIOP_PUT_emsp_tariffs_2.1.1
 
 *URL* :
 
@@ -133,7 +133,7 @@ Similarly to a POST Cdrs, Store and Forward mechanism must be implemented to ens
 
 ```
 
-### 4.2 ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
+### 5.7.2 ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
 
 *URL* :
 
