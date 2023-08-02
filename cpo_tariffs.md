@@ -133,7 +133,7 @@ Similarly to a POST Cdrs, Store and Forward mechanism must be implemented to ens
 
 ```
 
-### 5.7.2 ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
+### 4.2 ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
 
 *URL* :
 
