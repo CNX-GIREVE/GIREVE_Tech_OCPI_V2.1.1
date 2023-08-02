@@ -34,7 +34,7 @@ Specifically, all evse_id included into a given operation must always start with
 
 It is not allowed to include in a given CPO operation evse_ids that start with a different Operator Id.
 
-## 3.2	CPO operation and roaming offers
+## 3.2 CPO operation and roaming offers
 
 Reminder : If a CPO manages multiple operations, each operation has to go through the OCPI connection establishment process (handshake). 
 A CPO Operation is the smallest entity that can constitute a roaming offer.
