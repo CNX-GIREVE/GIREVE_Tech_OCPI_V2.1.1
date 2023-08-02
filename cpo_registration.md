@@ -10,7 +10,7 @@
   - 3.4.1 Always required
 * [3.5 Connection & Register specifications](#35-connection-and-register-specifications)
   - 3.5.1 Update Credentials FromIOP
-* [5 Exemples](#5-exemples)
+* [5.1 Exemples](#51-exemples)
   - 5.1.1 ToIOP_GET_emsp_versions, FromIOP_GET_emsp_versions
   - 5.1.2 ToIOP_GET_emsp_version_detail_2.1.1, FromIOP_GET_emsp_version_detail_2.1.1
   - 5.1.3 ToIOP_POST_emsp_credentials_2.1.1, FromIOP_POST_emsp_credentials_2.1.1
@@ -81,7 +81,7 @@ IOP follows the OCPI standard for Connection & Register process. [See OCPI speci
 
 IOP is not able to send a **PUT** Credentials to update its Credentials on operator backend. In order to update them, IOP sends a “**DELETE** Credentials” to delete the OCPI connection then starts a new Connection & Register process beginning by a **POST** Credentials sent by IOP or by the operator.
 
-## 5 Exemples 
+## 5.1 Exemples 
 
 ### 5.1.1 ToIOP_GET_emsp_versions, FromIOP_GET_emsp_versions
 
