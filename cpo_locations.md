@@ -12,7 +12,7 @@
   - 3.6.5 Store and Forward – PUT and PATCH Locations
   - 3.6.6 PULL Locations ToIOP
   - 3.6.7 PULL Locations FromIOP 
-* [5.2 Exemples](#4-exemples)
+* [5.2 Exemples](#52-exemples)
   - 5.2.2 ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
   - 5.2.3 ToIOP_PATCH_emsp_locations_2.1.1, FromIOP_ PATCH_emsp_locations_2.1.1 (on EVSE)
 
