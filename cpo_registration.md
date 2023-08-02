@@ -1,8 +1,8 @@
 # Contents
 
 * [3.1 CPO Operation Definition And Naming Rules](#31-cpo-operation-definition-and-naming-rules)
-* [3.2 CPO Operation And Roaming Offers](#32/cpo-operation-and-roaming-offers)
-* [3.3 Use Cases Covered By IOP](#33/use-cases-covered-by-iop)
+* [3.2 CPO Operation And Roaming Offers](#32-cpo-operation-and-roaming-offers)
+* [3.3 Use Cases Covered By IOP](#33-use-cases-covered-by-iop)
   - 3.3.1 Technical Use cases
 * [3.4 Use Cases Required By GIREVE](#34-use-cases-required-by-gireve)
   - 3.4.1 Always required
