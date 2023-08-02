@@ -142,19 +142,19 @@ IOP will never PULL eMSP to check the status of a Location, EVSE or Connector ob
 
 ### 5.2.1 ToIOP_GET_cpo_locations_2.1.1, FromIOP_GET_cpo_locations_2.1.1
 
-**URL**:
+*URL* :
 
 `/ocpi/cpo/2.1.1/locations?date_from=2020-01-20T14:51:43Z&limit=20&offset=10`
-*(Date_from parameter shall be the date of the last successful request)*
+(Date_from parameter shall be the date of the last successful request)
 
-**Request**:
+*Request* :
 
 - **VERB: GET**
 - **HEADERS**: `{connection:close}{accept:application/json, application/*+json}{authorization:Token xxx-xxx-xxx}`
 + `{ocpi-to-party-id:CPO}{ocpi-to-country-code:FR}` (If you wish to get the locations of a specific CPO)
-- **BODY**: (Empty body)
+- **BODY**: (No body)
 
-**Response**:
+*Response* :
 
 - **CODE**: 200
 - **HEADERS**: `{Date:Thu, 16 Jan 2020 07:30:16 GMT}{Connection:close}{Content-Type:application/json} {Link:<https://xxx.ddd.com/ocpi/cpo/2.1.1/locations?date_from=2020-01-20T14:51:43Z&limit=20&offset=30>;rel="next"} {X-Total-Count:11682} {X-Limit:20}`
@@ -177,4 +177,45 @@ IOP will never PULL eMSP to check the status of a Location, EVSE or Connector ob
         "uid": "33656",
         "status": "AVAILABLE",
         "capabilities": [
-          "REMOTE_START_STOP_CAP
+          "REMOTE_START_STOP_CAPABLE",
+          "RFID_READER"
+        ],
+        "connectors": [
+          {
+            "id": "UIOP",
+            "standard": "IEC_62196_T2",
+            "format": "SOCKET",
+            "voltage": 230,
+            "amperage": 32,
+            "power_type": "AC_1_PHASE",
+            "last_updated": "2019-11-21T10:43:49Z"
+          }
+        ],
+        "coordinates": {
+          "latitude": "11.222222",
+          "longitude": "11.222222"
+        },
+        "evse_id": "ES*AAA*E11111",
+        "last_updated": "2019-11-21T10:43:49Z"
+      }
+    ],
+    "operator": {
+      "name": "ES*AAA"
+    },
+    "postal_code": "12345",
+    "related_locations": [
+      {
+        "latitude": "11.222222",
+        "longitude": "11.222222"
+      }
+    ],
+    "opening_times": {
+      "twentyfourseven": true
+    },
+    "last_updated": "2019-11-21T10:43:49Z"
+  }],
+  "status_code": 1000,
+  "status_message": "Success",
+  "timestamp": "2020-01-15T18:56:08Z"
+}
+```
