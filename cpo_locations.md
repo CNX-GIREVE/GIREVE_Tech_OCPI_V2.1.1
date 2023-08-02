@@ -1,6 +1,6 @@
 # Contents 
 
-* [3.3 Use Cases Covered By IOP](#33use-cases-covered-by-iop)
+* [3.3 Use Cases Covered By IOP](#33-use-cases-covered-by-iop)
   - 3.3.2 EVCI data
 * [3.4 Use Cases Required By GIREVE](#34-use-cases-required-by-gireve)
   - 3.4.1 Always required
