@@ -5,7 +5,7 @@
 * [3.4 Use Cases Required By GIREVE](#34-use-cases-required-by-gireve)
   - 3.4.3 If the CPO doesn’t commit and describe its tariffs in a roaming agreement 
   - 3.6.3 Tarrif_id value
-* [3.11 Tariffs module specifications](#311-tarrifs-module-specifications)
+* [3.11 Tariffs module specifications](#311-tariffs-module-specifications)
   - 3.11.1 Tariffs flows implemented by GIREVE
   - 3.11.2 Specific properties added by GIREVE
   - 3.11.3 Store and forward – PUT TARIFFS
