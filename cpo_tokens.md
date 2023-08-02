@@ -4,7 +4,7 @@
   - 3.3.3 Roaming                                                            
 * [3.4 Use Cases Required By GIREVE](#34-use-cases-required-by-gireve)
   - 3.4.2 If the CPO implements the "Roaming" feature 
-* [3.7 Tokens module specifications](#37-tarrifs-module-specifications)
+* [3.7 Tokens module specifications](#37-tokens-module-specifications)
   - 3.7.1 GET Tokens To/FromIOP	
   - 3.7.2 PULL Tokens: Who is the eMSP?	
   - 3.7.3 PULL Tokens by uid: Retrieve a unique Token	
