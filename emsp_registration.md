@@ -8,7 +8,7 @@
   - 4.2.1 Always required
 * [4.3 Connection & Register specifications](#43-connection-and-register-specifications)
   - 4.3.1 Update Credentials FromIOP
-* [5 Exemples](#5-exemples)
+* [5.1 Exemples](#51-exemples)
   - 5.1.1 ToIOP_GET_cpo_versions, FromIOP_GET_cpo_versions
   - 5.1.2 ToIOP_GET_cpo_version_detail_2.1.1, FromIOP_GET_cpo_version_detail_2.1.1
   - 5.1.3 ToIOP_POST_cpo_credentials_2.1.1, FromIOP_POST_cpo_credentials_2.1.1
