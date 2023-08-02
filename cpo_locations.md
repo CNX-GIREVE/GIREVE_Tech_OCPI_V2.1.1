@@ -4,7 +4,7 @@
   - 3.3.2 EVCI data
 * [3.4 Use Cases Required By GIREVE](#34-use-cases-required-by-gireve)
   - 3.4.1 Always required
-* [3.6 Locations module specification](#35-locations-module-specifications)
+* [3.6 Locations module specifications](#36-locations-module-specifications)
   - 3.6.1 Static and dynamic attributes
   - 3.6.2 EVSE object
   - 3.6.3 Tariff_id value
