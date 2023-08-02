@@ -40,7 +40,7 @@ Some of these use cases are required when connecting to GIREVE :
 | ----------- | ----------- |
 | Register/FromIOP OR Register/ToIOP |  These use cases are needed to initialise connection between an operator and GIREVE. | 
 
-## 4.3 Connection & Register specifications
+## 4.3 Connection and Register specifications
 
 IOP follows the OCPI standard for Connection & Register process. [*See OCPI specifications.*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/credentials.md)
 
