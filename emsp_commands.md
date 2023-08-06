@@ -95,7 +95,8 @@ IOP requires it to do the mapping with the eMIP protocol.
 ```
 
 **Response :**
-```
+
+
 **CODE : 200**
 **HEADERS : ** {Content-Type:application/json}
 **BODY : **
