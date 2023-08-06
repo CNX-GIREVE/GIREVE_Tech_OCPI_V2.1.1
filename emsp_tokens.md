@@ -27,8 +27,8 @@ OCPI features are composed by several use cases that an eMSP can choose to imple
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
-| Push Tokens | An eMSP updates its Tokens stored in IOP. |
-| Pull Tokens | | FromIOP |IOP requests an eMSP to retrieve eMSP tokens. |
+| Push Tokens | ToIOP | An eMSP updates its Tokens stored in IOP. |
+| Pull Tokens |  FromIOP | IOP requests an eMSP to retrieve eMSP tokens. |
 | Check Tokens | ToIOP | An eMSP requests IOP to get its tokens stored in IOP.|
 | Realtime Authorisation | FromIOP | IOP, triggered by a get authorisation request coming from a CPO, requests an eMSP to get the authorisation for a charging session |
 
