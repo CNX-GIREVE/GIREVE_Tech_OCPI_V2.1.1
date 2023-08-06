@@ -72,7 +72,7 @@ IOP requires it to do the mapping with the eMIP protocol.
 **Request:**
 
 - **VERB: POST**
-- **HEADERS : ** {Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}{Content-Type:application/json}
+- **HEADERS :** {Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}{Content-Type:application/json}
 - **BODY :**
 
 ```json
@@ -98,8 +98,8 @@ IOP requires it to do the mapping with the eMIP protocol.
 
 
 - **CODE : 200**
-- **HEADERS : ** {Content-Type:application/json}
-- **BODY : **
+- **HEADERS :** {Content-Type:application/json}
+- **BODY :**
 
 ```json
 {
@@ -131,9 +131,9 @@ IOP requires it to do the mapping with the eMIP protocol.
 }
 ```
 
-**Response :**
+** Response :**
 
-- **CODE: 200**
+- **CODE : 200**
 - **HEADERS :** {Content-Type:application/json}
 - **BODY :**
 
