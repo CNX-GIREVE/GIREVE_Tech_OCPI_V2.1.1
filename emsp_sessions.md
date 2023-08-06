@@ -34,7 +34,7 @@ Some of these use cases are required when connecting to GIREVE :
 | ----------- | ----------- |
 | Push Session/FromIOP OR Pull Session/ToIOP | Required to be alerted about charging-sessions status changes. | 
 
-## 4.7 Sessions module specification
+## 4.7 Sessions module specifications
 
 IOP follows the OCPI standard for Sessions sent by a CPO. [*See OCPI specifications*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_sessions.md)*.*
 
