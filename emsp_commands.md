@@ -64,12 +64,12 @@ IOP requires it to do the mapping with the eMIP protocol.
 
 ### 5.4.1 ToIOP_POST_cpo_commands_2.1.1, FromIOP_POST_cpo_commands_2.1.1
 
-**URL:**
+*URL:*
 
-/ocpi/cpo/2.1.1/commands/START_SESSION
+`/ocpi/cpo/2.1.1/commands/START_SESSION`
 
 
-**Request:**
+*Request:*
 
 - **VERB: POST**
 - **HEADERS :** {Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}{Content-Type:application/json}
@@ -94,7 +94,7 @@ IOP requires it to do the mapping with the eMIP protocol.
 }
 ```
 
-**Response :**
+*Response :*
 
 
 - **CODE : 200**
@@ -114,12 +114,12 @@ IOP requires it to do the mapping with the eMIP protocol.
 
 ## 5.4.2 Callback ToIOP_POST_cpo_commands_2.1.1, FromIOP_POST_cpo_commands_2.1.1
 
-**URL:**
+*URL:*
 
-/ocpi/emsp/2.1.1/commands/START_SESSION/aaaa-fffff-ggggg
+`/ocpi/emsp/2.1.1/commands/START_SESSION/aaaa-fffff-ggggg`
 
 
-**Request :**
+*Request :*
 
 - **VERB : POST**
 - **HEADERS :**{Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}{Content-Type:application/json}
@@ -131,7 +131,7 @@ IOP requires it to do the mapping with the eMIP protocol.
 }
 ```
 
-**Response :**
+*Response :*
 
 - **CODE : 200**
 - **HEADERS :** {Content-Type:application/json}
