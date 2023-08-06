@@ -4,7 +4,7 @@
 
 * [4.1 Use Cases Covered By IOP](#41-use-cases-covered-by-iop)
   - 4.1.3 Roaming
-* [4.2 Use Cases Required By GIREVE](#42-use-cases-required-by-gireve
+* [4.2 Use Cases Required By GIREVE](#42-use-cases-required-by-gireve)
   - 4.2.4 If the eMSP implements the “Sessions” feature
 * [4.7 Sessions module specifications](#47-sessions-module-specifications)
   - 4.7.1 Usage of “authorization_id”
