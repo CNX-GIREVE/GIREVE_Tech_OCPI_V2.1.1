@@ -38,7 +38,7 @@ Some of these use cases are required when connecting to GIREVE :
 | ----------- | ----------- |
 | Push CDR/FromIOP OR Pull CDR/ToIOP | Getting CDR is mandatory to enable roaming. | 
 
-## 4.9 Tarrifs module specifications
+## 4.9 Tariffs module specifications
 
 IOP follows the OCPI standard for Tariffs download by an eMSP. [*See OCPI specifications*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_tariffs.md)
 
@@ -141,7 +141,7 @@ This new property will be consistent too for the future mapping between differen
 | exact_price_component | Boolean | 1  | Boolean informing if the “price_component” description corresponds exactly with the one sent/described by the CPO. |
 
 
-## 5.7- Exemples
+## 5.7 Exemples
 
 ### 5.7.2 ToIOP_GET_cpo_cdrs_2.1.1, FromIOP_GET_cpo_cdrs_2.1.1
 
