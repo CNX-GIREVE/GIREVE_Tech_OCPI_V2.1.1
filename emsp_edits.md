@@ -2,9 +2,9 @@
 
 - [Registration](emsp_registration.md)
 - [Locations](emsp_locations.md)
-- [Sessions](emsp_sessions)
-- [CDRs](emsp_cdrs)
-- [Tariffs](emsp_tariffs)
-- [Tokens](emsp_tokens)
-- [Commands](emsp_commands)
+- [Sessions](emsp_sessions.md)
+- [CDRs](emsp_cdrs.md)
+- [Tariffs](emsp_tariffs.md)
+- [Tokens](emsp_tokens.md)
+- [Commands](emsp_commands.md)
 
