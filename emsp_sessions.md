@@ -24,7 +24,7 @@ OCPI features are composed by several use cases that an eMSP can choose to imple
 | Pull Sessions | ToIOP | An eMSP requests IOP to get Sessions that belong to it. |
 
 
-## 4.2 Uses cases required by GIREVE
+## 4.2 Use cases required by GIREVE
 
 Some of these use cases are required when connecting to GIREVE :
 
