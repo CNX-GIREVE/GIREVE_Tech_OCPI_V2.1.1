@@ -2,7 +2,7 @@
 
 * [2.1 Technical](#21-technical)
   - [2.1.1 Supported OCPI versions](#211-supported-ocpi-versions)
-  - 2.1.2 Security]
+  - 2.1.2 Security
   - 2.1.3 Client owned object push
   - 2.1.4 Pagination
   - 2.1.5 IOP HTTP headers
