@@ -2,18 +2,18 @@
 
 * [2.1 Technical](#21-technical)
   - [2.1.1 Supported OCPI versions](#211-supported-ocpi-versions)
-  - [2.1.2 Security](#212-security)
-  - [2.1.3 Client owned object push](#213-client-owned-object-push)
-  - [2.1.4 Pagination](#214-pagination)
-  - [2.1.5 IOP HTTP headers](#215-iop-http-headers)
+  - 2.1.2 Security]
+  - 2.1.3 Client owned object push
+  - 2.1.4 Pagination
+  - 2.1.5 IOP HTTP headers
 * [2.2 OCPI modules implemented by IOP](#22-ocpi-modules-implemented-by-iop)
 * [2.3 GIREVE management of Locations data](#23-gireve-management-of-locations-data)
 * [2.4 Roaming](#24-roaming)
-  - [2.4.1 General workflow](#241-general-workflow)
-  - [2.4.2 New attribute « authorization_id »](#242-new-attribute-authorization-id)
-  - [2.4.3 Management of B2B tariffs](#243-management-of-b2b-tariffs)
-  - [2.4.4 RFID Tokens](#244-rfid-tokens)
-  - [2.4.5 Custom OCPI flow to prevent eMSP Tokens download by CPOs](#245-custom-ocpi-flow-to-prevent-emsp-tokens-download-by-cpos)
+  - 2.4.1 General workflow
+  - 2.4.2 New attribute « authorization_id »
+  - 2.4.3 Management of B2B tariffs
+  - 2.4.4 RFID Tokens
+  - 2.4.5 Custom OCPI flow to prevent eMSP Tokens download by CPOs
  
 *** 
 
