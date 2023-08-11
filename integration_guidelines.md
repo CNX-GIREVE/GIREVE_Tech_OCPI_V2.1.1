@@ -142,9 +142,8 @@ This new property must be provided by the eMSP during the authorisation process,
 
 
 
-$${\color{red}Red}$$
 
-### $${\color{red}Management of B2B tariffs}$$
+## Management of B2B tariffs
 
 The CPO connected to GIREVE through OCPI have two options to manage and “publish” B2B tariffs:
 
@@ -159,9 +158,10 @@ In this case (tariffs defined in roaming agreements), the CPO should not use the
 
 -   In this case, the CPO manages its tariffs on its own and eMSPs cannot give their insights or validation about applied tariffs.
 -   Moreover, the CPO is not able to differentiate its tariffs according to eMSPs. In other words, the tariff is unique whatever the eMSP.
--   In case of tariff updates, the CPO and the eMSP do not need to sign an amendment.
+  
+---
 
-### RFID Tokens
+## RFID Tokens
 
 The current typical situation for identification is swiping a MIFARE badge. In this case, the relevant RFID tag in such a situation is a character string that shall contain the hexadecimal representation of the 4- or 7-bytes RFID UID (sector 0). Please note that the 7 bytes UID is preferred for interoperability reason.
 
