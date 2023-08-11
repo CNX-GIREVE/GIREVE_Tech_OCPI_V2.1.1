@@ -2,27 +2,27 @@
 
 # Contents 
 
-* [4.1 Use Cases Covered By IOP](#41-use-cases-covered-by-iop)
-  - 4.1.3 Roaming
-* [4.2 Use Cases Required By GIREVE](#42-use-cases-required-by-gireve)
-  - 4.2.4 If the eMSP implements the “Sessions” feature
-* [4.8 CDRs module specifications](#48-cdrs-module-specifications)
-  - 4.8.1 Usage of “authorization_id”
-  - 4.8.2 CDR content
-  - 4.8.3 Add billing information in “Remark” field
-  - 4.8.4 Get the signed data (Calibration Law / Eichrecht)
-* [5.6 Exemples](#56-exemples)
-  - 5.6.2 ToIOP_GET_cpo_cdrs_2.1.1, FromIOP_GET_cpo_cdrs_2.1.1
+* [Use Cases Covered By IOP](#use-cases-covered-by-iop)
+  - Roaming
+* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+  - If the eMSP implements the “Sessions” feature
+* [CDRs module specifications](#cdrs-module-specifications)
+  - Usage of “authorization_id”
+  - CDR content
+  - Add billing information in “Remark” field
+  - Get the signed data (Calibration Law / Eichrecht)
+* [Examples](#examples)
+  - ToIOP_GET_cpo_cdrs_2.1.1, FromIOP_GET_cpo_cdrs_2.1.1
 
 ***
 
 
-## 4.1 Use cases covered by IOP 
+## Use cases covered by IOP 
 
 OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
 
 
-### 4.1.3 Roaming
+### Roaming
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
@@ -30,33 +30,33 @@ OCPI features are composed by several use cases that an eMSP can choose to imple
 | Pull CDR | ToIOP | An eMSP requests IOP to get CDRs that belongs to it. |
 
 
-## 4.2 Use cases required by GIREVE
+## Use cases required by GIREVE
 
 Some of these use cases are required when connecting to GIREVE :
 
-### 4.2.4 If the eMSP implements the “Roaming” feature
+### If the eMSP implements the “Roaming” feature
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
 | Push CDR/FromIOP OR Pull CDR/ToIOP | Getting CDR is mandatory to enable roaming. | 
 
-## 4.8 CDRs module specifications
+## CDRs module specifications
 
 IOP follows the OCPI standard for Sessions sent by a CPO. [*See OCPI specifications*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_cdrs.md)*.*
 
-### 4.8.1 Usage of “authorization_id”
+### Usage of “authorization_id”
 
 If an “authorization_id” has been provided by the eMSP during the Authorisation, this information will be defined in all CDRs requests sent to the eMSP. It allows eMSPs to link the CDR with its previous Authorisation.
 
 Please refer to paragraph *2.4.2 New attribute « authorization_id »*.
 
-### 4.8.2 CDR content
+### CDR content
 
 The “total_time” value is the total duration of this session (including the duration of charging and not charging).
 
 It might not include the duration during which the EVSE is out of order so cannot supply the service. The out of order duration should be free of charge for eMSPs.
 
-### 4.8.3Add billing information in “Remark” field
+### Add billing information in “Remark” field
 
 In some cases, the CPO is not able to send a consistent B2B price in the CDR. (“total_cost” not mandatory for CPOs connected through eMIP protocol, CPO not able to calculate the price, …)
 
@@ -70,7 +70,7 @@ The “Remark” field is prefixed by :
 -   [?] prefix: The total_cost provided in the CDR is not significant. The B2B price has not been sent by the CPO and/or the eMSP has not subscribed to GIREVE Clearing service.
 -   No prefix: The total_cost provided in the CDR has been sent by the CPO.
 
-### 4.8.4 Get the signed data (Calibration Law / Eichrecht)
+### Get the signed data (Calibration Law / Eichrecht)
 
 GIREVE has extended OCPI 2.1.1 for eMSPs to receive signed data in CDRs, aiming to be compliant with the German calibration law (Eichrecht).
 
@@ -78,9 +78,9 @@ eMSPs can ask GIREVE to activate the transfer of these signed data, in the case 
 
 These signed data are also included in CDRs following the [OCPI 2.2 specifications](https://github.com/ocpi/ocpi/blob/master/mod_cdrs.asciidoc#mod_cdrs_signed_data_class).
 
-## 5.6 Exemples
+## Examples
 
-5.6.2	ToIOP_GET_cpo_cdrs_2.1.1, FromIOP_GET_cpo_cdrs_2.1.1
+- ToIOP_GET_cpo_cdrs_2.1.1, FromIOP_GET_cpo_cdrs_2.1.1
 
 *URL*:
 
