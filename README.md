@@ -89,7 +89,7 @@ Tips before starting your implementation : [Integration Guidelines](integration_
   - If the eMSP implements the “Locations static data download” feature
   - If the eMSP implements the “Locations dynamic data download” feature
   - If the eMSP implements the “Roaming” feature
-* Connection & Register Specifications
+* [Connection & Register Specifications](emsp_registration.md)
   - Update Credentials FromIOP
 * [Locations Module Specification](emsp_locations.md)
   - Static and dynamic attributes
