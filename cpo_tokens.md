@@ -5,7 +5,7 @@
 * [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - Roaming                                                            
 * [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
-  - 3.4.2 If the CPO implements the "Roaming" feature 
+  - If the CPO implements the "Roaming" feature 
 * [Tokens module specifications](#tokens-module-specifications)
   - GET Tokens To/FromIOP	
   - PULL Tokens: Who is the eMSP?	
