@@ -144,7 +144,7 @@ This new property must be provided by the eMSP during the authorisation process,
 
 $${\color{red}Red}$$
 
-### Management of B2B tariffs
+### {\color{red}Management of B2B tariffs}
 
 The CPO connected to GIREVE through OCPI have two options to manage and “publish” B2B tariffs:
 
