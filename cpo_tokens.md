@@ -55,11 +55,11 @@ IOP follows the OCPI standard for Tokens module. [See OCPI specifications](https
 
 IOP is not able to PUSH Tokens to CPO backend. CPO should PULL IOP to get Tokens.
 
-### PULL Tokens: Who is the eMSP ?
+### PULL Tokens : Who is the eMSP ?
 
 The eMSP of a Token is not a direct property of the Token object. So, a CPO pulling IOP to get Tokens does not know to which eMSP the Token refers to. That is why IOP replaces the property *“Token.issuer”* by the eMI3 Id of the eMSP when a CPO get a Token. Using this property, the CPO is able to know who is the eMSP of the Token.
 
-### PULL Tokens by uid: Retrieve a unique Token
+### PULL Tokens by uid : Retrieve a unique Token
 
 IOP adds a new OCPI feature enabling a CPO to retrieve the full description of a Token through the Tokens.uid :
 
@@ -75,7 +75,7 @@ If the CPO is allowed to get Tokens of the eMSP owner, the response includes the
 
 This new flow prevents CPOs to download all Tokens of all eMSPs. For more description, see [? Custom OCPI flow to prevent eMSP Tokens download by CPOs]().
 
-### PULL Tokens: Retrieve Tokens of a single given eMSP
+### PULL Tokens : Retrieve Tokens of a single given eMSP
 
 The standard OCPI 2.1.1 Tokens pulling allows CPOs to get Tokens of all eMSPs in contract with them.
 In some cases, CPOs need only Tokens of a specific given eMSP. For example, when the CPO initializes data of an eMSP after signature of a new roaming agreement.
@@ -87,7 +87,7 @@ GIREVE provides a new OCPI 2.1.1 feature by allowing the CPO to get Tokens of a 
 Therefore, CPOs can request GIREVE without these headers to get Tokens of all eMSPs or including these headers to get Tokens of a unique eMSP.
 For information, these headers have been included in the version 2.2 of the OCPI standard.
 
-### POST Authorize request: LocationReferences mandatory
+### POST Authorize request : LocationReferences mandatory
 
 In OCPI, the body of a POST Authorize request can contain a LocationReferences object.
 **For IOP, the LocationReferences object is mandatory and must contain one and only one EVSE.**
@@ -95,7 +95,7 @@ In OCPI, the body of a POST Authorize request can contain a LocationReferences o
 If « LocationReferences » object contains 0 EVSE, IOP responds with a 2002 OCPI error (« Missing EVSE Id »).
 If « LocationReferences » object contains more than 1 EVSE, IOP responds with a 2001 OCPI error (« Invalid or missing parameters: IOP does not support authorization request on multiple EVSE »).
 
-### POST Authorize request: new attribute “authorization_id”
+### POST Authorize request : new attribute “authorization_id”
 
 IOP answers to a POST Token Authorize request with a new attribute of AuthorizationInfo object, the “authorization_id”. Please refer to paragraph 5 [New attribute « authorization_id »](checkup_edits.md).
 
