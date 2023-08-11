@@ -2,64 +2,64 @@
 
 # Contents
 
-* [3.3 Use Cases Covered By IOP](#33-use-cases-covered-by-iop)
-  - 3.3.3 Roaming
-* [3.4 Use Cases Required By GIREVE](#34-use-cases-required-by-gireve)
-  - 3.4.1 Always required
-* [3.9 Sessions module specification](#39-sessions-module-specifications)
-  - 3.9.1 Session Initialisation
-  - 3.9.2 Usage of “authorization_id”
-  - 3.9.3 Store and forward – PUT Sessions
-* [5.5 Exemples](#55-exemples)
-  - 5.5.1 ToIOP_PUT_emsp_sessions_2.1.1, FromIOP_PUT_emsp_sessions_2.1.1
-  - 5.5.2 ToIOP_PATCH_emsp_sessions_2.1.1, FromIOP_PATCH_emsp_sessions_2.1.1
+* [Use Cases Covered By IOP](#use-cases-covered-by-iop)
+  - Roaming
+* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+  - Always required
+* [Sessions module specification](#sessions-module-specifications)
+  - Session Initialisation
+  - Usage of “authorization_id”
+  - Store and forward – PUT Sessions
+* [Examples](#examples)
+  - ToIOP_PUT_emsp_sessions_2.1.1, FromIOP_PUT_emsp_sessions_2.1.1
+  - ToIOP_PATCH_emsp_sessions_2.1.1, FromIOP_PATCH_emsp_sessions_2.1.1
 
 ***
 
 
-## 3.3 Use cases covered by IOP
+## Use cases covered by IOP
 
 OCPI features are composed by several use cases that a CPO can choose to implement or not when connecting to an operator.
 
 In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
 
-### 3.3.3 Roaming
+### Roaming
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
 | Push Session | ToIOP | A CPO requests IOP to initialise or update an OCPI Session object following an positive Authorisation. |
 | Check Session | ToIOP | A CPO requests IOP to get Sessions it has previously initialised. |
 
-## 3.4. Use cases required by GIREVE
+## Use cases required by GIREVE
 
 Some of these use cases are required when connecting to GIREVE :
 
-### 3.4.2 If the CPO implements the “Roaming” feature
+### If the CPO implements the “Roaming” feature
 
 | Use case | Why ? |
 | ----------- | ----------- |
 | **PUT** Session FromIOP | A CPO must be able to send information about charging-sessions through Session objects (charge started, …). |
 
-## 3.9 Sessions module specifications
+## Sessions module specifications
 
 IOP follows the OCPI standard for Sessions sent by a CPO. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_sessions.md).
 
-### 3.9.1 Session Initialisation
+### Session Initialisation
 
 The CPO must send, after a remote or local authorization validated by the eMSP, a PUT Session with SessionStatus when the EV plugs to the EVSE.
 This flow gives information to eMSP that the charge of its customer has really started.
 
-### 3.9.2 Usage of “authorization_id”
+### Usage of “authorization_id”
 
 When sending a Session, the CPO defines the Authorization it refers to on providing the “authorization_id” property. Please refer to paragraph 5. [New attribute « authorization_id »](checkup_edits.md).
 
-### 3.9.3 Store and forward – PUT Sessions
+### Store and forward – PUT Sessions
 
 A Store and Forward mechanism must be implemented to ensure that no session may be lost, in case of a connection loss. Any PUT session that didn’t get a correct response from the GIREVE platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the session messages must be resent in a FIFO manner.
 
-## 5.5 Exemples
+## Examples
 
-### 5.5.1 ToIOP_PUT_emsp_sessions_2.1.1, FromIOP_PUT_emsp_sessions_2.1.1
+### ToIOP_PUT_emsp_sessions_2.1.1, FromIOP_PUT_emsp_sessions_2.1.1
 
 *URL* :
 
@@ -157,7 +157,7 @@ A Store and Forward mechanism must be implemented to ensure that no session may 
 
 ```
 
-### 5.5.2 ToIOP_PATCH_emsp_sessions_2.1.1, FromIOP_PATCH_emsp_sessions_2.1.1
+### ToIOP_PATCH_emsp_sessions_2.1.1, FromIOP_PATCH_emsp_sessions_2.1.1
 
 *URL* :
 
