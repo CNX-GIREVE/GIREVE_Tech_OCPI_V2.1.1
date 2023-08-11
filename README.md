@@ -22,9 +22,9 @@ A REVOIR : Tips before starting your implementation : [Integration Guidelines](i
   - Client owned object push
   - Pagination
   - IOP HTTP headers
-* [OCPI modules implemented by IOP](](integration_guidelines.md#ocpi-modules-implemented-by-iop)
-* [GIREVE management of Locations data](](integration_guidelines.md#gireve-management-of-locations-data)
-* [Roaming](](integration_guidelines.md#roaming)
+* [OCPI modules implemented by IOP](integration_guidelines.md#ocpi-modules-implemented-by-iop)
+* [GIREVE management of Locations data](integration_guidelines.md#gireve-management-of-locations-data)
+* [Roaming](integration_guidelines.md#roaming)
   - General workflow
   - New attribute « authorization_id »
   - Management of B2B tariffs
