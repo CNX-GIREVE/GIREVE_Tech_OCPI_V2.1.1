@@ -1,29 +1,29 @@
 # Contents
 
-* [2.1 Technical](#21-technical)
-  - [2.1.1 Supported OCPI versions](#211-supported-ocpi-versions)
-  - 2.1.2 Security
-  - 2.1.3 Client owned object push
-  - 2.1.4 Pagination
-  - 2.1.5 IOP HTTP headers
-* [2.2 OCPI modules implemented by IOP](#22-ocpi-modules-implemented-by-iop)
-* [2.3 GIREVE management of Locations data](#23-gireve-management-of-locations-data)
-* [2.4 Roaming](#24-roaming)
-  - 2.4.1 General workflow
-  - 2.4.2 New attribute « authorization_id »
-  - 2.4.3 Management of B2B tariffs
-  - 2.4.4 RFID Tokens
-  - 2.4.5 Custom OCPI flow to prevent eMSP Tokens download by CPOs
+* [Technical](#technical)
+  - [Supported OCPI versions](#supported-ocpi-versions)
+  - Security
+  - Client owned object push
+  - Pagination
+  - IOP HTTP headers
+* [OCPI modules implemented by IOP](#ocpi-modules-implemented-by-iop)
+* [GIREVE management of Locations data](#gireve-management-of-locations-data)
+* [Roaming](#oaming)
+  - General workflow
+  - New attribute « authorization_id »
+  - Management of B2B tariffs
+  - RFID Tokens
+  - Custom OCPI flow to prevent eMSP Tokens download by CPOs
  
 *** 
 
-## 2.1 Technical
+## Technical
 
-### 2.1.1 Supported OCPI versions
+### Supported OCPI versions
 
 IOP OCPI implementation has begun with version 2.1.1. IOP does not support previous versions.
 
-### 2.1.2 Security
+### Security
 
 IOP follows the security standard mechanisms of OCPI. At the connection, GIREVE provides new operator connecting with temporary Token(s) to register as CPO and/or eMSP. The Token should be used when the connection is initiated by the operater.
 
@@ -31,7 +31,7 @@ In the meantime, the operator can provide GIREVE with temporary Token(s) for IOP
 
 During the Connection & Register process, IOP and the operator exchange final Tokens to request each other, and endpoints of their respective OCPI modules. **GIREVE requires all endpoints to be in HTTPS in order to secure communication between the two backends.**
 
-### 2.1.3 Client owned object push
+### Client owned object push
 
 OCPI introduces a specific use of resource identification mechanism, to manage situation where resource belongs to servers and situation where resource belongs to client. [See OCPI client owned object.](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/transport_and_format.md)
 
@@ -51,7 +51,7 @@ For example, IOP pushes Locations of a CPO to an eMSP using “country-code/part
 
 ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/4c52c925-a330-40a8-90f5-55f7fdf3e41a)
 
-### 2.1.4 Pagination
+### Pagination
 
 IOP implements pagination mechanisms described by OCPI. [*See OCPI pagination mechanism.*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/transport_and_format.md#pagination)
 
@@ -59,7 +59,7 @@ IOP requires operators to use pagination when they pull resources requesting IOP
 
 Finally, IOP for each module has its own max size limit per page (20 Locations, 1000 Tokens, …). These limits can change with IOP evolutions, the operator implementation might be flexible regarding these limits.
 
-### 2.1.5 IOP HTTP headers
+### IOP HTTP headers
 
 The next version of OCPI, OCPI 2.2, integrates new extra headers enabling the sharing of a single OCPI connection to multiple operators.
 
@@ -72,7 +72,7 @@ GIREVE has begun to deploy these extra headers in its OCPI version 2.1.1 but it 
 -   ocpi-from-country-code
 -   ocpi-from-party-id
 
-## 2.2 OCPI modules implemented by IOP
+## OCPI modules implemented by IOP
 
 All OCPI modules have been implemented in IOP.
 List of modules implemented by IOP :
@@ -87,7 +87,7 @@ List of modules implemented by IOP :
 | CDRs | Send the final charge report |
 | Tariffs | Exchange Tariffs information |
 
-## 2.3 GIREVE management of Locations data
+## GIREVE management of Locations data
 
 GIREVE and its systems distinguish two natures of Location properties:
 
@@ -100,9 +100,9 @@ GIREVE performs a specific process to first integrate static data of CPO Locatio
 
 This process is asynchronous from the standard connection of the CPO with the GIREVE IOP platform, meaning that new Locations of the CPO or updates on them can be seen in the GIREVE charge point repository several days after the first PUSH from the CPO to the GIREVE IOP platform.
 
-## 2.4 Roaming
+## Roaming
 
-### 2.4.1 General workflow
+### General workflow
 
 An OCPI Roaming session through IOP should run the following workflow
 
@@ -114,7 +114,7 @@ An OCPI Roaming session through IOP should run the following workflow
 
 ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/ac509c35-6d0b-4e82-b83a-048aa302c283)
 
-### 2.4.2 New attribute « authorization_id »
+### New attribute « authorization_id »
 
 **IOP uses a new attribute « authorization_id » for Session, CDR, AuthorizationInfo and StartSession objects.**
 
@@ -140,7 +140,7 @@ This new property must be provided by the eMSP during the authorisation process,
 
 ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/4c43625c-efb0-4daf-b7ef-a4e7d1128223)
 
-### 2.4.3 Management of B2B tariffs
+### Management of B2B tariffs
 
 The CPO connected to GIREVE through OCPI have two options to manage and “publish” B2B tariffs:
 
@@ -157,7 +157,7 @@ In this case (tariffs defined in roaming agreements), the CPO should not use the
 -   Moreover, the CPO is not able to differentiate its tariffs according to eMSPs. In other words, the tariff is unique whatever the eMSP.
 -   In case of tariff updates, the CPO and the eMSP do not need to sign an amendment.
 
-### 2.4.4 RFID Tokens
+### RFID Tokens
 
 The current typical situation for identification is swiping a MIFARE badge. In this case, the relevant RFID tag in such a situation is a character string that shall contain the hexadecimal representation of the 4- or 7-bytes RFID UID (sector 0). Please note that the 7 bytes UID is preferred for interoperability reason.
 
@@ -169,7 +169,7 @@ As an example: “1A2B3C4D5E6F70” shall be interpreted as
 
 The RFID is not case sensitive. We recommend using uppercase characters. Leading zeros must be provided to reach 8 characters in case of 4 bytes UID or 14 characters in case of 7 bytes UID.
 
-### 2.4.5 Custom OCPI flow to prevent eMSP Tokens download by CPOs
+### Custom OCPI flow to prevent eMSP Tokens download by CPOs
 
 In OCPI 2.1.1, CPOs must send the “auth_id” of a Token in Sessions and CDRs flows.
 
@@ -188,4 +188,4 @@ Using this new flow, the CPO can decide to:
 
 This new flow can also be used as a fallback for CPOs which download all Tokens and have a local authorization for an unknown Token.
 
-Description of this new flow in chapter 3.7.3 PULL Tokens by uid: Retrieve a unique Token.
+Description of this new flow in chapter [PULL Tokens by uid: Retrieve a unique Token](cpo_tokens#pull-tokens-by-uid).
