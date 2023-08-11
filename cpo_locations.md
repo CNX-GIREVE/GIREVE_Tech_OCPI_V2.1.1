@@ -120,7 +120,7 @@ IOP is able to PULL Location requesting CPO backend. In this case, IOP uses the 
 
 The default periodicity is every day.
 
-## Exemples
+## Examples
 
 ### ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
 
