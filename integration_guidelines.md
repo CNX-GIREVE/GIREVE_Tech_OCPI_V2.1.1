@@ -8,7 +8,7 @@
   - IOP HTTP headers
 * [OCPI modules implemented by IOP](#ocpi-modules-implemented-by-iop)
 * [GIREVE management of Locations data](#gireve-management-of-locations-data)
-* [Roaming](#oaming)
+* [Roaming](#roaming)
   - General workflow
   - New attribute « authorization_id »
   - Management of B2B tariffs
