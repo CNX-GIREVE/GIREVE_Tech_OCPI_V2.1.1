@@ -159,7 +159,18 @@ In this case (tariffs defined in roaming agreements), the CPO should not use the
 -   In this case, the CPO manages its tariffs on its own and eMSPs cannot give their insights or validation about applied tariffs.
 -   Moreover, the CPO is not able to differentiate its tariffs according to eMSPs. In other words, the tariff is unique whatever the eMSP.
   
----
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## RFID Tokens
 
