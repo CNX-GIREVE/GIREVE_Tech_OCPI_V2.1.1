@@ -2,7 +2,7 @@
 
 # Contents
 
-* [Use Cases Covered By IOP](#33-use-cases-covered-by-iop)
+* [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - Roaming                                                            
 * [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
   - If the CPO doesn’t commit and describe its tariffs in a roaming agreement 
