@@ -7,7 +7,7 @@ Tips before starting your implementation : [Integration Guidelines](integration_
 
 # Contents
 - [Version History]()
-- [PDF](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.gireve.com/wp-content/uploads/2023/03/Gireve_Tech_OCPI-V2.1.1_ImplementationGuide_1.2.1_en.pdf)
+- [PDF](https://www.gireve.com/wp-content/uploads/2023/03/Gireve_Tech_OCPI-V2.1.1_ImplementationGuide_1.2.1_en.pdf)
 - [CPO Specific implementation guidlines](cpo_edits.md).
 - [eMSP Specific implementation guidlines](emsp_edits.md).
 
