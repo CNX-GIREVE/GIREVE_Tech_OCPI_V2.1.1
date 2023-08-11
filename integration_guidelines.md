@@ -149,8 +149,6 @@ This new property must be provided by the eMSP during the authorisation process,
 ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/4c43625c-efb0-4daf-b7ef-a4e7d1128223)
 
 
-
-
 ## Management of B2B tariffs
 
 The CPO connected to GIREVE through OCPI have two options to manage and “publish” B2B tariffs:
@@ -166,7 +164,14 @@ In this case (tariffs defined in roaming agreements), the CPO should not use the
 
 -   In this case, the CPO manages its tariffs on its own and eMSPs cannot give their insights or validation about applied tariffs.
 -   Moreover, the CPO is not able to differentiate its tariffs according to eMSPs. In other words, the tariff is unique whatever the eMSP.
-  
+
+ 
+ 
+ 
+
+
+
+     
 
 ## RFID Tokens
 
