@@ -188,4 +188,4 @@ Using this new flow, the CPO can decide to:
 
 This new flow can also be used as a fallback for CPOs which download all Tokens and have a local authorization for an unknown Token.
 
-Description of this new flow in chapter [PULL Tokens by uid: Retrieve a unique Token](cpo_tokens.md#pull-tokens-by-uid-retrieve-a-unique-token).
+Description of this new flow in chapter [PULL Tokens by uid: Retrieve a unique Token](cpo_tokens.md#pull-tokens-by-uid)
