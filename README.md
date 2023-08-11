@@ -6,6 +6,7 @@ For more informations, check the standard OCPI specifications : [OCPI 2.1.1](htt
 Tips before starting your implementation : [Integration Guidelines](integration_guidelines.md).
 
 # Contents
+- [Version History]()
 - [CPO Specific implementation guidlines](cpo_edits.md).
 - [eMSP Specific implementation guidlines](emsp_edits.md).
 
