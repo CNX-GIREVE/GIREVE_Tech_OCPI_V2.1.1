@@ -32,8 +32,8 @@ Tips before starting your implementation : [Integration Guidelines](integration_
   - Custom OCPI flow to prevent eMSP Tokens download by CPOs
 
 ## [CPO Specfic Implementation Guidelines](cpo_edits.md)
-* [CPO Operation Definition And Naming Rules](cpo_registration.md/#31-cpo-operation-definition-and-naming-rules)
-* [CPO Operation And Roaming Offers](cpo_registration.md/#32cpo-operation-and-roaming-offers)
+* [CPO Operation Definition And Naming Rules](cpo_registration.md/#cpo-operation-definition-and-naming-rules)
+* [CPO Operation And Roaming Offers](cpo_registration.md/#cpo-operation-and-roaming-offers)
 * Use Cases Covered By IOP
   - Technical Use cases
   - EVCI data
