@@ -3,33 +3,33 @@
 
 # Contents 
 
-* [3.3 Use Cases Covered By IOP](#33-use-cases-covered-by-iop)
-  - 3.3.2 EVCI data
-* [3.4 Use Cases Required By GIREVE](#34-use-cases-required-by-gireve)
-  - 3.4.1 Always required
-* [3.6 Locations module specifications](#36-locations-module-specifications)
-  - 3.6.1 Static and dynamic attributes
-  - 3.6.2 EVSE object
-  - 3.6.3 Tariff_id value
-  - 3.6.4 PUSH Locations ToIOP
-  - 3.6.5 Store and Forward – PUT and PATCH Locations
-  - 3.6.6 PULL Locations ToIOP
-  - 3.6.7 PULL Locations FromIOP 
-* [5.2 Exemples](#52-exemples)
-  - 5.2.2 ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
-  - 5.2.3 ToIOP_PATCH_emsp_locations_2.1.1, FromIOP_ PATCH_emsp_locations_2.1.1 (on EVSE)
+* [Use Cases Covered By IOP](#use-cases-covered-by-iop)
+  - EVCI data
+* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+  - Always required
+* [Locations module specifications](#locations-module-specifications)
+  - Static and dynamic attributes
+  - EVSE object
+  - Tariff_id value
+  - PUSH Locations ToIOP
+  - Store and Forward – PUT and PATCH Locations
+  - PULL Locations ToIOP
+  - PULL Locations FromIOP 
+* [Examples](#examples)
+  - ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
+  - ToIOP_PATCH_emsp_locations_2.1.1, FromIOP_ PATCH_emsp_locations_2.1.1 (on EVSE)
 
 ***
 
 
 
-## 3.3 Use cases covered by IOP
+## Use cases covered by IOP
 
 OCPI features are composed by several use cases that a CPO can choose to implement or not when connecting to an operator.
 
 In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
 
-## 3.2 EVCI data
+## EVCI data
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
@@ -38,18 +38,18 @@ In case of connection to GIREVE, here is the list of use cases that a CPO can im
 | Pull Locations (Static data) | FromIOP | IOP requests the CPO backend to retrieve Locations data. |
 | Check Locations | ToIOP | A CPO requests IOP to get its Locations stored in RPC. |
 
-## 3.4 Use cases required by GIREVE
+## Use cases required by GIREVE
 
 Some of these use cases are required when connecting to GIREVE :
 
-### 3.4.1 Always required
+### Always required
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
 | Push EVSE status/ToIOP | A CPO connected to GIREVE must transfer “in realtime” EVSE status change of its EVSEs. | 
 | Pull Locations/FromIOP | GIREVE wants to be able to refresh EVCI data when needed. |
 
-## 3.6 Locations module specifications
+## Locations module specifications
 
 IOP follows the OCPI standard for Locations upload by a CPO. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_locations.md).
 
@@ -62,7 +62,7 @@ Nonetheless, the following attributes are mandatory for Gireve although they are
 | Evses.connectos.tariff_id | Mandatory for GIREVE. |
 | Evses.capabilities | Mandatory for GIREVE. |
 
-### 3.6.1 Static and dynamic attibutes
+### Static and dynamic attibutes
 
 The attributes of the Location object (with EVSE and Connector) are of 2 types :
 
@@ -71,7 +71,7 @@ The attributes of the Location object (with EVSE and Connector) are of 2 types :
 
 **For the moment, all properties of a Location are Static data except EVSE.status, the only Dynamic data.**
 
-### 3.6.2 EVSE object
+### EVSE object
 
 OCPI defines an attribute called « evse_id » which contains the eMI3 id of the EVSE.
 
@@ -81,13 +81,13 @@ In addition, the eMI3 standard requires that the eMI3 Id of an EVSE begins by th
 [See “Part 2 v1.0” of eMI3 standard here :](http://emi3group.com/documents-links/)
 All “evse_id” of the CPO “FR*CPO” should start with “FR*CPO*E”.
 
-### 3.6.3 Tarrif_id value
+### Tarrif_id value
 
 GIREVE uses the “tariff_id” information provided by CPOs in Locations to dispatch CPO’s EVSEs into separated EVSE tariff groups. Also, CPOs can refer to these tariff groups when they describe their roaming offer including tariffs via the [GIREVE connect place](https://connect-place.gireve.com).
 
 **Considering that, we strongly suggest to fill the “tariff_id” information when the CPO uploads its Locations to GIREVE IOP platform.**
 
-### 3.6.4 PUSH Locations ToIOP
+### PUSH Locations ToIOP
 
 The eMSP Interface is not fully implemented by IOP for the PUSH of static attributes. The web service is present and responds but information is not stored in RPC (Charge Point Repository).
 
@@ -95,12 +95,12 @@ The only data directly updated in RPC after a PUT/PATCH Locations by a CPO are :
 - The dynamic attribute EVSE.status.
 - The “Connector.tariff_id” information.  
 
-### 3.6.5 Store and Forward – PUT and PATCH Locations
+### Store and Forward – PUT and PATCH Locations
 
 A Store and Forward mechanism must be implemented to ensure that no data upload may be lost, in case of a connection loss. Any data upload that didn’t get a correct response from the GIREVE platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active.
 After the connection recovery, the Data Upload messages must be resent in a FIFO manner.
 
-### 3.6.6 PULL Locations ToIOP
+### PULL Locations ToIOP
 
 If the CPO wants to check the status of a Location, EVSE or Connector object in the IOP system, it can call these URLs : 
 
@@ -114,15 +114,15 @@ with :
 `evse_uid: unique id of the EVSE object provided by the CPO.`
 `connector_id: unique id of the Connector object provided by the CPO.`
 
-### 3.6.7 PULL Locations FromIOP
+### PULL Locations FromIOP
 
 IOP is able to PULL Location requesting CPO backend. In this case, IOP uses the pagination and CPO must respond with a paginated response. If the response is not paginated, it will be ignored by IOP.
 
 The default periodicity is every day.
 
-## 5.2 Exemples
+## Exemples
 
-### 5.2.2 ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
+### ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
 
 *URL* :
 
@@ -219,7 +219,7 @@ The default periodicity is every day.
 
 ```
 
-### 5.2.3 ToIOP_PATCH_emsp_locations_2.1.1, FromIOP_ PATCH_emsp_locations_2.1.1 (on EVSE)
+### ToIOP_PATCH_emsp_locations_2.1.1, FromIOP_ PATCH_emsp_locations_2.1.1 (on EVSE)
 
 *URL* :
 
