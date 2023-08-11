@@ -16,15 +16,15 @@ A REVOIR : Tips before starting your implementation : [Integration Guidelines](i
 *  Cardinality expression
   
 ## [ Integration Guidelines](integration_guidelines.md)
-* [Technical](integration_guidelines.md#21-technical)
+* [Technical](integration_guidelines.md#technical)
   - Supported OCPI versions
   - Security
   - Client owned object push
   - Pagination
   - IOP HTTP headers
-* OCPI modules implemented by IOP
-* GIREVE management of Locations data
-* Roaming
+* [OCPI modules implemented by IOP](](integration_guidelines.md#ocpi-modules-implemented-by-iop)
+* [GIREVE management of Locations data](](integration_guidelines.md#gireve-management-of-locations-data)
+* [Roaming](](integration_guidelines.md#roaming)
   - General workflow
   - New attribute « authorization_id »
   - Management of B2B tariffs
