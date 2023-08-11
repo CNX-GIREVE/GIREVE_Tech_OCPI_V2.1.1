@@ -1,23 +1,25 @@
 # Contents
-## 1 Introduction
-* [1.1 Aims](#11-aims)
-* [1.2 Intended Audience](#12-intended-audience)
-* [1.3 Definitions and Abbreviations](#13-definitions-and-abbreviations)
-* [1.4 Cardinality expression](#14-cardinality-expression)
+## [Introduction](#introduction)
+* [Aims](#aims)
+* [Intended Audience](#intended-audience)
+* [Definitions and Abbreviations](#definitions-and-abbreviations)
+* [Cardinality expression](#cardinality-expression)
 
 ***
 
-## 1.1 Aims
+# Introduction
+
+## Aims
 
 This document describes guidelines to perform a proper connection with the GIREVE’s platform using the OCPI protocol.
 
-## 1.2 Intended Audience
+## Intended Audience
 
 This document is dedicated to technical teams (system administrators, developers, etc.) of systems connected or to be connected to the GIREVE’s platform through OCPI.
 
 This document also covers some operational requirements that must be considered when implementing the OCPI 2.1.1 protocol.
 
-## 1.3 Definitions and Abbreviations
+## Definitions and Abbreviations
 
 | Word | Meaning |
 | ----------- | ----------- |
@@ -26,7 +28,7 @@ This document also covers some operational requirements that must be considered 
 | ToIOP | Referring to flows for which an operator requests GIREVE platform IOP. Partner system is client. IOP is server |
 | FromIOP | Referring to flows for which GIREVE platform IOP requests an operator. IOP is client. Partner system is server |
 
-## 1.4 Cardinality expression
+## Cardinality expression
 
 To designate the cardinality of fields on data structures the following symbols are used:
 
