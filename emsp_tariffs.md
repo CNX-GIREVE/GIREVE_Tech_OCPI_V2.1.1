@@ -2,25 +2,25 @@
 
 # Contents 
 
-* [4.1 Use Cases Covered By IOP](#41-use-cases-covered-by-iop)
-  - 4.1.3 Roaming
-* [4.2 Use Cases Required By GIREVE](#42-use-cases-required-by-gireve)
-  - 4.2.4 If the eMSP implements the “Sessions” feature
-* [4.9 Tariffs module specifications](#49-tariffs-module-specifications)
-  - 4.9.1 Tariffs flows implemented by GIREVE
-  - 4.9.2 Specific properties added by GIREVE 
-* [5.7 Exemples](#57-exemples)
-  - 5.7.2 ToIOP_GET_cpo_cdrs_2.1.1, FromIOP_GET_cpo_cdrs_2.1.1
+* [Use Cases Covered By IOP](#41-use-cases-covered-by-iop)
+  - Roaming
+* [Use Cases Required By GIREVE](#42-use-cases-required-by-gireve)
+  - If the eMSP implements the “Sessions” feature
+* [Tariffs module specifications](#49-tariffs-module-specifications)
+  - Tariffs flows implemented by GIREVE
+  - Specific properties added by GIREVE 
+* [Exemples](#57-exemples)
+  - ToIOP_PUT_emsp_tariffs_2.1.1
 
 ***
 
 
-## 4.1 Use cases covered by IOP 
+## Use cases covered by IOP 
 
 OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
 
 
-### 4.1.3 Roaming
+### Roaming
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
@@ -28,25 +28,25 @@ OCPI features are composed by several use cases that an eMSP can choose to imple
 | Pull CDR | ToIOP | An eMSP requests IOP to get CDRs that belongs to it. |
 
 
-## 4.2 Use cases required by GIREVE
+## Use cases required by GIREVE
 
 Some of these use cases are required when connecting to GIREVE :
 
-### 4.2.4 If the eMSP implements the “Roaming” feature
+### If the eMSP implements the “Roaming” feature
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
 | Push CDR/FromIOP OR Pull CDR/ToIOP | Getting CDR is mandatory to enable roaming. | 
 
-## 4.9 Tariffs module specifications
+## Tariffs module specifications
 
 IOP follows the OCPI standard for Tariffs download by an eMSP. [*See OCPI specifications*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_tariffs.md)
 
-### 4.9.1 Tariffs flows implemented by GIREVE
+### Tariffs flows implemented by GIREVE
 
 IOP only implements the “GET Tariffs” used by an eMSP to retrieve tariffs of CPOs.
 
-### 4.9.2 Specific properties added by GIREVE
+### Specific properties added by GIREVE
 
 #### A. Tariffs.country_code and Tariffs.party_id (mandatory)
 
@@ -141,61 +141,55 @@ This new property will be consistent too for the future mapping between differen
 | exact_price_component | Boolean | 1  | Boolean informing if the “price_component” description corresponds exactly with the one sent/described by the CPO. |
 
 
-## 5.7 Exemples
+## Examples
 
-### 5.7.2 ToIOP_GET_cpo_cdrs_2.1.1, FromIOP_GET_cpo_cdrs_2.1.1
+### ToIOP_PUT_emsp_tariffs_2.1.1
 
 *URL*:
 
-`/ocpi/cpo/2.1.1/tariffs?offset=0&limit=10&date_from=2021-02-10T04:00:00Z&date_to=2021-02-11T04:00:00Z`
-*(Date_from parameter shall be the date of the last successful request)*
+`/ocpi/emsp/2.1.1/tariffs/FR/CPO/Tariff-1`
 
 *Request*:
 
-- **VERB: GET**
+- **VERB: PUT**
 - **HEADERS**: `{Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}`
-- **BODY**: (No body)
+- **BODY**:
 
+```json
+"id": "Tariff-1",
+"currency": "EUR",
+"elements": [
+    {
+        "price_components": [
+            {
+                "type": "TIME",
+                "price": 6,
+                "step_size": 1
+            },
+            {
+                "type": "FLAT",
+                "price": 1,
+                "step_size": 1
+            },
+            {
+                "type": "ENERGY",
+                "price": 2,
+                "step_size": 1
+            }
+        ]
+    }
+],
+"last_updated": "2021-02-11T16:46:37Z"
+}
+```
 *Response*:
 
 - **CODE**: 200
-- **HEADERS**: `{X-Limit:10}{Connection:close}{Content-Type:application/json}{X-Total-Count:2}`
+- **HEADERS**: `{Content-Type:application/json}`
 - **BODY**:
 ```json
 {
-    "data": [
-        {
-            "id": "aaa-xxxx",
-            "party_id": "AAA",
-            "last_updated": "2015-06-29T20:39:09Z",
-            "tariff_alt_url": "https://xxxxxxx.com/yyyyy/11",
-            "country_code": "FR",
-            "elements": [
-                {
-                    "restrictions": {
-                        "max_duration": 200000,
-                        "day_of_week": [
-                            "MONDAY",
-                            "TUESDAY"
-                        ]
-                    },
-                    "price_components": [
-                        {
-                            "price": 1,
-                            "step_size": 910,
-                            "type": "TIME"
-                        },
-                        {
-                            "price": 1,
-                            "step_size": 900,
-                            "type": "PARKING_TIME"
-                        }
-                    ]
-                }
-            ],
-            "currency": "EUR"
-        }
-    ],
+    "data": {};
     "status_code": 1000,
     "status_message": "Success",
     "timestamp": "2020-12-22T09:50:25Z"
