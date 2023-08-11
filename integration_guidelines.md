@@ -165,14 +165,6 @@ In this case (tariffs defined in roaming agreements), the CPO should not use the
 -   In this case, the CPO manages its tariffs on its own and eMSPs cannot give their insights or validation about applied tariffs.
 -   Moreover, the CPO is not able to differentiate its tariffs according to eMSPs. In other words, the tariff is unique whatever the eMSP.
 
- 
- 
- 
-
-
-
-     
-
 ## RFID Tokens
 
 The current typical situation for identification is swiping a MIFARE badge. In this case, the relevant RFID tag in such a situation is a character string that shall contain the hexadecimal representation of the 4- or 7-bytes RFID UID (sector 0). Please note that the 7 bytes UID is preferred for interoperability reason.
