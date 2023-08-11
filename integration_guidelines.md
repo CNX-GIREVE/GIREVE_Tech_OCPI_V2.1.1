@@ -140,6 +140,10 @@ This new property must be provided by the eMSP during the authorisation process,
 
 ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/4c43625c-efb0-4daf-b7ef-a4e7d1128223)
 
+
+
+$${\color{red}Red}$$
+
 ### Management of B2B tariffs
 
 The CPO connected to GIREVE through OCPI have two options to manage and “publish” B2B tariffs:
