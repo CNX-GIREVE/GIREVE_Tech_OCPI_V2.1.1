@@ -9,7 +9,7 @@
 * [Tariffs module specifications](#tariffs-module-specifications)
   - Tariffs flows implemented by GIREVE
   - Specific properties added by GIREVE 
-* [Exemples](#exemples)
+* [Exemples](#examples)
   - ToIOP_PUT_emsp_tariffs_2.1.1
 
 ***
