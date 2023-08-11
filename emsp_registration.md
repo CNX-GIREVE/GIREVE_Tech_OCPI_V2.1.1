@@ -2,25 +2,25 @@
 
 # Contents
 
-* [4.1 Use Cases Covered By IOP](#41-use-cases-covered-by-iop)
-  - 4.1.1 Technical Use cases
-* [4.2 Use Cases Required By GIREVE](#42-use-cases-required-by-gireve)
-  - 4.2.1 Always required
-* [4.3 Connection & Register specifications](#43-connection-and-register-specifications)
-  - 4.3.1 Update Credentials FromIOP
-* [5.1 Exemples](#51-exemples)
-  - 5.1.1 ToIOP_GET_cpo_versions, FromIOP_GET_cpo_versions
-  - 5.1.2 ToIOP_GET_cpo_version_detail_2.1.1, FromIOP_GET_cpo_version_detail_2.1.1
-  - 5.1.3 ToIOP_POST_cpo_credentials_2.1.1, FromIOP_POST_cpo_credentials_2.1.1
-  - 5.1.4 ToIOP_DELETE_cpo_credentials_2.1.1, FromIOP_DELETE_cpo_credentials_2.1.1
+* [Use Cases Covered By IOP](#use-cases-covered-by-iop)
+  - Technical Use cases
+* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+  - Always required
+* [Connection & Register specifications](#connection-and-register-specifications)
+  - Update Credentials FromIOP
+* [Examples](#-examples)
+  - ToIOP_GET_cpo_versions, FromIOP_GET_cpo_versions
+  - ToIOP_GET_cpo_version_detail_2.1.1, FromIOP_GET_cpo_version_detail_2.1.1
+  - ToIOP_POST_cpo_credentials_2.1.1, FromIOP_POST_cpo_credentials_2.1.1
+  - ToIOP_DELETE_cpo_credentials_2.1.1, FromIOP_DELETE_cpo_credentials_2.1.1
 
 ***
 
-## 4.1 Use cases covered by IOP 
+## Use cases covered by IOP 
 
 OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
 
-### 4.1.1 Technical Use cases
+### Technical Use cases
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
@@ -30,27 +30,27 @@ OCPI features are composed by several use cases that an eMSP can choose to imple
 | Unregister | **FromIOP** | IOP unregisters an eMSP by requesting a DELETE Credentials |
 | Unregister | **ToIOP** | An eMSP unregisters IOP by requesting a DELETE Credentials |
 
-## 4.2 Use cases required by GIREVE
+## Use cases required by GIREVE
 
 Some of these use cases are required when connecting to GIREVE :
 
-### 4.2.1 Always required
+### Always required
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
 | Register/FromIOP OR Register/ToIOP |  These use cases are needed to initialise connection between an operator and GIREVE. | 
 
-## 4.3 Connection and Register specifications
+## Connection and Register specifications
 
 IOP follows the OCPI standard for Connection & Register process. [*See OCPI specifications.*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/credentials.md)
 
-### 4.3.1 Update Credentials FromIOP
+### Update Credentials FromIOP
 
 IOP is not able to send a PUT Credentials to update its Credentials on operator backend. In order to update them, IOP sends a “DELETE Credentials” to delete the OCPI connection then starts a new Connection & Register process beginning by a POST Credentials sent by IOP or by the operator.
 
-## 5 Exemples 
+## Exemples 
 
-### 5.1.1 ToIOP_GET_cpo_versions, FromIOP_GET_cpo_versions
+### ToIOP_GET_cpo_versions, FromIOP_GET_cpo_versions
 
 *Request* :
 
@@ -78,7 +78,7 @@ IOP is not able to send a PUT Credentials to update its Credentials on operator 
 
 ```
 
-### 5.1.2 ToIOP_GET_cpo_version_detail_2.1.1, FromIOP_GET_cpo_version_detail_2.1.1
+### ToIOP_GET_cpo_version_detail_2.1.1, FromIOP_GET_cpo_version_detail_2.1.1
 
 *Request* :
 
@@ -130,7 +130,7 @@ IOP is not able to send a PUT Credentials to update its Credentials on operator 
 
 ```
 
-### 5.1.3 ToIOP_POST_cpo_credentials_2.1.1, FromIOP_POST_cpo_credentials_2.1.1
+### ToIOP_POST_cpo_credentials_2.1.1, FromIOP_POST_cpo_credentials_2.1.1
 
 Request* :
 
@@ -181,7 +181,7 @@ Request* :
 
 ```
 
-### 5.1.4 ToIOP_DELETE_cpo_credentials_2.1.1, FromIOP_DELETE_cpo_credentials_2.1.1
+### ToIOP_DELETE_cpo_credentials_2.1.1, FromIOP_DELETE_cpo_credentials_2.1.1
 
 *Request* :
 
