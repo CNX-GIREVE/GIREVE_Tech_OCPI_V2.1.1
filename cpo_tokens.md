@@ -51,7 +51,7 @@ Some of these use cases are required when connecting to GIREVE :
 
 IOP follows the OCPI standard for Tokens module. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_tokens.md).
 
-### 3GET Tokens To/FromIOP
+### GET Tokens To/FromIOP
 
 IOP is not able to PUSH Tokens to CPO backend. CPO should PULL IOP to get Tokens.
 
