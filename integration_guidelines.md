@@ -1,7 +1,7 @@
 # Contents
 
 * [Technical](#technical)
-  - [Supported OCPI versions](#supported-ocpi-versions)
+  - Supported OCPI versions
   - Security
   - Client owned object push
   - Pagination
