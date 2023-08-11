@@ -9,117 +9,117 @@ A REVOIR : Tips before starting your implementation : [Integration Guidelines](i
 - [CPO Specific implementation guidlines](cpo_edits.md).
 - [eMSP Specific implementation guidlines](emsp_edits.md).
 
-## [1 Introduction](introduction.md)
-* 1.1 Aims
-* 1.2 Intended Audience
-* 1.3 Definitions and Abbreviations
-* 1.4 Cardinality expression
+## [Introduction](introduction.md)
+*  Aims
+*  Intended Audience
+*  Definitions and Abbreviations
+*  Cardinality expression
   
-## [2 Integration Guidelines](integration_guidelines.md)
-* [2.1 Technical](integration_guidelines.md#21-technical)
-  - 2.1.1 Supported OCPI versions
-  - 2.1.2 Security
-  - 2.1.3 Client owned object push
-  - 2.1.4 Pagination
-  - 2.1.5 IOP HTTP headers
-* 2.2 OCPI modules implemented by IOP
-* 2.3 GIREVE management of Locations data
-* 2.4 Roaming
-  - 2.4.1 General workflow
-  - 2.4.2 New attribute « authorization_id »
-  - 2.4.3 Management of B2B tariffs
-  - 2.4.4 RFID Tokens
-  - 2.4.5 Custom OCPI flow to prevent eMSP Tokens download by CPOs
+## [ Integration Guidelines](integration_guidelines.md)
+* [Technical](integration_guidelines.md#21-technical)
+  - Supported OCPI versions
+  - Security
+  - Client owned object push
+  - Pagination
+  - IOP HTTP headers
+* OCPI modules implemented by IOP
+* GIREVE management of Locations data
+* Roaming
+  - General workflow
+  - New attribute « authorization_id »
+  - Management of B2B tariffs
+  - RFID Tokens
+  - Custom OCPI flow to prevent eMSP Tokens download by CPOs
 
-## [3 CPO Specfic Implementation Guidelines](cpo_edits.md)
-* 3.1 [CPO Operation Definition And Naming Rules](cpo_registration.md/#31-cpo-operation-definition-and-naming-rules)
-* 3.2 [CPO Operation And Roaming Offers](cpo_registration.md/#32cpo-operation-and-roaming-offers)
-* 3.3 Use Cases Covered By IOP
-  - 3.3.1 Technical Use cases
-  - 3.3.2 EVCI data
-  - 3.3.3 Roaming
-* 3.4 Use Cases Required By GIREVE
-  - 3.4.1 Always required
-  - 3.4.2 If the CPO implements the “Roaming” feature
-  - 3.4.3 If the CPO doesn’t commit and describe its tariffs in a roaming agreement
-* 3.5 [Connection & Register Specifications](cpo_registration.md)
-  - 3.5.1 Update Credentials FromIOP
-* 3.6 [Locations Module Specifications](cpo_locations.md)
-  - 3.6.1 Static and dynamic attributes
-  - 3.6.2 EVSE object
-  - 3.6.3 Tariff_id value
-  - 3.6.4 PUSH Locations ToIOP
-  - 3.6.5 Store and Forward – PUT and PATCH Locations
-  - 3.6.6 PULL Locations ToIOP
-  - 3.6.7 PULL Locations FromIOP
-* 3.7 [Tokens Module Specifications](cpo_tokens.md)
-  - 3.7.1 GET Tokens To/FromIOP
-  - 3.7.2 PULL Tokens: Who is the eMSP?
-  - 3.7.3 PULL Tokens by uid: Retrieve a unique Token
-  - 3.7.4 PULL Tokens: Retrieve Tokens of a single given eMSP
-  - 3.7.5 POST Authorize request: LocationReferences mandatory
-  - 3.7.6 POST Authorize request: new attribute “authorization_id”
-* 3.8 [Commands Module specifications](cpo_commands.md)
-  - 3.8.1 StartSession request: new attribute « authorization_id »
-  - 3.8.2 ReserveNow command
-  - 3.8.3 UnlockConnector command
-* 3.9 [Sessions Module Specification](cpo_sessions.md)
-  - 3.9.1 Session Initialisation
-  - 3.9.2 Usage of “authorization_id”
-  - 3.9.3 Store and forward – PUT Sessions
-* 3.10 [Cdrs Module Specification](cpo_cdrs.md)
-  - 3.10.1 CDR sending frequency
-  - 3.10.2 Usage of “authorization_id”
-  - 3.10.3 CDR content
-  - 3.10.4 Store and forward – POST CDRs
-  - 3.10.5 Send the signed data (Calibration Law / Eichrecht)
-* 3.11 [Tariffs Module Specification](cpo_tariffs.md)
-  - 3.11.1 Tariffs flows implemented by GIREVE
-  - 3.11.2 Specific properties added by GIREVE
-  - 3.11.3 Store and forward – PUT TARIFFS
+## [CPO Specfic Implementation Guidelines](cpo_edits.md)
+* [CPO Operation Definition And Naming Rules](cpo_registration.md/#31-cpo-operation-definition-and-naming-rules)
+* [CPO Operation And Roaming Offers](cpo_registration.md/#32cpo-operation-and-roaming-offers)
+* Use Cases Covered By IOP
+  - Technical Use cases
+  - EVCI data
+  - Roaming
+*  Use Cases Required By GIREVE
+  - Always required
+  - If the CPO implements the “Roaming” feature
+  - If the CPO doesn’t commit and describe its tariffs in a roaming agreement
+* [Connection & Register Specifications](cpo_registration.md)
+  - Update Credentials FromIOP
+* [Locations Module Specifications](cpo_locations.md)
+  - Static and dynamic attributes
+  - EVSE object
+  - Tariff_id value
+  - PUSH Locations ToIOP
+  - Store and Forward – PUT and PATCH Locations
+  - PULL Locations ToIOP
+  - PULL Locations FromIOP
+* [Tokens Module Specifications](cpo_tokens.md)
+  - GET Tokens To/FromIOP
+  - PULL Tokens: Who is the eMSP?
+  - PULL Tokens by uid: Retrieve a unique Token
+  - PULL Tokens: Retrieve Tokens of a single given eMSP
+  - POST Authorize request: LocationReferences mandatory
+  - POST Authorize request: new attribute “authorization_id”
+* [Commands Module specifications](cpo_commands.md)
+  - StartSession request: new attribute « authorization_id »
+  - ReserveNow command
+  - UnlockConnector command
+* [Sessions Module Specification](cpo_sessions.md)
+  - Session Initialisation
+  - Usage of “authorization_id”
+  - Store and forward – PUT Sessions
+* [Cdrs Module Specification](cpo_cdrs.md)
+  - CDR sending frequency
+  - Usage of “authorization_id”
+  - CDR content
+  - Store and forward – POST CDRs
+  - Send the signed data (Calibration Law / Eichrecht)
+* [Tariffs Module Specification](cpo_tariffs.md)
+  - Tariffs flows implemented by GIREVE
+  - Specific properties added by GIREVE
+  - Store and forward – PUT TARIFFS
 
 
-## [4 eMSP Specfic Implementation Guidelines](emsp_edits.md)
-* 4.1 Use Cases Required By IOP
-  - 4.1.1 Technical Use cases
-  - 4.1.2 EVCI data
-  - 4.1.3 Roaming
-* 4.2 Use Cases Required By GIREVE
-  - 4.2.1 Always required
-  - 4.2.2 If the eMSP implements the “Locations static data download” feature
-  - 4.2.3 If the eMSP implements the “Locations dynamic data download” feature
-  - 4.2.4 If the eMSP implements the “Roaming” feature
-* 4.3 Connection & Register Specifications
-  - 4.3.1 Update Credentials FromIOP
-* 4.4 [Locations Module Specification](emsp_locations.md)
-  - 4.4.1 Static and dynamic attributes
-  - 4.4.2 PULL Locations ToIOP: Who is the CPO?
-  - 4.4.3 PULL Tokens: Retrieve Locations of a single given CPO
-  - 4.4.4 PULL Locations ToIOP: Get Object
-  - 4.4.5 PULL Locations ToIOP: Get List Pagination
-  - 4.4.6 PULL Locations ToIOP: Get List, Full and Delta modes
-  - 4.4.7 PULL Locations ToIOP: evse_id
-  - 4.4.8 PUSH Locations FromIOP
-  - 4.4.9 PULL Locations FromIOP
-* 4.5 [Tokens Module Specification](emsp_tokens.md)
-  - 4.5.1 Share Tokens list
-  - 4.5.2 PULL Tokens FromIOP: Pagination and periodicity
-  - 4.5.3 POST Authorize request: new attribute « authorization_id »
-* 4.6 [Commands Module Specification](emsp_commands.md)
-  - 4.6.1 StartSession request: new attribute « authorization_id »
-  - 4.6.2 ReserveNow command
-  - 4.6.3 UnlockConnector command
-  - 4.6.4 “evse_uid” mandatory in StartSession command
-* 4.7 [Sessions Module Specification](emsp_sessions.md)
-  - 4.7.1 Usage of “authorization_id”
-* 4.8 [Cdrs Module Specification](emsp_cdrs.md)
-  - 4.8.1 Usage of “authorization_id”
-  - 4.8.2 CDR content
-  - 4.8.3 Add billing information in “Remark” field
-  - 4.8.4 Get the signed data (Calibration Law / Eichrecht)
-* 4.9 [Tariffs Module Specification](emsp_tariffs.md)
-  - 4.9.1 Tariffs flows implemented by GIREVE
-  - 4.9.2 Specific properties added by GIREVE
+## [eMSP Specfic Implementation Guidelines](emsp_edits.md)
+* Use Cases Required By IOP
+  - Technical Use cases
+  - EVCI data
+  - Roaming
+* Use Cases Required By GIREVE
+  - Always required
+  - If the eMSP implements the “Locations static data download” feature
+  - If the eMSP implements the “Locations dynamic data download” feature
+  - If the eMSP implements the “Roaming” feature
+* Connection & Register Specifications
+  - Update Credentials FromIOP
+* [Locations Module Specification](emsp_locations.md)
+  - Static and dynamic attributes
+  - PULL Locations ToIOP: Who is the CPO?
+  - PULL Tokens: Retrieve Locations of a single given CPO
+  - PULL Locations ToIOP: Get Object
+  - PULL Locations ToIOP: Get List Pagination
+  - PULL Locations ToIOP: Get List, Full and Delta modes
+  - PULL Locations ToIOP: evse_id
+  - PUSH Locations FromIOP
+  - PULL Locations FromIOP
+* [Tokens Module Specification](emsp_tokens.md)
+  - Share Tokens list
+  - PULL Tokens FromIOP: Pagination and periodicity
+  - POST Authorize request: new attribute « authorization_id »
+* [Commands Module Specification](emsp_commands.md)
+  - StartSession request: new attribute « authorization_id »
+  - ReserveNow command
+  - UnlockConnector command
+  - “evse_uid” mandatory in StartSession command
+* [Sessions Module Specification](emsp_sessions.md)
+  - Usage of “authorization_id”
+* [Cdrs Module Specification](emsp_cdrs.md)
+  - Usage of “authorization_id”
+  - CDR content
+  - Add billing information in “Remark” field
+  - Get the signed data (Calibration Law / Eichrecht)
+* [Tariffs Module Specification](emsp_tariffs.md)
+  - Tariffs flows implemented by GIREVE
+  - Specific properties added by GIREVE
 
 
 
