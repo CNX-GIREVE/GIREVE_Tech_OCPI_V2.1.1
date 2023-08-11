@@ -2,53 +2,53 @@
 
 # Contents
 
-* [3.3 Use Cases Covered By IOP](#33-use-cases-covered-by-iop)
-  - 3.3.3 Roaming                                                            
-* [3.4 Use Cases Required By GIREVE](#34-use-cases-required-by-gireve)
-  - 3.4.3 If the CPO doesn’t commit and describe its tariffs in a roaming agreement 
-  - 3.6.3 Tarrif_id value
-* [3.11 Tariffs module specifications](#311-tariffs-module-specifications)
-  - 3.11.1 Tariffs flows implemented by GIREVE
-  - 3.11.2 Specific properties added by GIREVE
-  - 3.11.3 Store and forward – PUT TARIFFS
-* [5.7 Exemples](#57-exemples)
-  - 5.7.1 ToIOP_PUT_emsp_tariffs_2.1.1
-  - 5.7.2 ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
+* [Use Cases Covered By IOP](#33-use-cases-covered-by-iop)
+  - Roaming                                                            
+* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+  - If the CPO doesn’t commit and describe its tariffs in a roaming agreement 
+  - Tarrif_id value
+* [Tariffs module specifications](#tariffs-module-specifications)
+  - Tariffs flows implemented by GIREVE
+  - Specific properties added by GIREVE
+  - Store and forward – PUT TARIFFS
+* [Examples](#examples)
+  - ToIOP_PUT_emsp_tariffs_2.1.1
+  - ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
 
 ***
 
 
-## 3.3 Use cases covered by IOP
+## Use cases covered by IOP
 
 OCPI features are composed by several use cases that a CPO can choose to implement or not when connecting to an operator.
 
 In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
 
-## 3.3.3 Roaming
+## Roaming
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
 | Push Tariffs | ToIOP | A CPO sends to IOP, a Tariffs object. |
 | Pull Tariffs | FromIOP | IOP requests the CPO backend to retrieve Tariffs data. |
 
-## 3.4 Use cases required by GIREVE
+## Use cases required by GIREVE
 
 Some of these use cases are required when connecting to GIREVE :
 
-### 3.4.3 If the CPO doesn’t commit and describe its tariffs in a roaming agreement
+### If the CPO doesn’t commit and describe its tariffs in a roaming agreement
 
 | Use case | Why ? |
 | ----------- | ----------- |
 | Push Tariffs ToIOP | CPOs must inform in realtime, through IOP, eMSPs about tariff changes. |
 | Pull Tariffs FromIOP | CPOs must inform in realtime, through IOP, eMSPs about tariff changes. |
 
-### 3.6.3 Tarrif_id value
+### Tarrif_id value
 
 GIREVE uses the “tariff_id” information provided by CPOs in Locations to dispatch CPO’s EVSEs into separated EVSE tariff groups. Also, CPOs can refer to these tariff groups when they describe their roaming offer including tariffs via the [GIREVE connect place](https://connect-place.gireve.com).
 
 **Considering that, we strongly suggest to fill the “tariff_id” information when the CPO uploads its Locations to GIREVE IOP platform.**
 
-## 3.11 Tariffs module specifications
+## Tariffs module specifications
 
 IOP follows the OCPI standard for Tariffs upload by a CPO. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_tariffs.md).
 
@@ -59,7 +59,7 @@ IOP only implements :
 - **PUT** Tariffs: Used by a CPO to create and update a tariff.
 - **GET** Tariffs: Used by IOP to pull Tariffs of a CPO.
 
-### 3.11.2 Specific properties added by GIREVE
+### Specific properties added by GIREVE
 
 TariffDimensionType “SESSION_TIME”
 
@@ -74,13 +74,13 @@ GIREVE adds a third “TariffDimensionType” named “SESSION_TIME” with the 
 - **SESSION_TIME** : “time charging or not: defined in hours, step_size multiplier: 1 second”.
 
 
-### 3.11.3 Store and forward – PUT TARIFFS
+### Store and forward – PUT TARIFFS
 
 Similarly to a POST Cdrs, Store and Forward mechanism must be implemented to ensure that no Tariffs may be lost, in case of a connection loss. Any PUT Tariffs that didn’t get a correct response from the GIREVE platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the Tariffs messages must be resent in a FIFO manner.
 
-## 5.7 Exemples
+## Exemples
 
-### 5.7.1 ToIOP_PUT_emsp_tariffs_2.1.1
+### ToIOP_PUT_emsp_tariffs_2.1.1
 
 *URL* :
 
@@ -135,7 +135,7 @@ Similarly to a POST Cdrs, Store and Forward mechanism must be implemented to ens
 
 ```
 
-### 5.7.2 ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
+### ToIOP_GET_cpo_tariffs_2.1.1, FromIOP_GET_cpo_tariffs_2.1.1
 
 *URL* :
 
