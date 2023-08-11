@@ -59,7 +59,7 @@ IOP is not able to PUSH Tokens to CPO backend. CPO should PULL IOP to get Tokens
 
 The eMSP of a Token is not a direct property of the Token object. So, a CPO pulling IOP to get Tokens does not know to which eMSP the Token refers to. That is why IOP replaces the property *“Token.issuer”* by the eMI3 Id of the eMSP when a CPO get a Token. Using this property, the CPO is able to know who is the eMSP of the Token.
 
-### PULL Tokens by uid : Retrieve a unique Token
+### PULL Tokens by uid Retrieve a unique Token
 
 IOP adds a new OCPI feature enabling a CPO to retrieve the full description of a Token through the Tokens.uid :
 
