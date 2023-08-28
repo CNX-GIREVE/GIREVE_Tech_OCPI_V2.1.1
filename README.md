@@ -3,11 +3,12 @@ IOP – OCPI 2.1.1 Interface - GIREVE Implementation Guide
 
 For more informations, check the standard OCPI specifications : [OCPI 2.1.1](https://github.com/ocpi/ocpi/tree/release-2.1.1-bugfixes#contents).
 
+- [Gireve_Implementation_Guide.pdf](https://www.gireve.com/wp-content/uploads/2023/03/Gireve_Tech_OCPI-V2.1.1_ImplementationGuide_1.2.1_en.pdf)
+
 - A REVOIR Tips before starting your implementation : [Integration Guidelines](integration_guidelines.md).
 
 # Contents
 - A REVOIR :  [Version History]()
-- A REVOIR :  [PDF](https://www.gireve.com/wp-content/uploads/2023/03/Gireve_Tech_OCPI-V2.1.1_ImplementationGuide_1.2.1_en.pdf)
 - [CPO Specific implementation guidlines](cpo_edits.md).
 - [eMSP Specific implementation guidlines](emsp_edits.md).
 
