@@ -13,12 +13,12 @@ For more informations, check the standard OCPI specifications : [OCPI 2.1.1](htt
 - [eMSP Specific implementation guidlines](emsp_edits.md).
 
 ## [Introduction](introduction.md)
-*  Aims
-*  Intended Audience
-*  Definitions and Abbreviations
-*  Cardinality expression
+*  [Aims](introduction.md#aims)
+*  [Intended Audience](introduction.md#intended-audience)
+*  [Definitions and Abbreviations](introduction.md#definitions-and-abbrevations)
+*  [Cardinality expression](introduction.md#cardinality-expression)
   
-## [ Integration Guidelines](integration_guidelines.md)
+## [Integration Guidelines](integration_guidelines.md)
 * [Technical](integration_guidelines.md#technical)
   - Supported OCPI versions
   - Security
