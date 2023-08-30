@@ -15,7 +15,7 @@ For more informations, check the standard OCPI specifications : [OCPI 2.1.1](htt
 ## [Introduction](introduction.md)
 *  [Aims](introduction.md#aims)
 *  [Intended Audience](introduction.md#intended-audience)
-*  [Definitions and Abbreviations](introduction.md#definitions-and-abbrevations)
+*  [Definitions and Abbreviations](introduction.md#definitions-and-abbreviations)
 *  [Cardinality expression](introduction.md#cardinality-expression)
   
 ## [Integration Guidelines](integration_guidelines.md)
