@@ -37,14 +37,6 @@ For more informations, check the standard OCPI specifications : [OCPI 2.1.1](htt
 ## [CPO Specfic Implementation Guidelines](cpo_edits.md)
 * [CPO Operation Definition And Naming Rules](cpo_registration.md/#cpo-operation-definition-and-naming-rules)
 * [CPO Operation And Roaming Offers](cpo_registration.md/#cpo-operation-and-roaming-offers)
-* Use Cases Covered By IOP
-  - Technical Use cases
-  - EVCI data
-  - Roaming
-*  Use Cases Required By GIREVE
-  - Always required
-  - If the CPO implements the “Roaming” feature
-  - If the CPO doesn’t commit and describe its tariffs in a roaming agreement
 * [Connection & Register Specifications](cpo_registration.md)
   - Update Credentials FromIOP
 * [Locations Module Specifications](cpo_locations.md)
@@ -83,15 +75,6 @@ For more informations, check the standard OCPI specifications : [OCPI 2.1.1](htt
 
 
 ## [eMSP Specfic Implementation Guidelines](emsp_edits.md)
-* Use Cases Required By IOP
-  - Technical Use cases
-  - EVCI data
-  - Roaming
-* Use Cases Required By GIREVE
-  - Always required
-  - If the eMSP implements the “Locations static data download” feature
-  - If the eMSP implements the “Locations dynamic data download” feature
-  - If the eMSP implements the “Roaming” feature
 * [Connection & Register Specifications](emsp_registration.md)
   - Update Credentials FromIOP
 * [Locations Module Specification](emsp_locations.md)
