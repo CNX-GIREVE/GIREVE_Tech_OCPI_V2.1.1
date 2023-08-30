@@ -9,7 +9,7 @@ For more informations, check the standard OCPI specifications : [OCPI 2.1.1](htt
 - ### [Q&A](q&a.md)
 
 # Contents
-- A REVOIR :  [Version History]()
+- A REVOIR :  [Version History](version_history.md)
 - [CPO Specific implementation guidlines](cpo_edits.md).
 - [eMSP Specific implementation guidlines](emsp_edits.md).
 
