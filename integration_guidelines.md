@@ -25,7 +25,7 @@
  
 *** 
 
-## Technical
+## `Technical`
 
 ### Supported OCPI versions
 
@@ -37,7 +37,7 @@ IOP follows the security standard mechanisms of OCPI. At the connection, GIREVE 
 
 In the meantime, the operator can provide GIREVE with temporary Token(s) for IOP to initiate the connection. It is not mandatory as the operator is able to launch the Connection & Register process.
 
-During the Connection & Register process, IOP and the operator exchange final Tokens to request each other, and endpoints of their respective OCPI modules. **GIREVE requires all endpoints to be in HTTPS in order to secure communication between the two backends.**
+During the Connection & Register process, IOP and the operator exchange final Tokens to request each other, and endpoints of their respective OCPI modules. **<ins>GIREVE requires all endpoints to be in HTTPS in order to secure communication between the two backends.</ins>**
 
 ### Client owned object push
 
@@ -53,7 +53,7 @@ In OCPI, Objects managed through Rest protocol are owned by the CPO or the eMSP:
 
 IOP acts as a hub which routes the messages between CPOs and eMSPs, so IOP does not own objects exchanged by these two actors during their communication.
 
-**IOP is not the owner of the exchanged resources. Following this principle, IOP uses “country-code” and “partner-id” of the object owner during communication with other operators.**
+**<ins>IOP is not the owner of the exchanged resources. Following this principle, IOP uses “country-code” and “partner-id” of the object owner during communication with other operators.</ins>**
 
 For example, IOP pushes Locations of a CPO to an eMSP using “country-code/party-id” of the CPO in the URL.
 
@@ -73,14 +73,14 @@ The next version of OCPI, OCPI 2.2, integrates new extra headers enabling the sh
 
 GIREVE has begun to deploy these extra headers in its OCPI version 2.1.1 but it is an ongoing action.
 
-**These extra headers should not be considered yet in OCPI 2.1.1, except for “PULL Tokens: Retrieve Tokens of a single given eMSP” (see chapter 3.7.4 page 22) and “PULL Tokens: Retrieve Locations of a single given CPO” (see chapter 4.4.3 page 29):**
+**<ins>These extra headers should not be considered yet in OCPI 2.1.1, except for “PULL Tokens: Retrieve Tokens of a single given eMSP” (see chapter 3.7.4 page 22) and “PULL Tokens: Retrieve Locations of a single given CPO” (see chapter 4.4.3 page 29)</ins>**
 
 -   ocpi-to-country-code
 -   ocpi-to-party-id
 -   ocpi-from-country-code
 -   ocpi-from-party-id
 
-## OCPI modules implemented by IOP
+## `OCPI modules implemented by IOP`
 
 All OCPI modules have been implemented in IOP.
 List of modules implemented by IOP :
@@ -95,7 +95,7 @@ List of modules implemented by IOP :
 | CDRs | Send the final charge report |
 | Tariffs | Exchange Tariffs information |
 
-## GIREVE management of Locations data
+## `GIREVE management of Locations data`
 
 GIREVE and its systems distinguish two natures of Location properties:
 
@@ -108,11 +108,11 @@ GIREVE performs a specific process to first integrate static data of CPO Locatio
 
 This process is asynchronous from the standard connection of the CPO with the GIREVE IOP platform, meaning that new Locations of the CPO or updates on them can be seen in the GIREVE charge point repository several days after the first PUSH from the CPO to the GIREVE IOP platform.
 
-## Roaming
+## `Roaming`
 
 ### General workflow
 
-An OCPI Roaming session through IOP should run the following workflow
+An OCPI Roaming session through IOP should run the following workflow :
 
 #### Authorisation then initialise Session object
 
@@ -124,13 +124,13 @@ An OCPI Roaming session through IOP should run the following workflow
 
 ### New attribute « authorization_id »
 
-**IOP uses a new attribute « authorization_id » for Session, CDR, AuthorizationInfo and StartSession objects.**
+**<ins>IOP uses a new attribute « authorization_id » for Session, CDR, AuthorizationInfo and StartSession objects.</ins>**
 
 This information is used to associate the « authorization » given by the eMSP at the beginning of a charging session with Sessions and CDR related to. It answers to real business cases, for example an eMSP giving 2 authorisations and receiving 3 CDRs. Which ones should it pay?
 
 This new property must be provided by the eMSP during the authorisation process, then used by the CPO when it sends Sessions and CDRs related to the authorisation.
 
-**This property is implemented in OCPI 2.2 under the name “authorization_reference”.**
+**<ins>This property is implemented in OCPI 2.2 under the name “authorization_reference”.</ins>**
 
 #### “authorization_id” in local authorization
 
@@ -149,7 +149,7 @@ This new property must be provided by the eMSP during the authorisation process,
 ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/4c43625c-efb0-4daf-b7ef-a4e7d1128223)
 
 
-## Management of B2B tariffs
+## `Management of B2B tariffs`
 
 The CPO connected to GIREVE through OCPI have two options to manage and “publish” B2B tariffs:
 
@@ -160,7 +160,7 @@ The CPO connected to GIREVE through OCPI have two options to manage and “publi
 
 In this case (tariffs defined in roaming agreements), the CPO should not use the OCPI Tariffs module.
 
-**B2B tariffs are not described in roaming agreements**: Tariffs are not described in roaming agreements and the CPO transfers them through the OCPI Tariffs module.
+**<ins>B2B tariffs are not described in roaming agreements</ins>**: Tariffs are not described in roaming agreements and the CPO transfers them through the OCPI Tariffs module.
 
 -   In this case, the CPO manages its tariffs on its own and eMSPs cannot give their insights or validation about applied tariffs.
 -   Moreover, the CPO is not able to differentiate its tariffs according to eMSPs. In other words, the tariff is unique whatever the eMSP.
