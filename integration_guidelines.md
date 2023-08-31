@@ -15,7 +15,7 @@
   - Pagination
   - IOP HTTP headers
 * [OCPI modules implemented by IOP](#ocpi-modules-implemented-by-iop)
-* [GIREVE management of Locations data](#gireve-management-of-locations-data)
+* [Gireve management of Locations data](#gireve-management-of-locations-data)
 * [Roaming](#roaming)
   - General workflow
   - New attribute « authorization_id »
@@ -33,11 +33,11 @@ IOP OCPI implementation has begun with version 2.1.1. IOP does not support previ
 
 ### Security
 
-IOP follows the security standard mechanisms of OCPI. At the connection, GIREVE provides new operator connecting with temporary Token(s) to register as CPO and/or eMSP. The Token should be used when the connection is initiated by the operater.
+IOP follows the security standard mechanisms of OCPI. At the connection, Gireve provides new operator connecting with temporary Token(s) to register as CPO and/or eMSP. The Token should be used when the connection is initiated by the operater.
 
-In the meantime, the operator can provide GIREVE with temporary Token(s) for IOP to initiate the connection. It is not mandatory as the operator is able to launch the Connection & Register process.
+In the meantime, the operator can provide Gireve with temporary Token(s) for IOP to initiate the connection. It is not mandatory as the operator is able to launch the Connection & Register process.
 
-During the Connection & Register process, IOP and the operator exchange final Tokens to request each other, and endpoints of their respective OCPI modules. **<ins>GIREVE requires all endpoints to be in HTTPS in order to secure communication between the two backends.</ins>**
+During the Connection & Register process, IOP and the operator exchange final Tokens to request each other, and endpoints of their respective OCPI modules. **<ins>Gireve requires all endpoints to be in HTTPS in order to secure communication between the two backends.</ins>**
 
 ### Client owned object push
 
@@ -71,7 +71,7 @@ Finally, IOP for each module has its own max size limit per page (20 Locations, 
 
 The next version of OCPI, OCPI 2.2, integrates new extra headers enabling the sharing of a single OCPI connection to multiple operators.
 
-GIREVE has begun to deploy these extra headers in its OCPI version 2.1.1 but it is an ongoing action.
+Gireve has begun to deploy these extra headers in its OCPI version 2.1.1 but it is an ongoing action.
 
 **<ins>These extra headers should not be considered yet in OCPI 2.1.1, except for “PULL Tokens: Retrieve Tokens of a single given eMSP” (see chapter 3.7.4 page 22) and “PULL Tokens: Retrieve Locations of a single given CPO” (see chapter 4.4.3 page 29)</ins>**
 
@@ -95,18 +95,18 @@ List of modules implemented by IOP :
 | CDRs | Send the final charge report |
 | Tariffs | Exchange Tariffs information |
 
-## `GIREVE management of Locations data`
+## `Gireve management of Locations data`
 
-GIREVE and its systems distinguish two natures of Location properties:
+Gireve and its systems distinguish two natures of Location properties:
 
 -   Static data: Locations properties which never or almost never change.
 -   Dynamic data: Locations properties which can change frequently (e.g., EVSE status, Connector tariff_id)
 
 All Location properties are considered as static data except for the status of the EVSE and the tariff_id attached to a connector.
 
-GIREVE performs a specific process to first integrate static data of CPO Locations in its charge point repository then to integrate static data change like change on a Locations of a CPO or new Locations or EVSEs. This process implies data quality tests and data completion of the CPO Locations.
+Gireve performs a specific process to first integrate static data of CPO Locations in its charge point repository then to integrate static data change like change on a Locations of a CPO or new Locations or EVSEs. This process implies data quality tests and data completion of the CPO Locations.
 
-This process is asynchronous from the standard connection of the CPO with the GIREVE IOP platform, meaning that new Locations of the CPO or updates on them can be seen in the GIREVE charge point repository several days after the first PUSH from the CPO to the GIREVE IOP platform.
+This process is asynchronous from the standard connection of the CPO with the Gireve IOP platform, meaning that new Locations of the CPO or updates on them can be seen in the Gireve charge point repository several days after the first PUSH from the CPO to the Gireve IOP platform.
 
 ## `Roaming`
 
@@ -151,11 +151,11 @@ This new property must be provided by the eMSP during the authorisation process,
 
 ## `Management of B2B tariffs`
 
-The CPO connected to GIREVE through OCPI have two options to manage and “publish” B2B tariffs:
+The CPO connected to Gireve through OCPI have two options to manage and “publish” B2B tariffs:
 
-**<ins>B2B tariffs are described in roaming agreements</ins>**: The description and the commitment related to tariffs are contained in roaming agreements signed on the GIREVE connect place:
+**<ins>B2B tariffs are described in roaming agreements</ins>**: The description and the commitment related to tariffs are contained in roaming agreements signed on the Gireve connect place:
 
--   Tariffs applied for a contract between an eMSP and a CPO are defined and negotiated, using the GIREVE connect place, before signature of the roaming agreement by both parts.
+-   Tariffs applied for a contract between an eMSP and a CPO are defined and negotiated, using the Gireve connect place, before signature of the roaming agreement by both parts.
 -   In case of tariff updates, the CPO and the eMSP must sign an amendment whose management is fully automated.
 
 In this case (tariffs defined in roaming agreements), the CPO should not use the OCPI Tariffs module.
@@ -190,7 +190,7 @@ Using this new flow, the CPO can decide to:
 -   Send an authorization request to IOP without knowledge of the Token. If the authorization is accepted the CPO gets the Token, including the “auth_id”, with the new flow then send Sessions and CDRs.  
       
      ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/12bbe067-d4e7-45bd-8cef-3a7195115ca6)
--   Or request this new flow to get the Token description and the confirmation that this Token is owned by an eMSP behind GIREVE, then send the authorization request to GIREVE.  
+-   Or request this new flow to get the Token description and the confirmation that this Token is owned by an eMSP behind Gireve, then send the authorization request to Gireve.  
       
     ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/5f86964a-3b30-41a1-b8cf-a9a62b1b6ac0)
 
