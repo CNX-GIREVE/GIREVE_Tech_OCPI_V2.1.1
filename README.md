@@ -5,7 +5,7 @@ For more informations, check the standard OCPI specifications : [OCPI 2.1.1](htt
 
 - [Gireve_Implementation_Guide.pdf](https://www.gireve.com/wp-content/uploads/2023/03/Gireve_Tech_OCPI-V2.1.1_ImplementationGuide_1.2.1_en.pdf)
 
-- A REVOIR Tips before starting your implementation : [Integration Guidelines](integration_guidelines.md).
+- Informations before starting your implementation : [Integration Guidelines](integration_guidelines.md).
 - ### [Q&A](q&a.md)
 
 # Contents
