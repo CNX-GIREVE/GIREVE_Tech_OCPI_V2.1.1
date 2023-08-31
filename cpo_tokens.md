@@ -4,7 +4,7 @@
 
 * [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - Roaming                                                            
-* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+* [Use Cases Required By Gireve](#use-cases-required-by-gireve)
   - If the CPO implements the "Roaming" feature 
 * [Tokens module specifications](#tokens-module-specifications)
   - GET Tokens To/FromIOP	
@@ -20,13 +20,13 @@
 
 ***
 
-## Use cases covered by IOP
+## `Use cases covered by IOP`
 
 OCPI features are composed by several use cases that a CPO can choose to implement or not when connecting to an operator.
 
-In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
+In case of connection to Gireve, here is the list of use cases that a CPO can implement :
 
-## Roaming
+## `Roaming`
 
 
 | Use case | ToIOP/FromIOP | Usage |
@@ -36,9 +36,9 @@ In case of connection to GIREVE, here is the list of use cases that a CPO can im
 | Pull Tokens by uid | ToIOP | A CPO requests IOP to get single Token which is identified by the user UID. |
 | Realtime Authorisation | ToIOP | A CPO requests IOP to get Authorisation triggered by a local authentication (swiping of an RFID badge by an EV driver on one of its EVSE, for example). |
 
-## Use cases required by GIREVE
+## `Use cases required by Gireve`
 
-Some of these use cases are required when connecting to GIREVE :
+Some of these use cases are required when connecting to Gireve :
 
 ### If the CPO implements the “Roaming” feature
 
@@ -47,13 +47,13 @@ Some of these use cases are required when connecting to GIREVE :
 | Realtime Authorisation/ToIOP | A CPO should be able to request eMSP through IOP when a driver uses his RFID badge to charge. | 
 | Pull Tokens/ToIOP | Pull Tokens is the only way open for a CPO to download Tokens of eMSP it is in contract with. This feature is “global” (CPO downloads all the tokens of all eMSP it is in contract with), or “unitary” (CPO downloads all the tokens of a single given eMSP). |
 
-## Tokens module specifications
+## `Tokens module specifications`
 
 IOP follows the OCPI standard for Tokens module. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_tokens.md).
 
 ### GET Tokens To/FromIOP
 
-IOP is not able to PUSH Tokens to CPO backend. CPO should PULL IOP to get Tokens.
+> :warning: **<ins>IOP is not able to PUSH Tokens to CPO backend. CPO should PULL IOP to get Tokens.**</ins>
 
 ### PULL Tokens : Who is the eMSP ?
 
@@ -79,12 +79,12 @@ This new flow prevents CPOs to download all Tokens of all eMSPs. For more descri
 
 The standard OCPI 2.1.1 Tokens pulling allows CPOs to get Tokens of all eMSPs in contract with them.
 In some cases, CPOs need only Tokens of a specific given eMSP. For example, when the CPO initializes data of an eMSP after signature of a new roaming agreement.
-GIREVE provides a new OCPI 2.1.1 feature by allowing the CPO to get Tokens of a unique eMSP by filling two dedicated OCPI headers in their “GET Tokens” request to GIREVE :
+Gireve provides a new OCPI 2.1.1 feature by allowing the CPO to get Tokens of a unique eMSP by filling two dedicated OCPI headers in their “GET Tokens” request to Gireve :
 
-- ocpi-to-country-code: The country code of the targeted eMSP.
-- ocpi-to-party-id: The party id of the targeted eMSP.
+- ocpi-to-country-code : The country code of the targeted eMSP.
+- ocpi-to-party-id : The party id of the targeted eMSP.
   
-Therefore, CPOs can request GIREVE without these headers to get Tokens of all eMSPs or including these headers to get Tokens of a unique eMSP.
+Therefore, CPOs can request Gireve without these headers to get Tokens of all eMSPs or including these headers to get Tokens of a unique eMSP.
 For information, these headers have been included in the version 2.2 of the OCPI standard.
 
 ### POST Authorize request : LocationReferences mandatory
@@ -97,11 +97,11 @@ If « LocationReferences » object contains more than 1 EVSE, IOP responds with 
 
 ### POST Authorize request : new attribute “authorization_id”
 
-IOP answers to a POST Token Authorize request with a new attribute of AuthorizationInfo object, the “authorization_id”. Please refer to paragraph 5 [New attribute « authorization_id »](checkup_edits.md).
+> :warning: **<ins>IOP answers to a POST Token Authorize request with a new attribute of AuthorizationInfo object, the “authorization_id”.**</ins> Please refer to paragraph 5 [New attribute « authorization_id »](checkup_edits.md).
 
 **The CPO must store this information to send it in Sessions and CDRs related to this Authorization.**
 
-## Examples
+## `Examples`
 
 ### ToIOP_GET_emsp_tokens_2.1.1, FromIOP_GET_emsp_tokens_2.1.1
 
@@ -210,7 +210,7 @@ IOP answers to a POST Token Authorize request with a new attribute of Authorizat
 
 - **VERB : GET**
 - **HEADERS** : {Authorization:Token xxx-xxx-xxx}{Connection:close}{Accept:application/json}
-- **BODY** : (Le corps de la requête est vide)
+- **BODY** : Empty
 
 *Response* : 
 
