@@ -171,11 +171,11 @@ The RFID is not case sensitive. We recommend using uppercase characters. Leading
 
 ### Custom OCPI flow to prevent eMSP Tokens download by CPOs
 
-In OCPI 2.1.1, CPOs must send the “auth_id” of a Token in Sessions and CDRs flows.
+<ins>**In OCPI 2.1.1, CPOs must send the “auth_id” of a Token in Sessions and CDRs flows.**</ins>
 
 The only way for CPOs to get this information is to download all Tokens of all eMSPs it is in contract with. CPOs must therefore manage millions of Tokens in their backends, sometime duplicated in case of a backend managing multiple CPOs (a single Token can be downloaded through each CPO connection).
 
-To prevent this complexity and make life easier for CPOs, IOP provides a new OCPI flow enabling a CPO to get the full description of a Token, including the “auth_id” information, by requesting IOP with the “Token’s uid”.
+<ins>**To prevent this complexity and make life easier for CPOs, IOP provides a new OCPI flow enabling a CPO to get the full description of a Token, including the “auth_id” information, by requesting IOP with the “Token’s uid”.**</ins>
 
 Using this new flow, the CPO can decide to:
 
