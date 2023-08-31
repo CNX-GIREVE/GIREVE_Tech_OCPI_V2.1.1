@@ -5,7 +5,7 @@
 
 * [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - EVCI data
-* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+* [Use Cases Required By Gireve](#use-cases-required-by-gireve)
   - Always required
 * [Locations module specifications](#locations-module-specifications)
   - Static and dynamic attributes
@@ -23,13 +23,13 @@
 
 
 
-## Use cases covered by IOP
+## `Use cases covered by IOP`
 
 OCPI features are composed by several use cases that a CPO can choose to implement or not when connecting to an operator.
 
-In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
+In case of connection to Gireve, here is the list of use cases that a CPO can implement :
 
-## EVCI data
+## `EVCI data`
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
@@ -38,36 +38,36 @@ In case of connection to GIREVE, here is the list of use cases that a CPO can im
 | Pull Locations (Static data) | FromIOP | IOP requests the CPO backend to retrieve Locations data. |
 | Check Locations | ToIOP | A CPO requests IOP to get its Locations stored in RPC. |
 
-## Use cases required by GIREVE
+## `Use cases required by Gireve`
 
-Some of these use cases are required when connecting to GIREVE :
+Some of these use cases are required when connecting to Gireve :
 
 ### Always required
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
-| Push EVSE status/ToIOP | A CPO connected to GIREVE must transfer “in realtime” EVSE status change of its EVSEs. | 
-| Pull Locations/FromIOP | GIREVE wants to be able to refresh EVCI data when needed. |
+| Push EVSE status/ToIOP | A CPO connected to Gireve must transfer “in realtime” EVSE status change of its EVSEs. | 
+| Pull Locations/FromIOP | Gireve wants to be able to refresh EVCI data when needed. |
 
-## Locations module specifications
+## `Locations module specifications`
 
 IOP follows the OCPI standard for Locations upload by a CPO. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_locations.md).
 
-Nonetheless, the following attributes are mandatory for Gireve although they are optional in the OCPI standard :
+**<ins>Nonetheless, the following attributes are mandatory for Gireve although they are optional in the OCPI standard :**</ins>
 
 | Word | Meaning |
 | ----------- | ----------- |
 | Owner.name | Mandatory : this information MUST be registered in the ocpi flow under the object « owner » with the attribute « name ». | 
 | Operator.name | Mandatory for Gireve - we use it to give information about the brand name. |
-| Evses.connectos.tariff_id | Mandatory for GIREVE. |
-| Evses.capabilities | Mandatory for GIREVE. |
+| Evses.connectos.tariff_id | Mandatory for Gireve. |
+| Evses.capabilities | Mandatory for Gireve. |
 
 ### Static and dynamic attibutes
 
 The attributes of the Location object (with EVSE and Connector) are of 2 types :
 
-- Static attributes are data attributes that do not change frequently (address, localisation …)
-- Dynamic attributes are data attributes that may change frequently (availability, occupied/free …)
+- **<ins>Static attributes</ins>** are data attributes that do not change frequently (address, localisation …)
+- **<ins>Dynamic attributes</ins>** are data attributes that may change frequently (availability, occupied/free …)
 
 **For the moment, all properties of a Location are Static data except EVSE.status, the only Dynamic data.**
 
@@ -75,7 +75,7 @@ The attributes of the Location object (with EVSE and Connector) are of 2 types :
 
 OCPI defines an attribute called « evse_id » which contains the eMI3 id of the EVSE.
 
-**The “evse_id” is optional for OCPI but required by GIREVE to ensure seamless compatibility with operators connected via other protocols (eMIP, …).
+**The “evse_id” is optional for OCPI but required by Gireve to ensure seamless compatibility with operators connected via other protocols (eMIP, …).
 In addition, the eMI3 standard requires that the eMI3 Id of an EVSE begins by the eMI3 Id of the CPO.**
 
 [See “Part 2 v1.0” of eMI3 standard here :](http://emi3group.com/documents-links/)
@@ -83,21 +83,21 @@ All “evse_id” of the CPO “FR*CPO” should start with “FR*CPO*E”.
 
 ### Tarrif_id value
 
-GIREVE uses the “tariff_id” information provided by CPOs in Locations to dispatch CPO’s EVSEs into separated EVSE tariff groups. Also, CPOs can refer to these tariff groups when they describe their roaming offer including tariffs via the [GIREVE connect place](https://connect-place.gireve.com).
+Gireve uses the “tariff_id” information provided by CPOs in Locations to dispatch CPO’s EVSEs into separated EVSE tariff groups. Also, CPOs can refer to these tariff groups when they describe their roaming offer including tariffs via the [Gireve connect place](https://connect-place.gireve.com).
 
-**Considering that, we strongly suggest to fill the “tariff_id” information when the CPO uploads its Locations to GIREVE IOP platform.**
+**Considering that, we strongly suggest to fill the “tariff_id” information when the CPO uploads its Locations to Gireve IOP platform.**
 
 ### PUSH Locations ToIOP
 
 The eMSP Interface is not fully implemented by IOP for the PUSH of static attributes. The web service is present and responds but information is not stored in RPC (Charge Point Repository).
 
-The only data directly updated in RPC after a PUT/PATCH Locations by a CPO are :
+**<ins>The only data directly updated in RPC after a PUT/PATCH Locations by a CPO are :**</ins>
 - The dynamic attribute EVSE.status.
 - The “Connector.tariff_id” information.  
 
 ### Store and Forward – PUT and PATCH Locations
 
-A Store and Forward mechanism must be implemented to ensure that no data upload may be lost, in case of a connection loss. Any data upload that didn’t get a correct response from the GIREVE platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active.
+A Store and Forward mechanism must be implemented to ensure that no data upload may be lost, in case of a connection loss. Any data upload that didn’t get a correct response from the Gireve platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active.
 After the connection recovery, the Data Upload messages must be resent in a FIFO manner.
 
 ### PULL Locations ToIOP
@@ -120,7 +120,7 @@ IOP is able to PULL Location requesting CPO backend. In this case, IOP uses the 
 
 The default periodicity is every day.
 
-## Examples
+## `Examples`
 
 ### ToIOP_PUT_emsp_locations_2.1.1, FromIOP_ PUT_emsp_locations_2.1.1 (on Locations)
 
