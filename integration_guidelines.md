@@ -79,26 +79,26 @@ List of modules implemented by IOP :
 
 | Module | Usage |
 | ----------- | ----------- |
-| Credentials | Initialise and update IT connection information (endpoints, OCPI versions, …) |
-| Locations | Exchange charge infrastructure information |
-| Tokens | Manage Tokens and local authorizations |
-| Commands | Start a charge remotely, Send commands during charge |
-| Sessions | Exchange information during charge |
-| CDRs | Send the final charge report |
-| Tariffs | Exchange Tariffs information |
+| **Credentials** | Initialise and update IT connection information (endpoints, OCPI versions, …) |
+| **Locations** | Exchange charge infrastructure information |
+| **Tokens** | Manage Tokens and local authorizations |
+| **Commands** | Start a charge remotely, Send commands during charge |
+| **Sessions** | Exchange information during charge |
+| **CDRs** | Send the final charge report |
+| **Tariffs** | Exchange Tariffs information |
 
 ## `Gireve management of Locations data`
 
 Gireve and its systems distinguish two natures of Location properties:
 
--   Static data: Locations properties which never or almost never change.
--   Dynamic data: Locations properties which can change frequently (e.g., EVSE status, Connector tariff_id)
+-   <ins>**Static data :**</ins> Locations properties which never or almost never change.
+-   <ins>**Dynamic data :**</ins> Locations properties which can change frequently (e.g., EVSE status, Connector tariff_id)
 
 All Location properties are considered as static data except for the status of the EVSE and the tariff_id attached to a connector.
 
 Gireve performs a specific process to first integrate static data of CPO Locations in its charge point repository then to integrate static data change like change on a Locations of a CPO or new Locations or EVSEs. This process implies data quality tests and data completion of the CPO Locations.
 
-This process is asynchronous from the standard connection of the CPO with the Gireve IOP platform, meaning that new Locations of the CPO or updates on them can be seen in the Gireve charge point repository several days after the first PUSH from the CPO to the Gireve IOP platform.
+This process is asynchronous from the standard connection of the CPO with the Gireve IOP platform, meaning that new Locations of the CPO or updates on them can be seen in the Gireve charge point repository several days after the first **PUSH** from the CPO to the Gireve IOP platform.
 
 ## `Roaming`
 
