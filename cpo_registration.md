@@ -6,7 +6,7 @@
 * [CPO Operation And Roaming Offers](#cpo-operation-and-roaming-offers)
 * [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - Technical Use cases
-* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+* [Use Cases Required By Gireve](#use-cases-required-by-gireve)
   - Always required
 * [Connection & Register specifications](#connection-and-register-specifications)
   - Update Credentials FromIOP
@@ -18,7 +18,7 @@
 
 ***
 
-## CPO operation definition and naming rules
+## `CPO operation definition and naming rules`
 
 A CPO can manage one or multiple CPO operations. A CPO operation is a homogeneous group of charging points. A CPO operation is defined by its unique eMI3 operation code also called “Operator Id” which is composed by a 2 ALPHA country code plus a 3 ALPHANUMERIC Spot Operator ID.
 
@@ -36,7 +36,7 @@ Specifically, all evse_id included into a given operation must always start with
 
 It is not allowed to include in a given CPO operation evse_ids that start with a different Operator Id.
 
-## CPO operation and roaming offers
+## `CPO operation and roaming offers`
 
 Reminder : If a CPO manages multiple operations, each operation has to go through the OCPI connection establishment process (handshake). 
 A CPO Operation is the smallest entity that can constitute a roaming offer.
@@ -44,11 +44,11 @@ Although Gireve’s technical platform (IOP) is built to manage bilateral commun
 •	Reduces the number of roaming agreements (1 agreement instead of several bilateral contracts – one per operation).
 •	Allows to add or remove operations from the network without terminating the current agreement or issuing amendments, enabling new tenants to benefit from already active roaming agreements. 
 
-## Use cases covered by IOP
+## `Use cases covered by IOP`
 
 OCPI features are composed by several use cases that a CPO can choose to implement or not when connecting to an operator.
 
-In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
+In case of connection to Gireve, here is the list of use cases that a CPO can implement :
 
 ### Technical Use cases
 
@@ -63,17 +63,17 @@ In case of connection to GIREVE, here is the list of use cases that a CPO can im
 **If a CPO manages several operations, each operation must go through the OCPI connection process (handshake).**
 
 
-## Use cases required by GIREVE
+## `Use cases required by Gireve`
 
-Some of these use cases are required when connecting to GIREVE :
+Some of these use cases are required when connecting to Gireve :
 
 ### Always required
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
-| Register/FromIOP OR Register/ToIOP |  These use cases are needed to initialise connection between an operator and GIREVE. | 
+| Register/FromIOP OR Register/ToIOP |  These use cases are needed to initialise connection between an operator and Gireve. | 
 
-## Connection And Register specifications
+## `Connection And Register specifications`
 
 IOP follows the OCPI standard for Connection & Register process. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/credentials.md).
 
@@ -81,7 +81,7 @@ IOP follows the OCPI standard for Connection & Register process. [See OCPI speci
 
 IOP is not able to send a **PUT** Credentials to update its Credentials on operator backend. In order to update them, IOP sends a “**DELETE** Credentials” to delete the OCPI connection then starts a new Connection & Register process beginning by a **POST** Credentials sent by IOP or by the operator.
 
-## Examples 
+## `Examples`
 
 ### ToIOP_GET_emsp_versions, FromIOP_GET_emsp_versions
 
