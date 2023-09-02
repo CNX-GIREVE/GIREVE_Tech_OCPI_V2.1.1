@@ -97,7 +97,7 @@ If « LocationReferences » object contains more than 1 EVSE, IOP responds with 
 
 ### POST Authorize request : new attribute “authorization_id”
 
-> :warning: **<ins>IOP answers to a POST Token Authorize request with a new attribute of AuthorizationInfo object, the “authorization_id”.**</ins> Please refer to paragraph [New attribute « authorization_id »](checkup_edits.md).
+> :warning: **<ins>IOP answers to a POST Token Authorize request with a new attribute of AuthorizationInfo object, the “authorization_id”.**</ins> Please refer to paragraph [New attribute « authorization_id »](integration_guidelines.md).
 
 **The CPO must store this information to send it in Sessions and CDRs related to this Authorization.**
 
