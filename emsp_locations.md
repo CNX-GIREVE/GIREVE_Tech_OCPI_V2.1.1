@@ -136,7 +136,7 @@ You should not reject them because of the non-compliance with the standard.
 
 ### PULL Locations FromIOP
 
-IOP will never PULL eMSP to check the status of a Location, EVSE or Connector object in the eMSP system.
+**IOP will never PULL eMSP to check the status of a Location, EVSE or Connector object in the eMSP system.**
 
 ## `Examples`
 
