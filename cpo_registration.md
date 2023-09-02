@@ -54,11 +54,11 @@ In case of connection to Gireve, here is the list of use cases that a CPO can im
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
-| Register | FromIOP | IOP initialises the connection to a CPO beginning by a GET_Versions, then exchanging endpoints and Authorization-token. |
-| Register | ToIOP | A CPO initialises the connection to IOP beginning by a GET_Versions, then exchanging endpoints and Authorization-token. |
-| Update CPO credentials | ToIOP | A CPO already registered requests IOP to update its Credentials (endPoints, versions, authorization-token). |
-| Unregister | FromIOP | IOP unregisters a CPO by requesting a DELETE Credentials. |
-| Unregister | ToIOP | A CPO unregisters IOP by requesting a DELETE Credentials. |
+| **Register** | FromIOP | IOP initialises the connection to a CPO beginning by a GET_Versions, then exchanging endpoints and Authorization-token. |
+| **Register** | ToIOP | A CPO initialises the connection to IOP beginning by a GET_Versions, then exchanging endpoints and Authorization-token. |
+| **Update CPO** credentials | ToIOP | A CPO already registered requests IOP to update its Credentials (endPoints, versions, authorization-token). |
+| **Unregister** | FromIOP | IOP unregisters a CPO by requesting a DELETE Credentials. |
+| **Unregister** | ToIOP | A CPO unregisters IOP by requesting a DELETE Credentials. |
 
 **If a CPO manages several operations, each operation must go through the OCPI connection process (handshake).**
 
@@ -71,7 +71,7 @@ Some of these use cases are required when connecting to Gireve :
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
-| Register/FromIOP OR Register/ToIOP |  These use cases are needed to initialise connection between an operator and Gireve. | 
+| **Register/FromIOP OR Register/ToIOP** |  These use cases are needed to initialise connection between an operator and Gireve. | 
 
 ## `Connection And Register specifications`
 
