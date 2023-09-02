@@ -4,7 +4,7 @@
 
 * [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - Technical Use cases
-* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+* [Use Cases Required By Gireve](#use-cases-required-by-gireve)
   - Always required
 * [Connection & Register specifications](#connection-and-register-specifications)
   - Update Credentials FromIOP
@@ -18,7 +18,7 @@
 
 ## Use cases covered by IOP 
 
-OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
+OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to Gireve, here is the list of use cases that a CPO can implement :
 
 ### Technical Use cases
 
@@ -30,15 +30,15 @@ OCPI features are composed by several use cases that an eMSP can choose to imple
 | Unregister | **FromIOP** | IOP unregisters an eMSP by requesting a DELETE Credentials |
 | Unregister | **ToIOP** | An eMSP unregisters IOP by requesting a DELETE Credentials |
 
-## Use cases required by GIREVE
+## Use cases required by Gireve
 
-Some of these use cases are required when connecting to GIREVE :
+Some of these use cases are required when connecting to Gireve :
 
 ### Always required
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
-| Register/FromIOP OR Register/ToIOP |  These use cases are needed to initialise connection between an operator and GIREVE. | 
+| Register/FromIOP OR Register/ToIOP |  These use cases are needed to initialise connection between an operator and Gireve. | 
 
 ## Connection and Register specifications
 
