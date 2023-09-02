@@ -4,7 +4,7 @@
 
 * [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - Roaming                                                            
-* [Use Cases Required By Gireve](#use-cases-required-by-Gireve)
+* [Use Cases Required By Gireve](#use-cases-required-by-gireve)
   - If the CPO doesn’t commit and describe its tariffs in a roaming agreement 
   - Tarrif_id value
 * [Tariffs module specifications](#tariffs-module-specifications)
