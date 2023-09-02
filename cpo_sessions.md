@@ -4,7 +4,7 @@
 
 * [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - Roaming
-* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+* [Use Cases Required By Gireve](#use-cases-required-by-gireve)
   - Always required
 * [Sessions module specification](#sessions-module-specifications)
   - Session Initialisation
@@ -17,22 +17,22 @@
 ***
 
 
-## Use cases covered by IOP
+## `Use cases covered by IOP`
 
 OCPI features are composed by several use cases that a CPO can choose to implement or not when connecting to an operator.
 
-In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
+In case of connection to Gireve, here is the list of use cases that a CPO can implement :
 
 ### Roaming
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
-| Push Session | ToIOP | A CPO requests IOP to initialise or update an OCPI Session object following an positive Authorisation. |
-| Check Session | ToIOP | A CPO requests IOP to get Sessions it has previously initialised. |
+| **Push Session** | ToIOP | A CPO requests IOP to initialise or update an OCPI Session object following an positive Authorisation. |
+| **Check Session** | ToIOP | A CPO requests IOP to get Sessions it has previously initialised. |
 
-## Use cases required by GIREVE
+## `Use cases required by Gireve`
 
-Some of these use cases are required when connecting to GIREVE :
+Some of these use cases are required when connecting to Gireve :
 
 ### If the CPO implements the “Roaming” feature
 
@@ -40,7 +40,7 @@ Some of these use cases are required when connecting to GIREVE :
 | ----------- | ----------- |
 | **PUT** Session FromIOP | A CPO must be able to send information about charging-sessions through Session objects (charge started, …). |
 
-## Sessions module specifications
+## `Sessions module specifications`
 
 IOP follows the OCPI standard for Sessions sent by a CPO. [See OCPI specifications](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_sessions.md).
 
@@ -55,9 +55,9 @@ When sending a Session, the CPO defines the Authorization it refers to on provid
 
 ### Store and forward – PUT Sessions
 
-A Store and Forward mechanism must be implemented to ensure that no session may be lost, in case of a connection loss. Any PUT session that didn’t get a correct response from the GIREVE platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the session messages must be resent in a FIFO manner.
+**<ins>A Store and Forward mechanism must be implemented</ins>** to ensure that no session may be lost, in case of a connection loss. Any PUT session that didn’t get a correct response from the Gireve platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the session messages must be resent in a FIFO manner.
 
-## Examples
+## `Examples`
 
 ### ToIOP_PUT_emsp_sessions_2.1.1, FromIOP_PUT_emsp_sessions_2.1.1
 
