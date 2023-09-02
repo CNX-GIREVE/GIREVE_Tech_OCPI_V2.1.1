@@ -11,7 +11,7 @@
   - PULL Tokens FromIOP : Pagination and Periodicity 
   - POST Authorize request: new attribute « authorization_id »
 * [Examples](#examples)
-  - oIOP_PUT_cpo_tokens_2.1.1
+  - ToIOP_PUT_cpo_tokens_2.1.1
   - ToIOP_PATCH_cpo_tokens_2.1.1  
 
 
