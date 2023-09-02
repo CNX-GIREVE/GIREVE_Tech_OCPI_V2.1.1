@@ -4,7 +4,7 @@
 
 * [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - Roaming
-* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+* [Use Cases Required By Gireve](#use-cases-required-by-gireve)
   - If the eMSP implements the “Sessions” feature
 * Tokens module specifications](#tokens-module-specifications)
   - Share Tokens liste
@@ -18,31 +18,31 @@
 ***
 
 
-## Use cases covered by IOP 
+## `Use cases covered by IOP` 
 
-OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
+OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to Gireve, here is the list of use cases that a CPO can implement :
 
 
 ### Roaming
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
-| Push Tokens | ToIOP | An eMSP updates its Tokens stored in IOP. |
-| Pull Tokens |  FromIOP | IOP requests an eMSP to retrieve eMSP tokens. |
-| Check Tokens | ToIOP | An eMSP requests IOP to get its tokens stored in IOP.|
-| Realtime Authorisation | FromIOP | IOP, triggered by a get authorisation request coming from a CPO, requests an eMSP to get the authorisation for a charging session |
+| **Push Tokens** | ToIOP | An eMSP updates its Tokens stored in IOP. |
+| **Pull Tokens** |  FromIOP | IOP requests an eMSP to retrieve eMSP tokens. |
+| **Check Tokens** | ToIOP | An eMSP requests IOP to get its tokens stored in IOP.|
+| **Realtime Authorisation** | FromIOP | IOP, triggered by a get authorisation request coming from a CPO, requests an eMSP to get the authorisation for a charging session |
 
-## Use cases required by GIREVE
+## `Use cases required by Gireve`
 
-Some of these use cases are required when connecting to GIREVE :
+Some of these use cases are required when connecting to Gireve :
 
 ### If the eMSP implements the “Roaming” feature
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
-| Pull Tokens/FromIOP | An eMSP has no possibility to send a single request to update a list of Tokens. The Pull Tokens feature allows IOP to retrieve all Tokens in a few numbers of requests instead of receiving many single updates. | 
+| **Pull Tokens/FromIOP** | An eMSP has no possibility to send a single request to update a list of Tokens. The Pull Tokens feature allows IOP to retrieve all Tokens in a few numbers of requests instead of receiving many single updates. | 
 
-## Tokens module specifications
+## `Tokens module specifications`
 
 IOP follows the OCPI standard for Tokens module. See OCPI specifications.
 
@@ -57,10 +57,9 @@ The default periodicity is every day.
 
 ### POST Authorize request: new attribute « authorization_id »
 
-When an eMSP answers to a POST Token Authorize request, GIREVE highly recommends eMSPs to use the new attribute of AuthorizationInfo object, the “authorization_id”. 
-Please refer to paragraph 2.4.2 New attribute « authorization_id ».
-
-## Examples
+When an eMSP answers to a POST Token Authorize request, **<ins>Gireve highly recommends eMSPs to use the new attribute of AuthorizationInfo object, the “authorization_id”.</ins>**
+Please refer to paragraph 5 [New attribute « authorization_id »](checkup_edits.md)
+## `Examples`
 
 ### ToIOP_PUT_cpo_tokens_2.1.1
 
