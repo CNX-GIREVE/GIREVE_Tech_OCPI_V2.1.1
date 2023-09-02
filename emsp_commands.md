@@ -49,7 +49,7 @@ IOP follows the OCPI standard for Commands received by a CPO. See OCPI specifica
 
 ### StartSession request: new attribute « authorization_id »
 
-> :bulb: When an eMSP sends a StartSession command to a CPO, **<ins>Gireve highly recommends eMSPs to use the new attribute “authorization_id”.</ins>** Please refer to [New attribute « authorization_id »](integrations_guidelines.md).
+> :bulb: When an eMSP sends a StartSession command to a CPO, **<ins>Gireve highly recommends eMSPs to use the new attribute “authorization_id”.</ins>** Please refer to [New attribute « authorization_id »](integration_guidelines.md).
 
 ### ReserveNow command
 
