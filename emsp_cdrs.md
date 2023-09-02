@@ -4,7 +4,7 @@
 
 * [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - Roaming
-* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+* [Use Cases Required By Gireve](#use-cases-required-by-gireve)
   - If the eMSP implements the “Sessions” feature
 * [CDRs module specifications](#cdrs-module-specifications)
   - Usage of “authorization_id”
@@ -17,30 +17,30 @@
 ***
 
 
-## Use cases covered by IOP 
+## `Use cases covered by IOP` 
 
-OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
+OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to Gireve, here is the list of use cases that a CPO can implement :
 
 
 ### Roaming
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
-| Push CDRSessions | IOP sends to an eMSP a CDR related to a terminated charging-session. |
-| Pull CDR | ToIOP | An eMSP requests IOP to get CDRs that belongs to it. |
+| **Push CDR** | ToIOP | IOP sends to an eMSP a CDR related to a terminated charging-session. |
+| **Pull CDR** | ToIOP | An eMSP requests IOP to get CDRs that belongs to it. |
 
 
-## Use cases required by GIREVE
+## `Use cases required by Gireve`
 
-Some of these use cases are required when connecting to GIREVE :
+Some of these use cases are required when connecting to Gireve :
 
 ### If the eMSP implements the “Roaming” feature
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
-| Push CDR/FromIOP OR Pull CDR/ToIOP | Getting CDR is mandatory to enable roaming. | 
+| **Push CDR/FromIOP OR Pull CDR/ToIOP** | Getting CDR is mandatory to enable roaming. | 
 
-## CDRs module specifications
+## `CDRs module specifications`
 
 IOP follows the OCPI standard for Sessions sent by a CPO. [*See OCPI specifications*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/mod_cdrs.md)*.*
 
@@ -60,25 +60,25 @@ It might not include the duration during which the EVSE is out of order so canno
 
 In some cases, the CPO is not able to send a consistent B2B price in the CDR. (“total_cost” not mandatory for CPOs connected through eMIP protocol, CPO not able to calculate the price, …)
 
-For these reasons GIREVE has implemented a billing feature, included in its “Clearing” service, which calculates the B2B price for a given CDR and injects this information in the CDR.
+For these reasons **<ins>Gireve has implemented a billing feature, included in its “Clearing” service, which calculates the B2B price for a given CDR and injects this information in the CDR.</ins>**
 
 IOP uses the “Remark” field in CDRs sent to the eMSP to send extra information about this billing.
 
 The “Remark” field is prefixed by :
 
--   [\*] prefix: The total_cost provided in the CDR is calculated by GIREVE.
--   [?] prefix: The total_cost provided in the CDR is not significant. The B2B price has not been sent by the CPO and/or the eMSP has not subscribed to GIREVE Clearing service.
--   No prefix: The total_cost provided in the CDR has been sent by the CPO.
+-   **[\*] prefix :** The total_cost provided in the CDR is calculated by Gireve.
+-   **[?] prefix :** The total_cost provided in the CDR is not significant. The B2B price has not been sent by the CPO and/or the eMSP has not subscribed to Gireve Clearing service.
+-   **No prefix :** The total_cost provided in the CDR has been sent by the CPO.
 
 ### Get the signed data (Calibration Law / Eichrecht)
 
-GIREVE has extended OCPI 2.1.1 for eMSPs to receive signed data in CDRs, aiming to be compliant with the German calibration law (Eichrecht).
+> :bulb: **Gireve has extended OCPI 2.1.1 for eMSPs to receive signed data in CDRs, aiming to be compliant with the German calibration law (Eichrecht).**
 
-eMSPs can ask GIREVE to activate the transfer of these signed data, in the case where the CPO sends them in CDRs.
+eMSPs can ask Gireve to activate the transfer of these signed data, in the case where the CPO sends them in CDRs.
 
 These signed data are also included in CDRs following the [OCPI 2.2 specifications](https://github.com/ocpi/ocpi/blob/master/mod_cdrs.asciidoc#mod_cdrs_signed_data_class).
 
-## Examples
+##` Examples`
 
 - ToIOP_GET_cpo_cdrs_2.1.1, FromIOP_GET_cpo_cdrs_2.1.1
 
