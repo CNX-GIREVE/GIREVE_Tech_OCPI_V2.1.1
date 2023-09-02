@@ -55,7 +55,7 @@ eMSPs will so be able to display the charging-session price directly to their en
 
 ### Usage of “authorization_id”
 
-When sending a CDR, the CPO defines the Authorization it refers to on providing the “authorization_id” property. Please refer to  [New attribute « authorization_id »](integrations_guidelines.md).
+When sending a CDR, the CPO defines the Authorization it refers to on providing the “authorization_id” property. Please refer to  [New attribute « authorization_id »](integration_guidelines.md).
 ### CDR content
 
 The “total_time” value is the total duration of this session (including the duration of charging and not charging).
