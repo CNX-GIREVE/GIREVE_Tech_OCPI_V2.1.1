@@ -114,7 +114,7 @@ An OCPI Roaming session through IOP should run the following workflow :
 
 ![image](https://github.com/CNX-GIREVE/GIRVE_Tech_OCPI_V2.1.1/assets/137178502/ac509c35-6d0b-4e82-b83a-048aa302c283)
 
-### New attribute « authorization_id »
+### New attribute authorization_id 
 
 **<ins>IOP uses a new attribute « authorization_id » for Session, CDR, AuthorizationInfo and StartSession objects.</ins>**
 
