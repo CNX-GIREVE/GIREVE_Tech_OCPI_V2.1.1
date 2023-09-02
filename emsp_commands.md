@@ -47,8 +47,7 @@ Some of these use cases are required when connecting to GIREVE :
 IOP follows the OCPI standard for Commands received by a CPO. See OCPI specifications.
 
 ### StartSession request: new attribute « authorization_id »
-When an eMSP sends a StartSession command to a CPO, GIREVE highly recommends eMSPs to use the new attribute “authorization_id”. Please refer to paragraph 2.4.2 New attribute « authorization_id ».
-
+When an eMSP sends a StartSession command to a CPO, GIREVE highly recommends eMSPs to use the new attribute “authorization_id”. Please refer to [New attribute « authorization_id »](integrations_guidelines.md).
 ### ReserveNow command
 The ReserveNow command is not yet implemented by IOP.
 
