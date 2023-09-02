@@ -29,8 +29,8 @@ In case of connection to Gireve, here is the list of use cases that a CPO can im
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
-| **Start** Session | FromIOP | IOP, triggered by a remote start received from an eMSP, requests a CPO to start remotely the charging-session. |
-| **Stop** Session | FromIOP | IOP, triggered by a remote stop received from an eMSP, requests a CPO to stop remotely the charging-session. This use case can happen even for charging-session beginning by an authorisation per RFID badge. |
+| **Start Session** | FromIOP | IOP, triggered by a remote start received from an eMSP, requests a CPO to start remotely the charging-session. |
+| **Stop Session** | FromIOP | IOP, triggered by a remote stop received from an eMSP, requests a CPO to stop remotely the charging-session. This use case can happen even for charging-session beginning by an authorisation per RFID badge. |
 
 ## `Use cases required by Gireve`
 
@@ -40,8 +40,8 @@ Some of these use cases are required when connecting to Gireve :
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
-| Start Session/FromIOP | Remote authorisation and start features on CPO infrastructure are required by Gireve. | 
-| Stop Session/FromIOP | Remote stop features on CPO infrastructure are required by Gireve. |.
+| **Start Session/FromIOP** | Remote authorisation and start features on CPO infrastructure are required by Gireve. | 
+| **Stop Session/FromIOP** | Remote stop features on CPO infrastructure are required by Gireve. |.
 
 ## `Commands module specifications`
 
