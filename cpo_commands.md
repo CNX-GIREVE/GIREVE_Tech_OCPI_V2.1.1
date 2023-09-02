@@ -49,7 +49,7 @@ IOP follows the OCPI standard for Commands received by a CPO. [See OCPI specific
 
 ### StartSession request: new attribute « authorization_id »
 
-> :warning: **<ins>IOP sends a StartSession command to a CPO with a new attribute, the “authorization_id”.</ins>** Please refer to [New attribute « authorization_id »](integrations_guidelines.md).
+> :warning: **<ins>IOP sends a StartSession command to a CPO with a new attribute, the “authorization_id”.</ins>** Please refer to [New attribute « authorization_id »](integration_guidelines.md).
 
 > :memo: **<ins>The CPO must store this information to send it in Sessions and CDRs related to this Authorization.</ins>**
 
