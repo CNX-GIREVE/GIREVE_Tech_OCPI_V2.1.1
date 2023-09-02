@@ -4,7 +4,7 @@
 
 * [Use Cases Covered By IOP](#use-cases-covered-by-iop)
   - Roaming
-* [Use Cases Required By GIREVE](#use-cases-required-by-gireve)
+* [Use Cases Required By Gireve](#use-cases-required-by-gireve)
   - If the eMSP implements the “Sessions” feature
 * [Commands module specifications](#commands-module-specifications)
   - StartSession request: new attribute « authorization_id »
@@ -19,47 +19,53 @@
 ***
 
 
-## Use cases covered by IOP 
+## `Use cases covered by IOP`
 
-OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to GIREVE, here is the list of use cases that a CPO can implement :
+OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to Gireve, here is the list of use cases that a CPO can implement :
 
 
 ### Roaming
 
 | Use case | ToIOP/FromIOP | Usage |
 | ----------- | ----------- | ----------- |
-| Start Session | ToIOP | An eMSP requests IOP to start a charging-session remotely on a CPO’s EVSE. |
-| Stop Session | ToIOP | An eMSP requests IOP to stop remotely a charging-session.
+| **Start Session** | ToIOP | An eMSP requests IOP to start a charging-session remotely on a CPO’s EVSE. |
+| **Stop Session** | ToIOP | An eMSP requests IOP to stop remotely a charging-session.
 This use case can happen even if the charging-session beginning with an authorisation per RFID badge. |
 
-## Use cases required by GIREVE
+## `Use cases required by Gireve`
 
-Some of these use cases are required when connecting to GIREVE :
+Some of these use cases are required when connecting to Gireve :
 
 ### If the eMSP implements the “remote authorisation” feature
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
-| Start Session/toIOP | Required to start a charging-session remotely. | 
-|  StopSession/ToIOP | Required to stop a charging-session remotely | 
+| **Start Session/toIOP** | Required to start a charging-session remotely. | 
+| **StopSession/ToIOP** | Required to stop a charging-session remotely | 
 
-## Commands module specifications
+## `Commands module specifications`
+
 IOP follows the OCPI standard for Commands received by a CPO. See OCPI specifications.
 
 ### StartSession request: new attribute « authorization_id »
-When an eMSP sends a StartSession command to a CPO, GIREVE highly recommends eMSPs to use the new attribute “authorization_id”. Please refer to [New attribute « authorization_id »](integrations_guidelines.md).
+
+> :bulb: When an eMSP sends a StartSession command to a CPO, **<ins>Gireve highly recommends eMSPs to use the new attribute “authorization_id”.</ins>** Please refer to [New attribute « authorization_id »](integrations_guidelines.md).
+
 ### ReserveNow command
-The ReserveNow command is not yet implemented by IOP.
+
+The ReserveNow command is **<ins>not yet implemented</ins>** by IOP.
 
 ### UnlockConnector command
-The UnlockConnector is not yet implemented by IOP. 
+
+The UnlockConnector is **<ins>not yet implemented</ins>** by IOP. 
 
 ### “evse_uid” mandatory in StartSession command.
+
 In OCPI 2.1.1 standard, the “evse_uid” property is optional for StartSession command.
 IOP requires it to do the mapping with the eMIP protocol.
 
 
-## Examples
+## `Examples`
 
 ### ToIOP_POST_cpo_commands_2.1.1, FromIOP_POST_cpo_commands_2.1.1
 
