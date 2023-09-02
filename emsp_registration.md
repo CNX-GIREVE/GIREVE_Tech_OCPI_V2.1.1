@@ -16,7 +16,7 @@
 
 ***
 
-## Use cases covered by IOP 
+## `Use cases covered by IOP`
 
 OCPI features are composed by several use cases that an eMSP can choose to implement or not when connecting to an operator. In case of connection to Gireve, here is the list of use cases that a CPO can implement :
 
@@ -30,7 +30,7 @@ OCPI features are composed by several use cases that an eMSP can choose to imple
 | Unregister | **FromIOP** | IOP unregisters an eMSP by requesting a DELETE Credentials |
 | Unregister | **ToIOP** | An eMSP unregisters IOP by requesting a DELETE Credentials |
 
-## Use cases required by Gireve
+## `Use cases required by Gireve`
 
 Some of these use cases are required when connecting to Gireve :
 
@@ -38,17 +38,17 @@ Some of these use cases are required when connecting to Gireve :
 
 | Use case |  Why ? | 
 | ----------- | ----------- |
-| Register/FromIOP OR Register/ToIOP |  These use cases are needed to initialise connection between an operator and Gireve. | 
+| **Register/FromIOP OR Register/ToIOP** |  These use cases are needed to initialise connection between an operator and Gireve. | 
 
-## Connection and Register specifications
+## `Connection and Register specifications`
 
 IOP follows the OCPI standard for Connection & Register process. [*See OCPI specifications.*](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/credentials.md)
 
 ### Update Credentials FromIOP
 
-IOP is not able to send a PUT Credentials to update its Credentials on operator backend. In order to update them, IOP sends a “DELETE Credentials” to delete the OCPI connection then starts a new Connection & Register process beginning by a POST Credentials sent by IOP or by the operator.
+**<ins>IOP is not able to send a PUT Credentials to update its Credentials on operator backend</ins>**. In order to update them, IOP sends a “DELETE Credentials” to delete the OCPI connection then starts a new Connection & Register process beginning by a POST Credentials sent by IOP or by the operator.
 
-## Exemples 
+## `Exemples` 
 
 ### ToIOP_GET_cpo_versions, FromIOP_GET_cpo_versions
 
