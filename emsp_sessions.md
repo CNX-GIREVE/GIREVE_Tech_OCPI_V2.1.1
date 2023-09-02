@@ -42,4 +42,4 @@ IOP follows the OCPI standard for Sessions sent by a CPO. [*See OCPI specificati
 
 If an “authorization_id” has been provided by the eMSP during the Authorisation, this information will be defined in all Sessions PUT/PATCH requests sent to the eMSP. It allows eMSPs to link the Session with its previous Authorisation.
 
-Please refer to paragraph *2.4.2 New attribute « authorization_id »*.
+Please refer to [New attribute « authorization_id »](integrations_guidelines.md).
