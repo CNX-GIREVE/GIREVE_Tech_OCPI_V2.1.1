@@ -38,7 +38,7 @@ It is not allowed to include in a given CPO operation evse_ids that start with a
 
 ## `CPO operation and roaming offers`
 
-Reminder : If a CPO manages multiple operations, each operation has to go through the OCPI connection establishment process (handshake). 
+> :memo: **Reminder** : If a CPO manages multiple operations, each operation has to go through the OCPI connection establishment process (handshake). 
 A CPO Operation is the smallest entity that can constitute a roaming offer.
 Although Gireve’s technical platform (IOP) is built to manage bilateral communications between 1 operation (i.e. CPO) and another (i.e. eMSP), it is possible to aggregate several operations into a so-called network group on Gireve’s Market Place (Connect-Place). It allows to publish a single roaming offer that includes several operations. The main advantages of such an offer structure are:
 •	Reduces the number of roaming agreements (1 agreement instead of several bilateral contracts – one per operation).
