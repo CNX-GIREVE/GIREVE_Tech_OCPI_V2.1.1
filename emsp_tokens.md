@@ -58,7 +58,7 @@ The default periodicity is every day.
 ### POST Authorize request: new attribute « authorization_id »
 
 When an eMSP answers to a POST Token Authorize request, **<ins>Gireve highly recommends eMSPs to use the new attribute of AuthorizationInfo object, the “authorization_id”.</ins>**
-Please refer to [New attribute « authorization_id »](integration_guidelines.md#new_attribute_«_autorization_id_»)
+Please refer to [New attribute « authorization_id »](integration_guidelines.md#new_attribute_autorization_id)
 ## `Examples`
 
 ### ToIOP_PUT_cpo_tokens_2.1.1
