@@ -42,7 +42,7 @@ To do this, you have two ways :
 
 > :bulb: **<ins>Depending on your contract with Gireve, these periodicities can change. For more information, please contact your acccount representative.</ins>**
 
-## `Tokens by uid : What's the difference`
+## `Tokens by uid What's the difference`
 
 You can retrieve tokens from an eMSP using either the FULL or DELTA method. However, integrating tokens at the CPO's end can be complicated if the eMSP contains a significant quantity of tokens. To address this, Gireve has implemented a new service : **"GET_Tokens_unitary."**
 
