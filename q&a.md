@@ -3,6 +3,7 @@
 * [Preproduction modules limit](#preproduction-modules-limit)
 * [How to test pagination in preprodution environment](#how-to-test-pagination-in-preproduction-environment)
 * [Tokens : Difference between Full and Delta PULL](#tokens-difference-between-full-and-delta-pull)
+* [Tokens by uid : What's the difference](tokens-by-uid-What's-the-difference)
 * [CDR : « total_cost » attribute](#cdr-attribute)
  
 *** 
@@ -40,6 +41,15 @@ To do this, you have two ways :
 > :warning: In Delta the CPO don't retrieve the Tokens of new eMSPs contracts. **<ins>New contract = New FULL</ins>**
 
 > :bulb: **<ins>Depending on your contract with Gireve, these periodicities can change. For more information, please contact your acccount representative.</ins>**
+
+## `Tokens by uid : What's the difference`
+
+You can retrieve tokens from an eMSP using either the FULL or DELTA method. However, integrating tokens at the CPO's end can be complicated if the eMSP contains a significant quantity of tokens. To address this, Gireve has implemented a new service : **"GET_Tokens_unitary."**
+
+This service allows the CPO to retrieve the complete description of a token using only the UID.
+
+> :bulb: **<ins>It is not mandatory to implement the full or delta. The most important thing is to be able to retrieve the "auth_id" attribute of the token.</ins>**
+
 
 
 ## `CDR attribute`
