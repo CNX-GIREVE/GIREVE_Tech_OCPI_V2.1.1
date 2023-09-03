@@ -3,7 +3,7 @@
 * [Preproduction modules limit](#preproduction-modules-limit)
 * [How to test pagination in preprodution environment](#how-to-test-pagination-in-preproduction-environment)
 * [Tokens : Difference between Full and Delta PULL](#tokens-difference-between-full-and-delta-pull)
-* [CDR : « total_cost » attribute](#cdr-total-cost-attribute)
+* [CDR : « total_cost » attribute](#cdr-«-total-cost-»-attribute)
  
 *** 
 
