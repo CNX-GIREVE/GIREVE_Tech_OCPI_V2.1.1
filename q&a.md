@@ -3,6 +3,7 @@
 * [Preproduction modules limit](#preproduction-modules-limit)
 * [How to test pagination in preprodution environment](#how-to-test-pagination-in-preproduction-environment)
 * [Tokens : Difference between Full and Delta PULL](#tokens-difference-between-full-and-delta-pull)
+* [CDR : total_cost attribute](#cdr-total-cost-attribute)
  
 *** 
 
@@ -39,3 +40,9 @@ To do this, you have two ways :
 > :warning: In Delta the CPO don't retrieve the Tokens of new eMSPs contracts. **<ins>New contract = New FULL</ins>**
 
 > :bulb: **<ins>Depending on your contract with Gireve, these periodicities can change. For more information, please contact your acccount representative.</ins>**
+
+
+## CDR : « total_cost » attribute
+
+The field "total_cost" is **mandatory**. It must always be associated with a value, whether it is true or false.
+
