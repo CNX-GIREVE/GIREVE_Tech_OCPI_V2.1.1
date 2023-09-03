@@ -20,7 +20,7 @@ To test the pagination of various modules, your system must contain a minimum nu
 IOP will consider this new limit.</ins>**
 
 
-## Tokens : Difference between Full and Delta PULL
+## Tokens Difference between Full and Delta PULL
 
 As a CPO, you can retrieve tokens from eMSPs with whom you have a contract.
 To do this, you have two ways :
