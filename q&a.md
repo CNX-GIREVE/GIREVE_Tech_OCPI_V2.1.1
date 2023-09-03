@@ -1,12 +1,12 @@
 # Contents
 
-* [How to test pagination in preprodution environment](#how-to-test-pagination-in-preproduction-environment-?)
+* [How to test pagination in preprodution environment](#how-to-test-pagination-in-preproduction-environment)
 * [Tokens : Difference between Full and Delta PULL](#tokens-difference-between-full-and-delta-pull)
  
 *** 
 
 
-## How to test pagination in preproduction environment ?
+## How to test pagination in preproduction environment 
 
 Gireve's preproduction environment has **<ins>defined limit</ins>** when retrieving your data.
 
