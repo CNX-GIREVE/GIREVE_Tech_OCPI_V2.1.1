@@ -1,7 +1,7 @@
 # Contents
 
-* [How to test pagination in preprodution environment](#how-to-test-pagination-in-preproduction-environment-?)
-* [Tokens : Difference between Full and Delta PULL](#tokens-:-difference-between-full-and-delta)
+* [How to test pagination in preprodution environment](#how-to-test-pagination-in-preproduction-environment)
+* [Tokens : Difference between Full and Delta PULL](#tokens-difference-between-full-and-delta)
  
 *** 
 
