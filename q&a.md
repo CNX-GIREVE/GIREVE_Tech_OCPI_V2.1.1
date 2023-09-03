@@ -1,14 +1,22 @@
 # Contents
 
+* [Preproduction modules limit](#preproduction-modules-limit)
 * [How to test pagination in preprodution environment](#how-to-test-pagination-in-preproduction-environment)
 * [Tokens : Difference between Full and Delta PULL](#tokens-difference-between-full-and-delta-pull)
  
 *** 
 
+## `Preproduction modules limit`
 
-## How to test pagination in preproduction environment 
+Gireve's preproduction environment has **<ins>defined limit</ins>** when retrieving your data :
 
-Gireve's preproduction environment has **<ins>defined limit</ins>** when retrieving your data.
+- **PULL** Locations : 20
+- **PULL** CDRs : 20
+- **PULL** Tokens : 1000 
+- **PULL** Tariffs : 100
+
+
+## `How to test pagination in preproduction environment`
 
 To test the pagination of various modules, your system must contain a minimum number of elements : 
 
@@ -20,7 +28,7 @@ To test the pagination of various modules, your system must contain a minimum nu
 IOP will consider this new limit.</ins>**
 
 
-## Tokens Difference between Full and Delta PULL
+## `Tokens Difference between Full and Delta PULL`
 
 As a CPO, you can retrieve tokens from eMSPs with whom you have a contract.
 To do this, you have two ways :
