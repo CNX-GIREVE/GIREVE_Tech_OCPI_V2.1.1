@@ -34,6 +34,8 @@ As a CPO, you can retrieve tokens from eMSPs with whom you have a contract.
 To do this, you have two ways :
 
 - **Full** : 1 time per month.
-- **Delta** : 1 time per day. 
+- **Delta** : 1 time per day.
+
+> :warning: In Delta the CPO don't retrieve the Tokens of new eMSPs contracts. **<ins>New contract = New FULL</ins>**
 
 > :bulb: **<ins>Depending on your contract with Gireve, these periodicities can change. For more information, please contact your acccount representative.</ins>**
