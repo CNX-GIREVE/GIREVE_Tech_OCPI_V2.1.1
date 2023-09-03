@@ -6,7 +6,7 @@
 *** 
 
 
-## How to test pagination in preproduction environment ?
+## How to test pagination in preproduction environment
 
 Gireve's preproduction environment has **<ins>defined limit</ins>** when retrieving your data.
 
