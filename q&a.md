@@ -42,7 +42,7 @@ To do this, you have two ways :
 > :bulb: **<ins>Depending on your contract with Gireve, these periodicities can change. For more information, please contact your acccount representative.</ins>**
 
 
-## CDR  total cost  attribute
+## CDR total cost attribute
 
 The field "total_cost" is **mandatory**. It must always be associated with a value, whether it is true or false.
 
