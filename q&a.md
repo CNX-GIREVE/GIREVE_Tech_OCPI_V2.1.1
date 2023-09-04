@@ -51,9 +51,9 @@ You can retrieve tokens from an eMSP using either the FULL or DELTA method. Howe
 
 This service allows the CPO to retrieve the complete description of a token using only the UID.
 
-> :bulb: **<ins>It is not mandatory to implement the full or delta. The most important thing is to be able to retrieve the "auth_id" attribute of the token.</ins>**
+> :memo: **<ins>It is not mandatory to implement the full or delta. The most important thing is to be able to retrieve the "auth_id" attribute of the token.</ins>**
 
-
+> :bulb: **<ins>"auth_id" attribute is the contract ID between the eMSP and the user's token</ins>**
 
 ## `CDR attribute`
 
