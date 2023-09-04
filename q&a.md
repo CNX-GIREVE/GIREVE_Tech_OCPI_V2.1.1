@@ -7,7 +7,6 @@
 * [How to test pagination in preprodution environment](#how-to-test-pagination-in-preproduction-environment)
 * [Tokens : Difference between Full and Delta PULL](#tokens-difference-between-full-and-delta-pull)
 * [Tokens by uid : What's the difference](#tokens-by-uid)
-* [CDR : « total_cost » attribute](#cdr-attribute)
  
 *** 
 
@@ -29,7 +28,7 @@ To test the pagination of various modules, your system must contain a minimum nu
 - **CDRs Module :** 21 Cdrs
 - **Tariffs Module :** 101 tariffs
 
-> :warning: **<ins>If you cannot integrate the recommended minimum number into your system, you must be able to modify your default PUSH limit.
+> :warning: **<ins>If you cannot integrate the recommended minimum number into your system, you must be able to modify your default PULL limit.
 IOP will consider this new limit.</ins>**
 
 
@@ -39,7 +38,7 @@ As a CPO, you can retrieve tokens from eMSPs with whom you have a contract.
 To do this, you have two ways :
 
 - **Full** : 1 time per month.
-- **Delta** : 1 time per day.
+- **Delta** : 1 time per hour.
 
 > :warning: In Delta the CPO don't retrieve the Tokens of new eMSPs contracts. **<ins>New contract = New FULL</ins>**
 
@@ -51,11 +50,7 @@ You can retrieve tokens from an eMSP using either the FULL or DELTA method. Howe
 
 This service allows the CPO to retrieve the complete description of a token using only the UID.
 
-> :memo: **<ins>It is not mandatory to implement the full or delta. The most important thing is to be able to retrieve the "auth_id" attribute of the token.</ins>**
+> :memo: **<ins>The most important thing is to be able to retrieve the "auth_id" attribute of the token.</ins>**
 
 > :bulb: **<ins>"auth_id" attribute is the contract ID between the eMSP and the user's token</ins>**
-
-## `CDR attribute`
-
-The field "total_cost" is **mandatory**. It must always be associated with a value, whether it is true or false.
 
