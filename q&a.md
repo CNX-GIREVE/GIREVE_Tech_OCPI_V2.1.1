@@ -40,7 +40,11 @@ To do this, you have two ways :
 - **Full** : 1 time per month.
 - **Delta** : 1 time per hour.
 
-> :warning: In Delta the CPO don't retrieve the Tokens of new eMSPs contracts. **<ins>New contract = New FULL</ins>**
+> :warning: In Delta the CPO don't retrieve the Tokens of new eMSPs contracts. 
+If you have a contract with a new eMSP, there are two ways to recover tokens :
+
+- New FULL
+- Tokens by single eMSP
 
 > :bulb: **<ins>Depending on your contract with Gireve, these periodicities can change. For more information, please contact your acccount representative.</ins>**
 
