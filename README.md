@@ -81,7 +81,7 @@ For more informations, check the standard OCPI specifications : [OCPI 2.1.1](htt
 * [Locations Module Specification](emsp_locations.md)
   - Static and dynamic attributes
   - PULL Locations ToIOP: Who is the CPO?
-  - PULL Tokens: Retrieve Locations of a single given CPO
+  - PULL Locations : Retrieve Locations of a single given CPO
   - PULL Locations ToIOP: Get Object
   - PULL Locations ToIOP: Get List Pagination
   - PULL Locations ToIOP: Get List, Full and Delta modes
