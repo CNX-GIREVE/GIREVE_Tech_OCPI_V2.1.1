@@ -12,7 +12,7 @@
 
 ## `Preproduction modules limit`
 
-Gireve's preproduction environment has **<ins>defined limit</ins>** when retrieving your data :
+Gireve's preproduction environment has **<ins>defined limits</ins>** when retrieving your data :
 
 - **PULL** Locations : 20
 - **PULL** CDRs : 20
