@@ -40,7 +40,7 @@ To do this, you have two ways :
 - **Full** : 1 time per month.
 - **Delta** : 1 time per hour.
 
-> :warning: In Delta the CPO don't retrieve the Tokens of new eMSPs contracts. 
+> :warning: In Delta the CPO doesn't retrieve the Tokens of new eMSPs contracts. 
 If you have a contract with a new eMSP, there are two ways to recover tokens :
 
 - New FULL
