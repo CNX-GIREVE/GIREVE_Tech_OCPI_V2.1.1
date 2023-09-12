@@ -25,15 +25,15 @@ IOP OCPI implementation has begun with version 2.1.1. IOP does not support previ
 
 ### Security
 
-IOP follows the security standard mechanisms of OCPI. At the connection, Gireve provides new operator connecting with temporary Token(s) to register as CPO and/or eMSP. The Token should be used when the connection is initiated by the operater.
+IOP follows the security standard mechanisms of OCPI. At the connection, Gireve provides new connecting operators with temporary Token(s) to register as CPO and/or eMSP. The Token should be used when the connection is initiated by the operator.
 
-In the meantime, the operator can provide Gireve with temporary Token(s) for IOP to initiate the connection. It is not mandatory as the operator is able to launch the Connection & Register process.
+In the meantime, the operator can provide Gireve with temporary Token(s) for IOP to initiate the connection. This is not mandatory as the operator is able to launch the Connection & Register process.
 
 During the Connection & Register process, IOP and the operator exchange final Tokens to request each other, and endpoints of their respective OCPI modules. **<ins>Gireve requires all endpoints to be in HTTPS in order to secure communication between the two backends.</ins>**
 
 ### Client owned object push
 
-OCPI introduces a specific use of resource identification mechanism, to manage situation where resource belongs to servers and situation where resource belongs to client. [See OCPI client owned object.](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/transport_and_format.md)
+OCPI introduces a specific use of resource identification mechanism, to manage situations where resource belongs to servers and situations where resource belongs to client. [See OCPI client owned object.](https://github.com/ocpi/ocpi/blob/release-2.1.1-bugfixes/transport_and_format.md)
 
 In OCPI, Objects managed through Rest protocol are owned by the CPO or the eMSP:
 
@@ -41,7 +41,7 @@ In OCPI, Objects managed through Rest protocol are owned by the CPO or the eMSP:
 -   Locations are owned by the CPO
 -   Sessions are owned by the CPO
 -   CDRs are owned by the CPO
--   Tarifs are owned by the CPO
+-   Tariffs are owned by the CPO
 
 IOP acts as a hub which routes the messages between CPOs and eMSPs, so IOP does not own objects exchanged by these two actors during their communication.
 
@@ -57,7 +57,7 @@ IOP implements pagination mechanisms described by OCPI. [*See OCPI pagination me
 
 IOP requires operators to use pagination when they pull resources requesting IOP. If the operator does not use pagination arguments in its request, IOP will force it answering with the first **X** items and a Link to the second page if any.
 
-Finally, IOP for each module has its own max size limit per page (20 Locations, 1000 Tokens, …). These limits can change with IOP evolutions, the operator implementation might be flexible regarding these limits.
+Finally, for each module, IOP has its own max size limit per page (20 Locations, 1000 Tokens, …). These limits can change with IOP evolutions, the operator implementation must be flexible regarding these limits.
 
 ### IOP HTTP headers
 
@@ -96,9 +96,9 @@ Gireve and its systems distinguish two natures of Location properties:
 
 All Location properties are considered as static data except for the status of the EVSE and the tariff_id attached to a connector.
 
-Gireve performs a specific process to first integrate static data of CPO Locations in its charge point repository then to integrate static data change like change on a Locations of a CPO or new Locations or EVSEs. This process implies data quality tests and data completion of the CPO Locations.
+Gireve performs a specific process to first integrate static data of CPO Locations in its charge point repository then to integrate static data changes like changes on a Location of a CPO or new Locations or EVSEs. This process implies data quality tests and data completion of the CPO Locations.
 
-This process is asynchronous from the standard connection of the CPO with the Gireve IOP platform, meaning that new Locations of the CPO or updates on them can be seen in the Gireve charge point repository several days after the first **PUSH** from the CPO to the Gireve IOP platform.
+This process is asynchronous from the standard connection of the CPO with Gireve IOP platform, meaning that new Locations of the CPO or updates on them can be seen in Gireve's charge point repository several days after the first **PUSH** from the CPO to Gireve IOP platform.
 
 ## `Roaming`
 
@@ -118,7 +118,7 @@ An OCPI Roaming session through IOP should run the following workflow :
 
 **<ins>IOP uses a new attribute « authorization_id » for Session, CDR, AuthorizationInfo and StartSession objects.</ins>**
 
-This information is used to associate the « authorization » given by the eMSP at the beginning of a charging session with Sessions and CDR related to. It answers to real business cases, for example an eMSP giving 2 authorisations and receiving 3 CDRs. Which ones should it pay?
+This information is used to associate the « authorization » given by the eMSP at the beginning of a charging session with Sessions and CDR related to it. This allows to tackle real business cases, for example an eMSP giving 2 authorisations and receiving 3 CDRs. Which ones should it pay?
 
 This new property must be provided by the eMSP during the authorisation process, then used by the CPO when it sends Sessions and CDRs related to the authorisation.
 
@@ -145,9 +145,9 @@ This new property must be provided by the eMSP during the authorisation process,
 
 The CPO connected to Gireve through OCPI have two options to manage and “publish” B2B tariffs:
 
-**<ins>B2B tariffs are described in roaming agreements</ins>**: The description and the commitment related to tariffs are contained in roaming agreements signed on the Gireve connect place:
+**<ins>B2B tariffs are described in roaming agreements</ins>**: The description and the commitment related to tariffs are contained in roaming agreements signed on Gireve Connect Place:
 
--   Tariffs applied for a contract between an eMSP and a CPO are defined and negotiated, using the Gireve connect place, before signature of the roaming agreement by both parts.
+-   Tariffs applied for a contract between an eMSP and a CPO are defined and negotiated, using the Gireve Connect Place, before signature of the roaming agreement by both parties.
 -   In case of tariff updates, the CPO and the eMSP must sign an amendment whose management is fully automated.
 
 In this case (tariffs defined in roaming agreements), the CPO should not use the OCPI Tariffs module.
@@ -159,7 +159,7 @@ In this case (tariffs defined in roaming agreements), the CPO should not use the
 
 ## `RFID Tokens`
 
-The current typical situation for identification is swiping a MIFARE badge. In this case, the relevant RFID tag in such a situation is a character string that shall contain the hexadecimal representation of the 4- or 7-bytes RFID UID (sector 0). Please note that the 7 bytes UID is preferred for interoperability reason.
+The current typical situation for identification is swiping a MIFARE badge. In this case, the relevant RFID tag in such a situation is a character string that shall contain the hexadecimal representation of the 4- or 7-bytes RFID UID (sector 0). Please note that the 7 bytes UID is preferred for interoperability reasons.
 
 As an example: “1A2B3C4D5E6F70” shall be interpreted as
 
