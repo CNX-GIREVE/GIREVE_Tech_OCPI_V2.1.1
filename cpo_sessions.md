@@ -55,7 +55,7 @@ When sending a Session, the CPO defines the Authorization it refers to on provid
 
 ### Store and forward – PUT Sessions
 
-**<ins>A Store and Forward mechanism must be implemented</ins>** to ensure that no session may be lost, in case of a connection loss. Any PUT session that didn’t get a correct response from the Gireve platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the session messages must be resent in a FIFO manner.
+**<ins>A [Store and Forward mechanism](q&a.md/#store-and-forward-mechanism) must be implemented</ins>** to ensure that no session may be lost, in case of a connection loss. Any PUT session that didn’t get a correct response from the Gireve platform IOP (timeout, http code 500) must be stored on CPO side and a retry process must be active. After the connection recovery, the session messages must be resent in a FIFO manner.
 
 ## `Examples`
 
