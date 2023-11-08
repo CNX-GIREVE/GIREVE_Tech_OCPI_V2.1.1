@@ -75,7 +75,7 @@ If the CPO is allowed to get Tokens of the eMSP owner, the response includes the
 
 This new flow prevents CPOs to download all Tokens of all eMSPs. For more description, see [? Custom OCPI flow to prevent eMSP Tokens download by CPOs]().
 
-### PULL Tokens : Retrieve Tokens of a single given eMSP
+### PULL Tokens Retrieve Tokens of a single given eMSP
 
 The standard OCPI 2.1.1 Tokens pulling allows CPOs to get Tokens of all eMSPs in contract with them.
 In some cases, CPOs need only Tokens of a specific given eMSP. For example, when the CPO initializes data of an eMSP after signature of a new roaming agreement.
