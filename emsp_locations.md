@@ -10,7 +10,7 @@
 * [Locations module specifications](#locations-module-specifications)
   - Static and dynamic attributes
   - PULL Locations ToIOP: Who is the CPO?
-  - PULL Tokens: Retrieve Locations of a single given CPO
+  - PULL Locations: Retrieve Locations of a single given CPO
   - PULL Locations ToIOP: Get Object
   - PULL Locations ToIOP: Get List Pagination
   - PULL Locations ToIOP: Get List, Full and Delta modes
