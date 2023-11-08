@@ -45,7 +45,7 @@ To do this, you have two ways :
 If you have a contract with a new eMSP, there are two ways to recover tokens :
 
 - New FULL
-- Gireve's new Web Service : [Tokens by single eMSP](cpo_tokens.md#pull-tokens-retrieve-locations-of-a-single-given-cpo)
+- Gireve's new Web Service : [Tokens by single eMSP](cpo_tokens.md#pull-tokens-retrieve-tokens-of-a-single-given-emsp)
 
 > :bulb: **<ins>Depending on your contract with Gireve, these periodicities can change. For more information, please contact your acccount representative.</ins>**
 
