@@ -10,7 +10,7 @@
 * [Locations module specifications](#locations-module-specifications)
   - Static and dynamic attributes
   - PULL Locations ToIOP: Who is the CPO?
-  - PULL Locations: Retrieve Locations of a single given CPO
+  - PULL Locations : Retrieve Locations of a single given CPO
   - PULL Locations ToIOP: Get Object
   - PULL Locations ToIOP: Get List Pagination
   - PULL Locations ToIOP: Get List, Full and Delta modes
@@ -69,7 +69,7 @@ For the moment, all properties of a Location are Static data except EVSE.status,
 
 The CPO of a Location is not a direct property of the Location object (String “name” is not strongly consistent). So, an eMSP pulling IOP to get Locations does not know to which CPO the Location refers to. **<ins>That is why IOP replaces the property “Location.operator.name” by the eMI3 Id of the CPO when an eMSP get a Location</ins>**. Using this property, the eMSP is able to know who the CPO of the Location is.
 
-### PULL Tokens Retrieve Locations of a single given CPO
+### PULL Locations Retrieve Locations of a single given CPO
 
 The standard OCPI 2.1.1 Locations pulling allows eMSPs to get Locations of all CPOs in contract with them.
 
