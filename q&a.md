@@ -59,3 +59,7 @@ This service allows the CPO to retrieve the complete description of a token usin
 
 > :bulb: **<ins>"auth_id" attribute is the contract ID between the eMSP and the user's token</ins>**
 
+## `Store and Forward mechanism`
+
+r(tgfder85685
+
