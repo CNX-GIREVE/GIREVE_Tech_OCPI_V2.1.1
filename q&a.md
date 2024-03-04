@@ -61,5 +61,6 @@ This service allows the CPO to retrieve the complete description of a token usin
 
 ## `Store and Forward mechanism`
 
-r(tgfder85685
+> :warning: **<ins>A Store and Forward mechanism must be implemented to ensure that no data upload may be lost, in case of a connection loss. Any data upload that didn’t get a correct response (HTTP code : 200) from the GIREVE platform IOP must be stored on CPO side and a retry process must be active.
+> After the connection recovery, the Data Upload messages must be resent in a FIFO manner.</ins>**
 
