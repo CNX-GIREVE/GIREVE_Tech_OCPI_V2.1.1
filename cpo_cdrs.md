@@ -65,7 +65,7 @@ The out of order duration should be free of charge for eMSPs.
 ### Store and forward – POST CDRs
 
 > :warning: Similarly to a **PUT sessions**, **<ins>A [Store and Forward mechanism](q&a.md/#store-and-forward-mechanism) must be implemented</ins>** to ensure that no CDR may be lost, in case of a connection loss. 
-Any **POST** Cdrs that didn’t get a correct response from the Gireve platform IOP (timeout, http code 500) **<ins>must be stored on CPO side and a retry process must be active</ins>**. After the connection recovery, the Cdr messages must be resent in a FIFO manner.
+Any **POST** Cdrs that didn’t get a correct response (HTTP code : 2XX) from the Gireve platform IOP **<ins>must be stored on CPO side and a retry process must be active</ins>**. After the connection recovery, the Cdr messages must be resent in a FIFO manner.
 
 ### Send the signed data (Calibration Law / Eichrecht)
 
