@@ -76,7 +76,7 @@ Gireve adds a third “TariffDimensionType” named “SESSION_TIME” with the 
 
 ### Store and forward – PUT TARIFFS
 
-Similarly to a **POST Cdrs**, Store and Forward mechanism must be implemented to ensure that no Tariffs may be lost, in case of a connection loss. Any PUT Tariffs that didn’t get a correct response from the Gireve platform IOP (timeout, http code 500) **<ins>must be stored on CPO side and a retry process must be active</ins>**. After the connection recovery, the Tariffs messages must be resent in a FIFO manner.
+Similarly to a **POST Cdrs**, Store and Forward mechanism must be implemented to ensure that no Tariffs may be lost, in case of a connection loss. Any PUT Tariffs that didn’t get a correct response (HTTP code : 2XX) from the Gireve platform IOP **<ins>must be stored on CPO side and a retry process must be active</ins>**. After the connection recovery, the Tariffs messages must be resent in a FIFO manner.
 
 ## `Examples`
 
