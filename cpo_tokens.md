@@ -7,7 +7,9 @@
 * [Use Cases Required By Gireve](#use-cases-required-by-gireve)
   - If the CPO implements the "Roaming" feature 
 * [Tokens module specifications](#tokens-module-specifications)
-  - GET Tokens To/FromIOP	
+  - GET Tokens To/FromIOP
+  - PULL Tokens ToIOP : Get List Pagination
+  - PULL Tokens ToIOP: Get List, Full and Delta modes
   - PULL Tokens: Who is the eMSP?	
   - PULL Tokens by uid: Retrieve a unique Token	
   - PULL Tokens: Retrieve Tokens of a single given eMSP	
@@ -55,9 +57,23 @@ IOP follows the OCPI standard for Tokens module. [See OCPI specifications](https
 
 > :warning: **<ins>IOP is not able to PUSH Tokens to CPO backend. CPO should PULL IOP to get Tokens.**</ins>
 
+### PULL Tokens ToIOP : Get List Pagination
+
+If the CPO wants to retrieve a list of Tokens, it can call the URL: /ocpi/emsp/2.1.1/tokens using the paginated properties date_from, date_to, offset and limit.
+
+Parameters « offset » and « limit » are optional but IOP always returns a paginated response (subset of objects list and link, X-Total-Count and X-limit headers).
+The CPO must call the link returned in the headers to get the next pages. 
+
+> :warning: <ins>**IOP has its own max limit (1000 Tokens) and answers with its if the client limit is upper than IOP one or the client doesn’t set its limit.**</ins>
+
+### PULL Tokens ToIOP : Get List, Full and Delta modes
+
+If the CPO wants to retrieve all the Tokens, it should not include « date_from » parameter in its request. But if it wants to get only changes (optimised), it should use it.
+
 ### PULL Tokens : Who is the eMSP ?
 
 The eMSP of a Token is not a direct property of the Token object. So, a CPO pulling IOP to get Tokens does not know to which eMSP the Token refers to. That is why IOP replaces the property *“Token.issuer”* by the eMI3 Id of the eMSP when a CPO get a Token. Using this property, the CPO is able to know who is the eMSP of the Token.
+
 
 ### PULL Tokens by uid Retrieve a unique Token
 
