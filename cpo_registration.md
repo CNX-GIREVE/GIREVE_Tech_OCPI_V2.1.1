@@ -103,7 +103,7 @@ IOP is not able to send a **PUT** Credentials to update its Credentials on an op
     "data": [
         {
             "version": "2.1.1",
-            "url": "https://xxx.yyy.com/ocpi/emsp/2.1.1"
+            "url": "https://url.aaa.com/ocpi/emsp/2.1.1"
         }
     ],
     "status_code": 1000,
@@ -178,18 +178,18 @@ Request* :
         "logo": {
             "category": "NETWORK",
             "height": 44,
-            "thumbnail": "http://xxx.xxx.com/yyyy.png",
+            "thumbnail": "http://url.com/yyyy.png",
             "width": 92,
             "type": "png",
-            "url": " http://xxx.xxx.com/logo.png"
+            "url": " http://url.com/logo.png"
         },
-        "website": "http://xxx.com",
+        "website": "http://url.com",
         "name": "NAME"
     },
     "token": "aaa-xxx-eee",
     "party_id": "PID",
     "country_code": "FR",
-    "url": "https://xxx.com/ocpi/emsp/versions"
+    "url": "https://url.com/ocpi/emsp/versions"
 }
 
 ```
@@ -201,7 +201,7 @@ Request* :
 ```json
 {
     "data": {
-        "url": "http://xxx.com/ocpi/versions",
+        "url": "http://url.com/ocpi/versions",
         "token": "eee-fff-ddd",
         "party_id": "AAA",
         "country_code": "DE",
