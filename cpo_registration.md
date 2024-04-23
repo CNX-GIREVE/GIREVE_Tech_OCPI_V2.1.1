@@ -103,7 +103,7 @@ IOP is not able to send a **PUT** Credentials to update its Credentials on an op
     "data": [
         {
             "version": "2.1.1",
-            "url": "https://url.aaa.com/ocpi/emsp/2.1.1"
+            "url": "https://DomainName.com/ocpi/emsp/2.1.1"
         }
     ],
     "status_code": 1000,
@@ -133,27 +133,27 @@ IOP is not able to send a **PUT** Credentials to update its Credentials on an op
         "endpoints": [
             {
                 "identifier": "credentials",
-                "url": "https:// ccc.yyy.com/ocpi/emsp/2.1.1/credentials"
+                "url": "https://DomainName.com/ocpi/emsp/2.1.1/credentials"
             },
             {
                 "identifier": "locations",
-                "url": "https:// ccc.yyy.com/ocpi/emsp/2.1.1/locations"
+                "url": "https://DomainName.com/ocpi/emsp/2.1.1/locations"
             },
             {
                 "identifier": "tokens",
-                "url": "https:// ccc.yyy.com/ocpi/emsp/2.1.1/tokens"
+                "url": "https://DomainName.com/ocpi/emsp/2.1.1/tokens"
             },
             {
                 "identifier": "commands",
-                "url": "https:// ccc.yyy.com/ocpi/emsp/2.1.1/commands"
+                "url": "https://DomainName.com/ocpi/emsp/2.1.1/commands"
             },
             {
                 "identifier": "sessions",
-                "url": "https:// ccc.yyy.com/ocpi/emsp/2.1.1/sessions"
+                "url": "https://DomainName.com/ocpi/emsp/2.1.1/sessions"
             },
             {
                 "identifier": "cdrs",
-                "url": "https:// ccc.yyy.com/ocpi/emsp/2.1.1/cdrs"
+                "url": "https://DomainName.com/ocpi/emsp/2.1.1/cdrs"
             }
         ],
         "version": "2.1.1"
@@ -178,18 +178,18 @@ Request* :
         "logo": {
             "category": "NETWORK",
             "height": 44,
-            "thumbnail": "http://url.com/yyyy.png",
+            "thumbnail": "http://DomainName.com/yyyy.png",
             "width": 92,
             "type": "png",
-            "url": " http://url.com/logo.png"
+            "url": " http://DomainName.com/logo.png"
         },
-        "website": "http://url.com",
+        "website": "http://DomainName.com",
         "name": "NAME"
     },
     "token": "aaa-xxx-eee",
     "party_id": "PID",
     "country_code": "FR",
-    "url": "https://url.com/ocpi/emsp/versions"
+    "url": "https://DomainName.com/ocpi/emsp/versions"
 }
 
 ```
@@ -201,7 +201,7 @@ Request* :
 ```json
 {
     "data": {
-        "url": "http://url.com/ocpi/versions",
+        "url": "http://DomainName.com/ocpi/versions",
         "token": "eee-fff-ddd",
         "party_id": "AAA",
         "country_code": "DE",
