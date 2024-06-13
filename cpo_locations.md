@@ -83,9 +83,9 @@ All “evse_id” of the CPO “FR*CPO” should start with “FR*CPO*E”.
 
 ### Tarrif_id value
 
-Gireve uses the “tariff_id” information provided by CPOs in Locations to dispatch CPO’s EVSEs into separated EVSE tariff groups. Also, CPOs can refer to these tariff groups when they describe their roaming offer including tariffs via the [Gireve connect place](https://connect-place.gireve.com).
+GIREVE uses the “tariff_id” information provided by CPOs in Locations to dispatch CPO’s EVSEs into separated EVSE tariff groups. Also, CPOs can refer to these tariff groups when they describe their roaming offer including tariffs via the GIREVE connect place (https://connect-place.gireve.com).
 
-**Considering that, we strongly suggest to fill the “tariff_id” information when the CPO uploads its Locations to Gireve IOP platform.**
+**If CPOs use the OCPI Tariffs module to send their tariffs, the management of tariffs and relations to the charging infrastructure follows the OCPI standard except that in GIREVE systems, tariffs are linked to EVSEs and not to connectors (ie All connectors of a single EVSE have the same “tariff_id”).**
 
 ### PUSH Locations ToIOP
 
