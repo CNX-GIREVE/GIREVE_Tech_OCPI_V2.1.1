@@ -98,7 +98,7 @@ With :
 -   evse_uid: unique id of the EVSE object provided by IOP.
 -   connector_id: unique id of the Connector object provided by IOP.
 
-**Gireve strongly advises partners not to use them because we do not provide support for those flows, and we do not guarantee any service level on them.**
+> :warning: **Gireve strongly advises partners not to use them because we do not provide support for those flows, and we do not guarantee any service level on them.**
 
 ### PULL Locations ToIOP: Get List Pagination
 
