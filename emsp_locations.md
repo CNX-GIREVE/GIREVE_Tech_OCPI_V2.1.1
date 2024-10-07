@@ -98,6 +98,8 @@ With :
 -   evse_uid: unique id of the EVSE object provided by IOP.
 -   connector_id: unique id of the Connector object provided by IOP.
 
+**Gireve strongly advises partners not to use them because we do not provide support for those flows, and we do not guarantee any service level on them.**
+
 ### PULL Locations ToIOP: Get List Pagination
 
 If the eMSP wants to retrieve a list of Locations, it can call the URL: /ocpi/cpo/2.2.1/locations using the paginated properties date_from, date_to, offset and limit.
