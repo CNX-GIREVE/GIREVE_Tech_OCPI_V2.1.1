@@ -11,7 +11,7 @@
 
 ## `Aims`
 
-This document describes guidelines to perform a proper connection with the Gireve’s platform using the OCPI protocol version 2.2.1.
+This document describes guidelines to perform a proper connection with the Gireve’s platform using the OCPI protocol.
 
 ## `Intended Audience`
 
