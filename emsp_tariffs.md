@@ -99,7 +99,7 @@ This rounding is applied for each “TariffElement” after the calculation of �
 
 This rounding has 2 properties :
 
--   **round_granularity**: Can take values “UNIT”, “TENTH”, “HUNDRETH” or “THOUSANDTH”.
+-   **round_granularity**: Can take values “UNIT”, “TENTH”, “HUNDREDTH” or “THOUSANDTH”.
 -   **round rule**: Can take values “ROUND_UP”, “ROUND_DOWN” or “ROUND_NEAR”.
 
 For tariffs coming from CPOs through the OCPI Tariffs module, the rounding is not defined and the price properties can contain until 4 decimals so the default rounding applied by Gireve is “round_granularity: thousandth” and “round_rule: round_near”.
