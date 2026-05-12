@@ -12,7 +12,6 @@
   - EVSE object
   - Tariff_id value
   - PUSH Locations ToIOP
-  - Store and Forward – PUT and PATCH Locations
   - PULL Locations ToIOP
   - PULL Locations FromIOP 
 * [Examples](#examples)
