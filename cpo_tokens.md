@@ -12,7 +12,8 @@
   - PULL Tokens ToIOP: Get List, Full and Delta modes
   - PULL Tokens: Who is the eMSP?	
   - PULL Tokens by uid: Retrieve a unique Token	
-  - PULL Tokens: Retrieve Tokens of a single given eMSP	
+  - PULL Tokens: Retrieve Tokens of a single given eMSP
+  - PULL Tokens ToIOP: Timeout Error
   - POST Authorize request: LocationReferences mandatory	
   - POST Authorize request: new attribute “authorization_id”
 * [Examples](#examples)
