@@ -43,3 +43,14 @@ IOP follows the OCPI standard for Sessions sent by a CPO. [*See OCPI specificati
 If an “authorization_id” has been provided by the eMSP during the Authorisation, this information will be defined in all Sessions PUT/PATCH requests sent to the eMSP. It allows eMSPs to link the Session with its previous Authorisation.
 
 Please refer to [New attribute « authorization_id »](integration_guidelines.md).
+
+### PULL Sessions ToIOP: Get List Pagination
+
+If the eMSP wants to retrieve a list of Sessions, it can call the URL: /ocpi/cpo/2.1.1/sessions?date_from= using the paginated properties date_from, date_to, offset and limit.
+
+Parameters « offset » and « limit » are optional but IOP always returns a paginated response (subset of objects list and link, X-Total-Count and X-limit headers).
+The eMSP must call the link returned in the headers to get the next pages. 
+
+IOP has its own max limit (20 Sessions) and answers with its if the client limit is upper than IOP one or the client doesn’t set its limit.
+
+The timeframe (‘date_from’ and ‘date_to’) used in the request parameters must be lower than one month.
