@@ -55,6 +55,20 @@ OCPI requires eMSPs to transfer their tokens list to CPOs. The eMSP can choose b
 IOP is able to PULL Tokens requesting eMSP backend. In this case, IOP uses the pagination and eMSP must respond with a paginated response. If the response is not paginated, it will be ignored by IOP.
 The default periodicity is every day.
 
+### POST Authorize request: LocationReferences mandatory
+
+In OCPI, the body of a POST Authorize request can contain a LocationReferences object. 
+
+For IOP, the LocationReferences object is mandatory.
+
+IOP previously required that CPOs send only one “evse_uid” in the real-time authorization request. This limit is now removed, CPOs can send 0 to N “evse_uid” in the request.
+
+Please note that a CPO can send a real-time authorization request with 0 or N evse_uid values in the payload.
+
+In such cases, Gireve will randomly select an EVSE belonging to the specified location and forward the request to the eMSP. The EVSE chosen by Gireve may not necessarily be the one actually used in the authorization process.
+
+However, the CPO is required to use the correct EVSE in both the Sessions and CDRs objects.
+
 ### POST Authorize request: new attribute « authorization_id »
 
 When an eMSP answers to a POST Token Authorize request, **<ins>Gireve highly recommends eMSPs to use the new attribute of AuthorizationInfo object, the “authorization_id”.</ins>**
