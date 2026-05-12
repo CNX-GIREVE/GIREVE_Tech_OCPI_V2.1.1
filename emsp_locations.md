@@ -84,6 +84,27 @@ Therefore, eMSPs can request Gireve without these headers to get Locations of al
 
 For information, these headers have been included in the version 2.2 of the OCPI standard.
 
+### PULL Locations: OCPI-2.2.1 CPO
+
+If the “publish” property of the OCPI-2.2.1 CPO’s Location is set to “false”, Gireve doesn’t send Location to the eMSP.
+-	For OCPI 2.1.1 there is no "published" property, so OCPI 2.1.1 eMSPs cannot distinguish "publish" false or true.
+-	By default, only "publish" true is sent.
+
+### PULL Locations ToIOP: Plug&Charge (P&C): Connector Object - new attribute “capabilities”
+
+The ability to enable Plug & Charge (P&C) functionality, eliminating the need for a physical badge, offers a significant improvement in the user experience for EV drivers.
+
+In alignment with the OCPI 2.3 white paper, which recommends adding Plug & Charge capabilities at the Connector level rather than the EVSE level (as currently defined in OCPI 2.1.1 and 2.2.1), Gireve has implemented a mechanism enabling CPOs to inform eMSPs about EVSE compatibility with Plug & Charge.
+
+To achieve this, Gireve has introduced a new attribute, capabilities, at the Connector object level. This attribute accepts the following list of values:
+
+| OCPI Field | Enum | Description |
+| ----------- | ----------- | ----------- |
+| Location.evse.connector.capabilities | ISO_15118_2_PLUG_AND_CHARGE | Compatibility of an EVSE with PnC using ISO15118-2 |
+| Location.evse.connector.capabilities | ISO_15118_20_PLUG_AND_CHARGE | Compatibility of an EVSE with PnC using ISO15118-20 |
+
+eMSPs should accept these two new capabilities when they are provided by Gireve.
+
 ### PULL Locations ToIOP: Get Object
 
 If the eMSP wants to retrieve a specific given Location, EVSE or Connector, it can call these URLs :
@@ -135,6 +156,10 @@ You should not reject them because of the non-compliance with the standard.
 | **CREATE** | Location is pushed by IOP. |EVSE is pushed by IOP. | Connector appears in EVSE description pushed by IOP. |
 | **UPDATE** | Each EVSE of the updated Location are pushed by IOP. | UEVSE is pushed by IOP. | EVSE containing Connector updates is pushed by IOP. |
 | **DELETE** | Each EVSE of the deleted Location are pushed by IOP with « REMOVED » value for « status » field. | EVSE containing « REMOVED » value for « status » field is pushed by IOP. |EVSE description is pushed by IOP, it doesn’t contain the Connector anymore. |
+
+When IOP pushes a notification on static attributes to eMSP, IOP only uses PUT method.
+
+**As a reminder, Gireve doesn’t send OCPI-2.2.1 CPO’s Location to the eMSP if the “publish” property of the Location is set to “false”. But the eMSP can still receive dynamic data from these locations (patch evse status) and, as for any evci the eMSP doesn't know, simply ignore it (standard behavior).**
 
 ### PULL Locations FromIOP
 
