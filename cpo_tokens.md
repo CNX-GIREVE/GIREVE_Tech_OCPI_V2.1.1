@@ -103,13 +103,34 @@ Gireve provides a new OCPI 2.1.1 feature by allowing the CPO to get Tokens of a 
 Therefore, CPOs can request Gireve without these headers to get Tokens of all eMSPs or including these headers to get Tokens of a unique eMSP.
 For information, these headers have been included in the version 2.2 of the OCPI standard.
 
+### PULL Tokens ToIOP: Timeout Error
+
+In the event of a timeout during a Get Token request (HTTP 500), the CPO may retry the request for up to one hour, leveraging a caching mechanism.
+
+Gireve recommends waiting at least 10 minutes before retrying. Otherwise, the CPO may encounter the following error response:
+
+{
+    "status_code": 2914,
+    "status_message": "A pulling already ran for a similar request",
+    "timestamp": "2026-03-25T14:22:01Z"
+}
+
+In such cases, the CPO should retry the same request.
+
+> :warning: <ins>**Important:**</ins> For the caching mechanism to apply, all retry requests must use exactly the same parameters as the initial request (date_from, date_to, offset, and limit). Any variation will be treated as a new request, and the cache will not be utilized.
+
+
 ### POST Authorize request : LocationReferences mandatory
 
 In OCPI, the body of a POST Authorize request can contain a LocationReferences object.
-**For IOP, the LocationReferences object is mandatory and must contain one and only one EVSE.**
+**For IOP, the LocationReferences object is mandatory.**
 
-If « LocationReferences » object contains 0 EVSE, IOP responds with a 2002 OCPI error (« Missing EVSE Id »).
-If « LocationReferences » object contains more than 1 EVSE, IOP responds with a 2001 OCPI error (« Invalid or missing parameters: IOP does not support authorization request on multiple EVSE »).
+IOP previously required that CPOs send only one “evse_uid” in the real-time authorization request. This limit is now removed, CPOs can send 0 to N “evse_uid” in the request.
+
+Please note that a CPO can send a real-time authorization request with 0 or N evse_uid values in the payload.
+
+In such cases, Gireve will randomly select an EVSE belonging to the specified location and forward the request to the eMSP. The EVSE chosen by Gireve may not necessarily be the one actually used in the authorization process.
+However, the CPO is required to use the correct EVSE in both the Sessions and CDRs objects.
 
 ### POST Authorize request : new attribute “authorization_id”
 
