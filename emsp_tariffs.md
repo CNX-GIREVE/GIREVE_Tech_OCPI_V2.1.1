@@ -46,6 +46,15 @@ IOP follows the OCPI standard for Tariffs download by an eMSP. [*See OCPI specif
 
 IOP only implements the “GET Tariffs” used by an eMSP to retrieve tariffs of CPOs.
 
+### PULL Tariffs ToIOP: Get List Pagination
+
+If the eMSP wants to retrieve a list of Tariffs, it can call the URL: /ocpi/cpo/2.1.1/tariffs using the paginated properties date_from, date_to, offset and limit.
+
+Parameters « offset » and « limit » are optional but IOP always returns a paginated response (subset of objects list and link, X-Total-Count and X-limit headers).
+The eMSP must call the link returned in the headers to get the next pages. 
+
+IOP has its own max limit (100 Tariffs) and answers with its if the client limit is upper than IOP one or the client doesn’t set its limit.
+
 ### Specific properties added by Gireve
 
 #### A. Tariffs.country_code and Tariffs.party_id (mandatory)
