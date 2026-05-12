@@ -87,18 +87,22 @@ GIREVE uses the “tariff_id” information provided by CPOs in Locations to dis
 
 **If CPOs use the OCPI Tariffs module to send their tariffs, the management of tariffs and relations to the charging infrastructure follows the OCPI standard except that in GIREVE systems, tariffs are linked to EVSEs and not to connectors (ie All connectors of a single EVSE have the same “tariff_id”).**
 
+### 3.6.5	Plug&Charge (P&C): Connector Object - new attribute “capabilities” 
+
+The ability to enable Plug & Charge (P&C) functionality, eliminating the need for a physical badge, offers a significant improvement in the user experience for EV drivers.
+
+In alignment with the OCPI 2.3 white paper, which recommends adding Plug & Charge capabilities at the Connector level rather than the EVSE level (as currently defined in OCPI 2.1.1 and 2.2.1), Gireve has implemented a mechanism enabling CPOs to inform eMSPs about EVSE compatibility with Plug & Charge.
+
+To achieve this, Gireve has introduced a new attribute “capabilities”, at the Connector object level. This attribute accepts the following list of values:
+
+
 ### PUSH Locations ToIOP
 
 The eMSP Interface is not fully implemented by IOP for the PUSH of static attributes. The web service is present and responds but information is not stored in RPC (Charge Point Repository).
 
 **<ins>The only data directly updated in RPC after a PUT/PATCH Locations by a CPO are :**</ins>
 - The dynamic attribute EVSE.status.
-- The “Connector.tariff_id” information.  
-
-### Store and Forward – PUT and PATCH Locations
-
-**<ins>A [Store and Forward mechanism](q&a.md/#store-and-forward-mechanism) must be implemented</ins>** to ensure that no data upload may be lost, in case of a connection loss. Any data upload that didn’t get a correct response (HTTP code : 2XX) from the GIREVE platform IOP must be stored on CPO side and a retry process must be active.
-After the connection recovery, the Data Upload messages must be resent in a FIFO manner.
+- The “Connector.tariff_id” information.
 
 ### PULL Locations ToIOP
 
