@@ -95,6 +95,10 @@ In alignment with the OCPI 2.3 white paper, which recommends adding Plug & Charg
 
 To achieve this, Gireve has introduced a new attribute “capabilities”, at the Connector object level. This attribute accepts the following list of values:
 
+| OCPI Field   | Enum         | Description                                    |
+|-----------|--------------|------------------------------------------------|
+| Location.evse.connector.capabilities      | ISO_15118_2_PLUG_AND_CHARGE   | Compatibility of an EVSE with PnC using ISO15118-2 | 
+| Location.evse.connector.capabilities      | ISO_15118_20_PLUG_AND_CHARGE   | Compatibility of an EVSE with PnC using ISO15118-20 |
 
 ### PUSH Locations ToIOP
 
