@@ -64,8 +64,11 @@ The out of order duration should be free of charge for eMSPs.
 
 ### Store and forward – POST CDRs
 
-> :warning: Similarly to a **PUT sessions**, **<ins>A [Store and Forward mechanism](q&a.md/#store-and-forward-mechanism) must be implemented</ins>** to ensure that no CDR may be lost, in case of a connection loss. 
-Any **POST** Cdrs that didn’t get a correct response (HTTP code : 2XX) from the Gireve platform IOP **<ins>must be stored on CPO side and a retry process must be active</ins>**. After the connection recovery, the Cdr messages must be resent in a FIFO manner.
+Similarly to a PUT sessions, Store and Forward mechanism must be implemented to ensure that no CDR may be lost, in case of a connection loss. Any POST Cdrs that didn’t get a correct response (HTTP code : 2XX) from the GIREVE platform IOP must be stored on CPO side and a retry process must be active. 
+
+Additionally, retries must not be performed immediately when receiving platform error codes such as 425 (Too Early) or 429 (Too Many Requests), as these indicate that requests are being sent too early or too frequently; immediate retries would worsen the situation. In such cases, the client is expected to wait several minutes before retrying, using a progressive backoff strategy (e.g., 5 min → 10 min → 20 min → …). 
+
+Retries must never be executed in an uncontrolled loop or in parallel bursts. A strict retry policy should be applied: no more than one retry every defined interval (e.g., 5 min → 10 min → 20 min → …), with ideally one processing queue per flow type (Sessions, CDRs, Tokens, etc.) and sequential handling to ensure stability and compliance.
 
 ### Send the signed data (Calibration Law / Eichrecht)
 
