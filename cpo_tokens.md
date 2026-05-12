@@ -109,11 +109,15 @@ In the event of a timeout during a Get Token request (HTTP 500), the CPO may ret
 
 Gireve recommends waiting at least 10 minutes before retrying. Otherwise, the CPO may encounter the following error response:
 
+```json
+
 {
     "status_code": 2914,
     "status_message": "A pulling already ran for a similar request",
     "timestamp": "2026-03-25T14:22:01Z"
 }
+
+```
 
 In such cases, the CPO should retry the same request.
 
