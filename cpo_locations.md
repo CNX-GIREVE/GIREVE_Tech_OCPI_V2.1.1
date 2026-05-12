@@ -87,7 +87,7 @@ GIREVE uses the “tariff_id” information provided by CPOs in Locations to dis
 
 **If CPOs use the OCPI Tariffs module to send their tariffs, the management of tariffs and relations to the charging infrastructure follows the OCPI standard except that in GIREVE systems, tariffs are linked to EVSEs and not to connectors (ie All connectors of a single EVSE have the same “tariff_id”).**
 
-### 3.6.5	Plug&Charge (P&C): Connector Object - new attribute “capabilities” 
+### Plug&Charge (P&C): Connector Object - new attribute “capabilities” 
 
 The ability to enable Plug & Charge (P&C) functionality, eliminating the need for a physical badge, offers a significant improvement in the user experience for EV drivers.
 
