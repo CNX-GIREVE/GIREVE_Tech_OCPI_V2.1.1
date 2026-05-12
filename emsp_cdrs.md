@@ -78,6 +78,37 @@ eMSPs can ask Gireve to activate the transfer of these signed data, in the case 
 
 These signed data are also included in CDRs following the [OCPI 2.2 specifications](https://github.com/ocpi/ocpi/blob/master/mod_cdrs.asciidoc#mod_cdrs_signed_data_class).
 
+### PULL CDRs ToIOP: Get List Pagination
+
+If the eMSP wants to retrieve a list of CDRs, it can call the URL: /ocpi/cpo/2.1.1/cdrs?date_from= using the paginated properties date_from, date_to, offset and limit.
+
+Parameters « offset » and « limit » are optional but IOP always returns a paginated response (subset of objects list and link, X-Total-Count and X-limit headers).
+The eMSP must call the link returned in the headers to get the next pages. 
+
+IOP has its own max limit (20 CDRs) and answers with its if the client limit is upper than IOP one or the client doesn’t set its limit.
+
+The timeframe (‘date_from’ and ‘date_to’) used in the request parameters must be lower than one month.
+
+### PULL CDRs ToIOP: Timeout Error
+
+In the event of a timeout during a Get CDRs request (HTTP 500), the eMSP may retry the request for up to one hour, leveraging a caching mechanism.
+
+Gireve recommends waiting at least 10 minutes before retrying. Otherwise, the eMSP may encounter the following error response:
+
+```json
+
+{
+    "status_code": 2914,
+    "status_message": "A pulling already ran for a similar request",
+    "timestamp": "2026-03-25T14:22:01Z"
+}
+
+```
+
+In such cases, the eMSP should retry the same request.
+
+> :warning: <ins>**Important:**</ins> For the caching mechanism to apply, all retry requests must use exactly the same parameters as the initial request (date_from, date_to, offset, and limit). Any variation will be treated as a new request, and the cache will not be utilized.
+
 ##` Examples`
 
 - ToIOP_GET_cpo_cdrs_2.1.1, FromIOP_GET_cpo_cdrs_2.1.1
