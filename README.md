@@ -45,7 +45,6 @@ For more information, check the standard OCPI specifications : [OCPI 2.1.1](http
   - EVSE object
   - Tariff_id value
   - PUSH Locations ToIOP
-  - Store and Forward – PUT and PATCH Locations
   - PULL Locations ToIOP
   - PULL Locations FromIOP
 * [Tokens Module Specifications](cpo_tokens.md)
